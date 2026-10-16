@@ -1,490 +1,557 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#103c2b">
-
-  <title>GICDF | Empowering Communities, Transforming Futures</title>
-
-  <meta name="description"
-        content="Gangara Integrated Community Development Foundation works to advance women and youth empowerment, education, livelihoods, environmental sustainability and inclusive community development in Kaduna State, Nigeria.">
-
-  <meta name="robots" content="index, follow">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="GICDF | Community Development">
-  <meta property="og:description"
-        content="Building stronger, inclusive and resilient communities through opportunity, partnership and sustainable development.">
-  <meta property="og:locale" content="en_NG">
-
-  <style>
-    :root {
-      --green-950: #09271b;
-      --green-900: #103c2b;
-      --green-800: #16543b;
-      --green-700: #20734e;
-      --green-100: #e7f2e9;
-      --gold: #d9ae48;
-      --gold-light: #f6e9c7;
-      --white: #ffffff;
-      --off-white: #f7f9f6;
-      --text: #25352c;
-      --muted: #69766d;
-      --border: #e1e8e1;
-      --shadow: 0 12px 36px rgba(9, 39, 27, 0.08);
-      --radius: 16px;
-      --max-width: 1200px;
-    }
-
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 90px;
-    }
-
-    body {
-      margin: 0;
-      font-family: Inter, "Segoe UI", Arial, sans-serif;
-      background: var(--white);
-      color: var(--text);
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    button,
-    input,
-    select,
-    textarea {
-      font: inherit;
-    }
-
-    button,
-    a {
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    a:focus-visible,
-    button:focus-visible,
-    input:focus-visible,
-    select:focus-visible,
-    textarea:focus-visible {
-      outline: 3px solid var(--gold);
-      outline-offset: 4px;
-    }
-
-    .container {
-      width: min(var(--max-width), 90%);
-      margin-inline: auto;
-    }
-
-    .skip-link {
-      position: absolute;
-      top: -100px;
-      left: 15px;
-      z-index: 2000;
-      background: white;
-      padding: 12px;
-      color: var(--green-900);
-    }
-
-    .skip-link:focus {
-      top: 10px;
-    }
-
-    /* Announcement bar */
-
-    .topbar {
-      background: var(--green-950);
-      color: #eaf1eb;
-      font-size: 0.78rem;
-      padding: 8px 0;
-    }
-
-    .topbar-inner {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .topbar strong {
-      color: var(--gold-light);
-      font-weight: 600;
-    }
-
-    /* Navigation */
-
-    .site-header {
-      background: rgba(255, 255, 255, 0.97);
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      backdrop-filter: blur(12px);
-    }
-
-    .nav-container {
-      min-height: 84px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-      flex-shrink: 0;
-    }
-
-    .brand-mark {
-      width: 48px;
-      height: 48px;
-      display: grid;
-      place-items: center;
-      background: var(--green-900);
-      color: var(--gold-light);
-      border-radius: 12px;
-      font-size: 1.45rem;
-    }
-
-    .brand-copy strong {
-      display: block;
-      color: var(--green-900);
-      font-size: 1.05rem;
-      line-height: 1.3;
-      letter-spacing: 0.03em;
-    }
-
-    .brand-copy small {
-      display: block;
-      color: var(--muted);
-      font-size: 0.69rem;
-      line-height: 1.4;
-      margin-top: 3px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 25px;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      font-size: 0.87rem;
-      font-weight: 600;
-      color: #36483b;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover {
-      color: var(--green-700);
-    }
-
-    .nav-links .nav-cta {
-      background: var(--green-900);
-      color: white;
-      padding: 11px 17px;
-      border-radius: 7px;
-    }
-
-    .nav-links .nav-cta:hover {
-      background: var(--green-700);
-      color: white;
-    }
-
-    .menu-toggle {
-      display: none;
-      width: 44px;
-      height: 44px;
-      border: 1px solid var(--border);
-      background: white;
-      border-radius: 8px;
-      color: var(--green-900);
-      cursor: pointer;
-      font-size: 1.4rem;
-    }
-
-    /* Buttons */
-
-    .button {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      gap: 9px;
-      min-height: 48px;
-      padding: 12px 21px;
-      border-radius: 7px;
-      background: var(--gold);
-      border: 1px solid var(--gold);
-      color: var(--green-950);
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.9rem;
-      transition: transform 0.2s, background 0.2s;
-      cursor: pointer;
-    }
-
-    .button:hover {
-      transform: translateY(-2px);
-      background: #e8c568;
-    }
-
-    .button-outline {
-      color: white;
-      border-color: rgba(255, 255, 255, 0.6);
-      background: transparent;
-    }
-
-    .button-outline:hover {
-      color: var(--green-950);
-      background: white;
-      border-color: white;
-    }
-
-    .button-green {
-      color: white;
-      background: var(--green-900);
-      border-color: var(--green-900);
-    }
-
-    .button-green:hover {
-      background: var(--green-700);
-      border-color: var(--green-700);
-    }
-
-    /* Hero */
-
-    .hero {
-      position: relative;
-      overflow: hidden;
-      color: white;
-      background:
-        radial-gradient(ellipse at 90% 10%, rgba(217, 174, 72, 0.15), transparent 32%),
-        linear-gradient(120deg, #09271b 0%, #103c2b 58%, #1a6342 100%);
-      padding: 95px 0 100px;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 450px;
-      height: 450px;
-      right: -190px;
-      bottom: -240px;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 50%;
-      box-shadow:
-        0 0 0 40px rgba(255, 255, 255, 0.025),
-        0 0 0 80px rgba(255, 255, 255, 0.025);
-      pointer-events: none;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.25fr 0.75fr;
-      align-items: center;
-      gap: 70px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.13em;
-      font-size: 0.74rem;
-      font-weight: 800;
-      color: var(--gold-light);
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 29px;
-      height: 2px;
-      background: var(--gold);
-    }
-
-    .hero h1 {
-      font-size: clamp(2.6rem, 5.3vw, 4.5rem);
-      line-height: 1.09;
-      letter-spacing: -0.045em;
-      margin: 23px 0;
-      max-width: 760px;
-    }
-
-    .hero h1 span {
-      color: var(--gold-light);
-    }
-
-    .hero-description {
-      max-width: 650px;
-      color: #e0eae2;
-      font-size: 1.08rem;
-      margin-bottom: 31px;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .hero-note {
-      margin-top: 25px;
-      color: #c8d9cc;
-      font-size: 0.82rem;
-    }
-
-    .hero-panel {
-      padding: 30px;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      background: rgba(255, 255, 255, 0.07);
-      border-radius: 18px;
-      backdrop-filter: blur(8px);
-    }
-
-    .hero-panel .panel-label {
-      color: var(--gold-light);
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      font-weight: 800;
-    }
-
-    .hero-panel h2 {
-      font-size: 1.65rem;
-      line-height: 1.3;
-      margin: 13px 0;
-    }
-
-    .hero-panel > p {
-      color: #d8e5db;
-      font-size: 0.91rem;
-    }
-
-    .priority-list {
-      list-style: none;
-      padding: 0;
-      margin: 25px 0 0;
-    }
-
-    .priority-list li {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      border-top: 1px solid rgba(255, 255, 255, 0.15);
-      padding: 13px 0;
-      color: #edf4ee;
-      font-size: 0.88rem;
-    }
-
-    .priority-list li span {
-      color: var(--gold-light);
-      font-weight: 800;
-    }
-
-    /* Trust strip */
-
-    .trust-strip {
-      background: var(--off-white);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .trust-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      padding: 24px 0;
-    }
-
-    .trust-item {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .trust-icon {
-      display: grid;
-      place-items: center;
-      width: 44px;
-      height: 44px;
-      border-radius: 10px;
-      background: var(--green-100);
-      color: var(--green-900);
-      font-size: 1.25rem;
-      flex-shrink: 0;
-    }
-
-    .trust-item strong {
-      display: block;
-      font-size: 0.91rem;
-      color: var(--green-900);
-    }
-
-    .trust-item small {
-      display: block;
-      color: var(--muted);
-      font-size: 0.78rem;
-    }
-
-    /* General sections */
-
-    .section {
-      padding: 90px 0;
-    }
-
-    .section-light {
-      background: var(--off-white);
-    }
-
-    .section-dark {
-      background: var(--green-950);
-      color: white;
-    }
-
-    .section-heading {
-      max-width: 760px;
-      margin: 0 auto 45px;
-      text-align: center;
-    }
-
-    .section-heading .eyebrow {
-      color: var(--green-700);
-    }
-
-    .section-heading h2 {
-      font-size: clamp(2rem, 4vw, 2.85rem);
-      line-height: 1.2;
-      letter-spacing: -0.035em;
-      color: var(--green-900);
-      margin: 15px 0;
-    }
-
-    .section-heading p {
-      color: var(--muted);
-      font-size: 1rem;
-      margin: 0;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GICDF Community Connect | Empowering Communities</title>
+
+    <meta name="description"
+          content="Gangara Integrated Community Development Foundation promotes youth empowerment, education, skills development, community welfare, environmental sustainability, and peaceful communities in Gangara, Kaduna State, Nigeria.">
+
+    <meta name="theme-color" content="#176b45">
+
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="site-header">
+    <div class="container header-inner">
+
+        <a class="brand" href="index.html" aria-label="GICDF Home">
+            <img src="assets/images/gicdf-logo.png"
+                 alt="GICDF logo"
+                 onerror="this.style.display='none'">
+
+            <span class="brand-text">
+                GICDF
+                <small>Community Connect</small>
+            </span>
+        </a>
+
+        <button class="menu-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="main-navigation">
+            ☰
+        </button>
+
+        <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="programmes.html">Programmes</a>
+            <a href="projects.html">Projects</a>
+            <a href="partnerships.html">Partnerships</a>
+            <a href="news.html">News</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="governance.html">Governance</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<!-- ================= HERO SECTION ================= -->
+
+<main>
+
+<section class="hero">
+    <div class="container hero-grid">
+
+        <div>
+            <span class="eyebrow">Community • Opportunity • Progress</span>
+
+            <h1>Building Stronger Communities, Creating Brighter Futures.</h1>
+
+            <p>
+                Gangara Integrated Community Development Foundation (GICDF)
+                is committed to supporting community development, empowering
+                young people, expanding educational opportunities, and
+                promoting inclusive and sustainable progress in Gangara
+                and surrounding communities.
+            </p>
+
+            <a class="btn" href="about.html">Discover Our Mission</a>
+
+            <a class="btn btn-outline" href="get-involved.html">
+                Get Involved
+            </a>
+        </div>
+
+        <aside class="hero-panel">
+            <h2>Our Commitment</h2>
+
+            <p>
+                We believe that every community deserves opportunities to
+                grow, every young person deserves a chance to succeed,
+                and every individual has a role to play in building a
+                better future.
+            </p>
+
+            <a class="btn" href="programmes.html">Explore Our Priorities</a>
+        </aside>
+
+    </div>
+</section>
+
+
+<!-- ================= INTRODUCTION ================= -->
+
+<section class="section">
+    <div class="container split">
+
+        <div>
+            <span class="eyebrow">Who We Are</span>
+
+            <div class="section-heading">
+                <h2>Local Commitment. Shared Progress.</h2>
+
+                <p>
+                    GICDF is a community-focused development initiative
+                    working towards a future where young people and
+                    families have better opportunities to learn, develop
+                    practical skills, improve their livelihoods, and
+                    participate in community development.
+                </p>
+
+                <p>
+                    Our approach centres on community participation,
+                    collaboration, accountability, peaceful coexistence,
+                    and practical responses to local needs.
+                </p>
+            </div>
+
+            <a class="btn" href="about.html">Learn About GICDF</a>
+        </div>
+
+        <div class="card">
+            <span class="card-icon" aria-hidden="true">🌱</span>
+
+            <h3>Development That Starts With People</h3>
+
+            <p>
+                Sustainable progress begins by listening to communities,
+                understanding their priorities, mobilising local
+                resources, and working with partners to turn shared
+                goals into practical action.
+            </p>
+
+            <ul class="check-list">
+                <li>Community-led development</li>
+                <li>Youth empowerment and skills</li>
+                <li>Education and learning opportunities</li>
+                <li>Partnerships for sustainable progress</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= DEVELOPMENT PRIORITIES ================= -->
+
+<section class="section section-light">
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="eyebrow">Our Development Priorities</span>
+
+            <h2>Creating Opportunities That Matter</h2>
+
+            <p>
+                Our priorities reflect areas where community participation,
+                collaboration, and targeted support can help create
+                meaningful opportunities for local people.
+            </p>
+        </div>
+
+        <div class="cards">
+
+            <article class="card">
+                <span class="card-icon" aria-hidden="true">🎓</span>
+
+                <h3>Education</h3>
+
+                <p>
+                    Promote access to learning, educational support,
+                    literacy, and opportunities that help young people
+                    develop their potential.
+                </p>
+
+                <a href="programmes.html">Explore this priority →</a>
+            </article>
+
+            <article class="card">
+                <span class="card-icon" aria-hidden="true">💡</span>
+
+                <h3>Youth Empowerment</h3>
+
+                <p>
+                    Support practical skills development, entrepreneurship,
+                    digital inclusion, leadership, and pathways towards
+                    economic participation.
+                </p>
+
+                <a href="programmes.html">Explore this priority →</a>
+            </article>
+
+            <article class="card">
+                <span class="card-icon" aria-hidden="true">🏘️</span>
+
+                <h3>Community Development</h3>
+
+                <p>
+                    Encourage community participation in identifying local
+                    needs, developing initiatives, and improving access
+                    to essential amenities.
+                </p>
+
+                <a href="projects.html">Explore this priority →</a>
+            </article>
+
+            <article class="card">
+                <span class="card-icon" aria-hidden="true">🤝</span>
+
+                <h3>Peace and Social Cohesion</h3>
+
+                <p>
+                    Promote unity, mutual understanding, peaceful
+                    coexistence, and constructive community engagement.
+                </p>
+
+                <a href="programmes.html">Explore this priority →</a>
+            </article>
+
+            <article class="card">
+                <span class="card-icon" aria-hidden="true">🌿</span>
+
+                <h3>Health and Environment</h3>
+
+                <p>
+                    Encourage environmental awareness, community health
+                    education, sanitation, and responsible stewardship
+                    of the local environment.
+                </p>
+
+                <a href="programmes.html">Explore this priority →</a>
+            </article>
+
+            <article class="card">
+                <span class="card-icon" aria-hidden="true">📊</span>
+
+                <h3>Leadership and Accountability</h3>
+
+                <p>
+                    Encourage responsible leadership, transparent
+                    decision-making, civic participation, and
+                    accountability in community initiatives.
+                </p>
+
+                <a href="governance.html">Explore our approach →</a>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= MISSION AND VISION ================= -->
+
+<section class="section">
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="eyebrow">Our Purpose</span>
+            <h2>Guided by a Shared Vision</h2>
+
+            <p>
+                Our work is guided by the belief that communities make
+                stronger progress when people work together towards
+                shared goals.
+            </p>
+        </div>
+
+        <div class="cards">
+
+            <article class="card">
+                <span class="card-icon" aria-hidden="true">🎯</span>
+
+                <h3>Our Mission</h3>
+
+                <p>
+                    To promote inclusive community development by
+                    supporting education, youth empowerment, skills
+                    development, social welfare, environmental awareness,
+                    and collaborative action.
+                </p>
+            </article>
+
+            <article class="card">
+                <span class="card-icon" aria-hidden="true">🌍</span>
+
+                <h3>Our Vision</h3>
+
+                <p>
+                    Thriving, peaceful, and resilient communities where
+                    people have opportunities to develop their abilities,
+                    improve their livelihoods, and contribute to
+                    sustainable progress.
+                </p>
+            </article>
+
+            <article class="card">
+                <span class="card-icon" aria-hidden="true">💚</span>
+
+                <h3>Our Values</h3>
+
+                <p>
+                    Integrity, inclusion, service, accountability,
+                    transparency, respect, collaboration, and
+                    commitment to community progress.
+                </p>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= PROJECT DEVELOPMENT ================= -->
+
+<section class="section section-light">
+    <div class="container split">
+
+        <div>
+            <span class="eyebrow">From Priorities to Action</span>
+
+            <h2>Turning Community Needs Into Development Opportunities</h2>
+
+            <p>
+                Lasting development requires more than good intentions.
+                It requires listening to residents, identifying needs,
+                planning responsibly, building partnerships, and
+                monitoring progress.
+            </p>
+
+            <p>
+                GICDF seeks to work with community stakeholders,
+                government institutions, civil society organisations,
+                development partners, and other supporters to identify
+                and advance suitable initiatives.
+            </p>
+
+            <a class="btn" href="projects.html">Explore Project Priorities</a>
+        </div>
+
+        <div class="card">
+            <h3>Our Approach</h3>
+
+            <ul class="check-list">
+                <li>Listen to community needs and priorities.</li>
+                <li>Consult residents and relevant stakeholders.</li>
+                <li>Develop realistic, locally relevant proposals.</li>
+                <li>Seek partnerships and appropriate resources.</li>
+                <li>Promote transparency and responsible delivery.</li>
+                <li>Monitor outcomes and communicate progress.</li>
+            </ul>
+
+            <p class="muted">
+                Our website will be updated as programmes, partnerships,
+                and projects develop.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= PARTNERSHIPS ================= -->
+
+<section class="section">
+    <div class="container">
+
+        <div class="cta">
+            <span class="eyebrow">Stronger Together</span>
+
+            <h2>Partner With Us to Support Community Progress</h2>
+
+            <p>
+                We welcome conversations with development organisations,
+                NGOs, foundations, public institutions, businesses,
+                professionals, volunteers, and individuals interested
+                in supporting inclusive community development.
+            </p>
+
+            <a class="btn" href="partnerships.html">
+                Explore Partnerships
+            </a>
+
+            <a class="btn btn-outline" href="get-involved.html">
+                Get Involved
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= COMMUNITY INVOLVEMENT ================= -->
+
+<section class="section section-light">
+    <div class="container split">
+
+        <div>
+            <span class="eyebrow">Be Part of the Progress</span>
+
+            <h2>Every Contribution Can Make a Difference</h2>
+
+            <p>
+                Community development is a shared responsibility.
+                Your skills, ideas, time, professional experience,
+                or organisational support can help identify
+                opportunities and strengthen local initiatives.
+            </p>
+
+            <a class="btn" href="get-involved.html">
+                Find Ways to Participate
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>Ways to Get Involved</h3>
+
+            <ul class="check-list">
+                <li>Volunteer your time or professional skills.</li>
+                <li>Share ideas about local development needs.</li>
+                <li>Explore collaboration with our organisation.</li>
+                <li>Support educational and youth initiatives.</li>
+                <li>Help connect communities with relevant partners.</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= CONTACT CTA ================= -->
+
+<section class="section">
+    <div class="container">
+        <div class="section-heading">
+
+            <span class="eyebrow">Connect With GICDF</span>
+
+            <h2>Let's Start a Conversation</h2>
+
+            <p>
+                Have a question, a community development idea,
+                a partnership proposal, or an interest in volunteering?
+                We would welcome hearing from you.
+            </p>
+
+            <p>
+                <strong>Location:</strong>
+                Gangara, Makarfi LGA, Kaduna State, Nigeria
+            </p>
+
+            <p>
+                <strong>Email:</strong>
+                <a href="mailto:info.gicdf@gmail.com">
+                    info.gicdf@gmail.com
+                </a>
+            </p>
+
+            <p>
+                <strong>Phone:</strong>
+                <a href="tel:+2347059313835">+234 705 931 3835</a>
+            </p>
+
+            <a class="btn" href="contact.html">Contact Our Team</a>
+
+        </div>
+    </div>
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="site-footer">
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+                <h3>GICDF Community Connect</h3>
+
+                <p>
+                    Gangara Integrated Community Development Foundation
+                    is committed to inclusive community development,
+                    youth empowerment, education, and sustainable progress.
+                </p>
+
+                <p>
+                    <strong>Location:</strong><br>
+                    Gangara, Makarfi LGA,<br>
+                    Kaduna State, Nigeria
+                </p>
+            </div>
+
+            <div>
+                <h4>Explore</h4>
+
+                <div class="footer-links">
+                    <a href="about.html">About Us</a>
+                    <a href="programmes.html">Programmes</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="partnerships.html">Partnerships</a>
+                    <a href="get-involved.html">Get Involved</a>
+                </div>
+            </div>
+
+            <div>
+                <h4>Information</h4>
+
+                <div class="footer-links">
+                    <a href="news.html">News and Updates</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="governance.html">Governance</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="mailto:info.gicdf@gmail.com">Email GICDF</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                &copy; <span class="current-year">2026</span>
+                Gangara Integrated Community Development Foundation.
+                All rights reserved.
+            </p>
+
+            <p>
+                Community-led development. Shared responsibility.
+                Sustainable progress.
+            </p>
+        </div>
+
+    </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+
+</body>
+          </html>gin: 0;
     }
 
     .section-dark .section-heading h2 {
