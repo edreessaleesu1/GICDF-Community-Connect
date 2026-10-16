@@ -1,53 +1,46 @@
-// GICDF Community Connect
-// Website interactive features
+/* ==========================================
+   GICDF COMMUNITY CONNECT - MAIN JAVASCRIPT
+   ========================================== */
 
-document.addEventListener("DOMContentLoaded", function () {
-  // 1. Mobile navigation menu
-  const menuButton = document.querySelector(".menu-toggle");
-  const navigation = document.querySelector(".main-nav");
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // --- Mobile Menu Toggle ---
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
 
-  if (menuButton && navigation) {
-    menuButton.addEventListener("click", function () {
-      const isOpen = navigation.classList.toggle("open");
+    if (menuToggle && mainNav) {
+        menuToggle.addEventListener('click', () => {
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            
+            // Toggle state attributes and CSS active class
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+            mainNav.classList.toggle('active');
+        });
 
-      menuButton.setAttribute("aria-expanded", String(isOpen));
+        // Close the mobile menu automatically when a navigation link is clicked
+        const navLinks = mainNav.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (mainNav.classList.contains('active')) {
+                    mainNav.classList.remove('active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
 
-      menuButton.setAttribute(
-        "aria-label",
-        isOpen ? "Close navigation menu" : "Open navigation menu"
-      );
-    });
-  }
-
-  // 2. Automatically update the copyright year
-  const yearElements = document.querySelectorAll(".current-year");
-
-  yearElements.forEach(function (element) {
-    element.textContent = new Date().getFullYear();
-  });
-
-  // 3. Highlight the current page in the navigation
-  let currentPage = window.location.pathname.split("/").pop();
-
-  if (!currentPage) {
-    currentPage = "index.html";
-  }
-
-  const navigationLinks = document.querySelectorAll(".main-nav a");
-
-  navigationLinks.forEach(function (link) {
-    const linkPage = link.getAttribute("href");
-
-    if (linkPage === currentPage) {
-      link.classList.add("active");
-      link.setAttribute("aria-current", "page");
+        // Close the menu if clicked outside of the header navigation area
+        document.addEventListener('click', (event) => {
+            const isClickInside = mainNav.contains(event.target) || menuToggle.contains(event.target);
+            if (!isClickInside && mainNav.classList.contains('active')) {
+                mainNav.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
     }
-  });
 
-  // 4. Prevent accidental empty navigation links
-  document.querySelectorAll('a[href="#"]').forEach(function (link) {
-    link.addEventListener("click", function (event) {
-      event.preventDefault();
-    });
-  });
+    // --- Dynamic Copyright Year Update ---
+    const yearSpan = document.querySelector('.current-year');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
 });
