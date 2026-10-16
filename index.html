@@ -1,138 +1,2015 @@
-<!DOCTYPE html><html lang="en">
+```html
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#14532d">
-<meta name="description" content="Gangara Integrated Community Development Foundation — empowering women and youths and transforming communities.">
-<title>GICDF Community Connect</title>
-<style>
-:root{--green:#14532d;--light:#f0fdf4;--gold:#d4a72c;--dark:#17251b;--white:#fff}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--dark);line-height:1.6;background:#fff}
-header{background:var(--green);color:#fff;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-.brand{font-weight:bold;font-size:1.05rem}
-nav{display:flex;gap:14px;flex-wrap:wrap}
-nav a{color:white;text-decoration:none;font-size:.9rem}
-nav a:hover{text-decoration:underline;color:#ffe49a}
-.hero{background:linear-gradient(135deg,#14532d,#166534);color:white;padding:72px 6%;text-align:center}
-.hero .badge{color:#ffe49a;font-weight:bold;letter-spacing:1px}
-.hero h1{font-size:clamp(2rem,6vw,3.5rem);line-height:1.15;max-width:850px;margin:18px auto}
-.hero p{max-width:680px;margin:20px auto;font-size:1.08rem}
-.button{display:inline-block;background:var(--gold);color:#17251b;padding:12px 20px;border-radius:6px;text-decoration:none;font-weight:bold;border:0;cursor:pointer;margin:5px}
-.button.secondary{background:white;color:var(--green)}
-section{padding:52px 6%}
-section h2{text-align:center;color:var(--green);font-size:1.8rem}
-.intro{text-align:center;max-width:760px;margin:0 auto 28px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:18px}
-.card{padding:23px;border:1px solid #e3e9e4;border-radius:12px;background:white;box-shadow:0 4px 14px #00000008}
-.card h3{color:var(--green);margin-top:5px}
-.icon{font-size:1.8rem}
-.light{background:var(--light)}
-.values{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-.values span{background:white;border:1px solid #d8e9dc;border-radius:30px;padding:8px 15px}
-form{max-width:650px;margin:auto}
-label{display:block;font-weight:bold;margin-top:14px}
-input,select,textarea{width:100%;padding:12px;margin-top:6px;border:1px solid #bdc9bf;border-radius:6px;font:inherit}
-textarea{min-height:110px;resize:vertical}
-.notice{background:#fff8e1;padding:12px;border-radius:6px;font-size:.9rem}
-footer{background:#102e1b;color:white;padding:30px 6%;text-align:center}
-footer a{color:#ffe49a}
-.small{font-size:.88rem}
-.status{margin-top:12px;font-weight:bold}
-@media(max-width:600px){header{align-items:flex-start}nav{gap:10px}.hero{padding:55px 6%}section{padding:40px 5%}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#103c2b">
+
+  <title>GICDF | Empowering Communities, Transforming Futures</title>
+
+  <meta name="description"
+        content="Gangara Integrated Community Development Foundation works to advance youth empowerment, education, livelihoods, environmental sustainability and inclusive community development in Kaduna State, Nigeria.">
+
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="GICDF | Community Development">
+  <meta property="og:description"
+        content="Building stronger, inclusive and resilient communities through opportunity, partnership and sustainable development.">
+  <meta property="og:locale" content="en_NG">
+
+  <style>
+    :root {
+      --green-950: #09271b;
+      --green-900: #103c2b;
+      --green-800: #16543b;
+      --green-700: #20734e;
+      --green-100: #e7f2e9;
+      --gold: #d9ae48;
+      --gold-light: #f6e9c7;
+      --white: #ffffff;
+      --off-white: #f7f9f6;
+      --text: #25352c;
+      --muted: #69766d;
+      --border: #e1e8e1;
+      --shadow: 0 12px 36px rgba(9, 39, 27, 0.08);
+      --radius: 16px;
+      --max-width: 1200px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      background: var(--white);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(var(--max-width), 90%);
+      margin-inline: auto;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 15px;
+      z-index: 2000;
+      background: white;
+      padding: 12px;
+      color: var(--green-900);
+    }
+
+    .skip-link:focus {
+      top: 10px;
+    }
+
+    /* Announcement bar */
+
+    .topbar {
+      background: var(--green-950);
+      color: #eaf1eb;
+      font-size: 0.78rem;
+      padding: 8px 0;
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .topbar strong {
+      color: var(--gold-light);
+      font-weight: 600;
+    }
+
+    /* Navigation */
+
+    .site-header {
+      background: rgba(255, 255, 255, 0.97);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-container {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .brand-mark {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      background: var(--green-900);
+      color: var(--gold-light);
+      border-radius: 12px;
+      font-size: 1.45rem;
+    }
+
+    .brand-copy strong {
+      display: block;
+      color: var(--green-900);
+      font-size: 1.05rem;
+      line-height: 1.3;
+      letter-spacing: 0.03em;
+    }
+
+    .brand-copy small {
+      display: block;
+      color: var(--muted);
+      font-size: 0.69rem;
+      line-height: 1.4;
+      margin-top: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.87rem;
+      font-weight: 600;
+      color: #36483b;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--green-700);
+    }
+
+    .nav-links .nav-cta {
+      background: var(--green-900);
+      color: white;
+      padding: 11px 17px;
+      border-radius: 7px;
+    }
+
+    .nav-links .nav-cta:hover {
+      background: var(--green-700);
+      color: white;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--border);
+      background: white;
+      border-radius: 8px;
+      color: var(--green-900);
+      cursor: pointer;
+      font-size: 1.4rem;
+    }
+
+    /* Buttons */
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
+      min-height: 48px;
+      padding: 12px 21px;
+      border-radius: 7px;
+      background: var(--gold);
+      border: 1px solid var(--gold);
+      color: var(--green-950);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: transform 0.2s, background 0.2s;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      background: #e8c568;
+    }
+
+    .button-outline {
+      color: white;
+      border-color: rgba(255, 255, 255, 0.6);
+      background: transparent;
+    }
+
+    .button-outline:hover {
+      color: var(--green-950);
+      background: white;
+      border-color: white;
+    }
+
+    .button-green {
+      color: white;
+      background: var(--green-900);
+      border-color: var(--green-900);
+    }
+
+    .button-green:hover {
+      background: var(--green-700);
+      border-color: var(--green-700);
+    }
+
+    /* Hero */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      color: white;
+      background:
+        radial-gradient(ellipse at 90% 10%, rgba(217, 174, 72, 0.15), transparent 32%),
+        linear-gradient(120deg, #09271b 0%, #103c2b 58%, #1a6342 100%);
+      padding: 95px 0 100px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 450px;
+      height: 450px;
+      right: -190px;
+      bottom: -240px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 40px rgba(255, 255, 255, 0.025),
+        0 0 0 80px rgba(255, 255, 255, 0.025);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      align-items: center;
+      gap: 70px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      font-size: 0.74rem;
+      font-weight: 800;
+      color: var(--gold-light);
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 29px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.6rem, 5.3vw, 4.5rem);
+      line-height: 1.09;
+      letter-spacing: -0.045em;
+      margin: 23px 0;
+      max-width: 760px;
+    }
+
+    .hero h1 span {
+      color: var(--gold-light);
+    }
+
+    .hero-description {
+      max-width: 650px;
+      color: #e0eae2;
+      font-size: 1.08rem;
+      margin-bottom: 31px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .hero-note {
+      margin-top: 25px;
+      color: #c8d9cc;
+      font-size: 0.82rem;
+    }
+
+    .hero-panel {
+      padding: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 18px;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-panel .panel-label {
+      color: var(--gold-light);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 800;
+    }
+
+    .hero-panel h2 {
+      font-size: 1.65rem;
+      line-height: 1.3;
+      margin: 13px 0;
+    }
+
+    .hero-panel > p {
+      color: #d8e5db;
+      font-size: 0.91rem;
+    }
+
+    .priority-list {
+      list-style: none;
+      padding: 0;
+      margin: 25px 0 0;
+    }
+
+    .priority-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 13px 0;
+      color: #edf4ee;
+      font-size: 0.88rem;
+    }
+
+    .priority-list li span {
+      color: var(--gold-light);
+      font-weight: 800;
+    }
+
+    /* Trust strip */
+
+    .trust-strip {
+      background: var(--off-white);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 24px 0;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .trust-icon {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--green-100);
+      color: var(--green-900);
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .trust-item strong {
+      display: block;
+      font-size: 0.91rem;
+      color: var(--green-900);
+    }
+
+    .trust-item small {
+      display: block;
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    /* General sections */
+
+    .section {
+      padding: 90px 0;
+    }
+
+    .section-light {
+      background: var(--off-white);
+    }
+
+    .section-dark {
+      background: var(--green-950);
+      color: white;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin: 0 auto 45px;
+      text-align: center;
+    }
+
+    .section-heading .eyebrow {
+      color: var(--green-700);
+    }
+
+    .section-heading h2 {
+      font-size: clamp(2rem, 4vw, 2.85rem);
+      line-height: 1.2;
+      letter-spacing: -0.035em;
+      color: var(--green-900);
+      margin: 15px 0;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    .section-dark .section-heading h2 {
+      color: white;
+    }
+
+    .section-dark .section-heading p {
+      color: #cfddd2;
+    }
+
+    .section-dark .section-heading .eyebrow {
+      color: var(--gold-light);
+    }
+
+    /* About */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .about-copy h2 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      line-height: 1.2;
+      letter-spacing: -0.035em;
+      color: var(--green-900);
+      margin: 14px 0 22px;
+    }
+
+    .about-copy > p {
+      color: var(--muted);
+    }
+
+    .about-highlight {
+      padding: 21px;
+      border-left: 4px solid var(--gold);
+      background: var(--off-white);
+      margin: 25px 0;
+      color: var(--green-900);
+      font-weight: 600;
+    }
+
+    .about-visual {
+      min-height: 400px;
+      padding: 30px;
+      background:
+        radial-gradient(circle at 80% 15%, rgba(217, 174, 72, 0.2), transparent 35%),
+        linear-gradient(145deg, #164e35, #09271b);
+      border-radius: 18px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-visual::before {
+      content: "GICDF";
+      position: absolute;
+      top: 20px;
+      right: -12px;
+      font-size: 6rem;
+      font-weight: 900;
+      letter-spacing: -0.08em;
+      color: rgba(255, 255, 255, 0.055);
+    }
+
+    .about-visual .visual-mark {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .about-visual h3 {
+      font-size: 1.8rem;
+      line-height: 1.3;
+      max-width: 370px;
+      margin: 0 0 12px;
+    }
+
+    .about-visual p {
+      color: #d7e5d9;
+      margin: 0;
+    }
+
+    .about-visual .visual-caption {
+      margin-top: 25px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      font-size: 0.82rem;
+    }
+
+    /* Values */
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .value-card {
+      padding: 25px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .value-card .value-icon {
+      font-size: 1.8rem;
+      margin-bottom: 13px;
+    }
+
+    .value-card h3 {
+      margin: 0 0 9px;
+      color: var(--green-900);
+      font-size: 1.08rem;
+    }
+
+    .value-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* Programmes */
+
+    .programme-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .programme-card {
+      background: white;
+      padding: 29px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .programme-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .programme-icon {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border-radius: 13px;
+      background: var(--green-100);
+      font-size: 1.65rem;
+      margin-bottom: 20px;
+    }
+
+    .programme-card h3 {
+      color: var(--green-900);
+      font-size: 1.18rem;
+      margin: 0 0 11px;
+    }
+
+    .programme-card p {
+      color: var(--muted);
+      font-size: 0.91rem;
+      margin: 0;
+    }
+
+    /* Projects */
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .project-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .project-banner {
+      min-height: 150px;
+      padding: 25px;
+      display: flex;
+      align-items: flex-end;
+      background: linear-gradient(130deg, #164e35, #28744d);
+      color: white;
+    }
+
+    .project-card:nth-child(2) .project-banner {
+      background: linear-gradient(130deg, #72551c, #b68b34);
+    }
+
+    .project-card:nth-child(3) .project-banner {
+      background: linear-gradient(130deg, #243c32, #597564);
+    }
+
+    .project-banner span {
+      font-size: 2.4rem;
+    }
+
+    .project-body {
+      padding: 24px;
+    }
+
+    .status-label {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 5px 9px;
+      border-radius: 5px;
+      background: var(--gold-light);
+      color: #664c11;
+      margin-bottom: 12px;
+    }
+
+    .project-body h3 {
+      margin: 0 0 10px;
+      color: var(--green-900);
+      font-size: 1.15rem;
+    }
+
+    .project-body p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .transparency-note {
+      max-width: 850px;
+      margin: 30px auto 0;
+      padding: 17px 20px;
+      border: 1px solid #e8d9ac;
+      border-radius: 9px;
+      background: #fffaf0;
+      color: #635222;
+      font-size: 0.86rem;
+    }
+
+    /* Partnership CTA */
+
+    .partnership-box {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 35px;
+      padding: 45px;
+      border-radius: 18px;
+      background:
+        radial-gradient(circle at 100% 0%, rgba(217, 174, 72, 0.15), transparent 32%),
+        var(--green-900);
+      color: white;
+    }
+
+    .partnership-box h2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      line-height: 1.2;
+      margin: 0 0 13px;
+    }
+
+    .partnership-box p {
+      color: #d8e5db;
+      max-width: 720px;
+      margin: 0;
+    }
+
+    /* Volunteer */
+
+    .volunteer-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 65px;
+      align-items: start;
+    }
+
+    .volunteer-copy h2 {
+      font-size: clamp(2rem, 4vw, 2.7rem);
+      color: var(--green-900);
+      line-height: 1.2;
+      margin: 13px 0 18px;
+    }
+
+    .volunteer-copy p {
+      color: var(--muted);
+    }
+
+    .volunteer-benefits {
+      list-style: none;
+      padding: 0;
+      margin-top: 25px;
+    }
+
+    .volunteer-benefits li {
+      margin: 13px 0;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .volunteer-benefits span {
+      color: var(--green-700);
+      font-weight: 900;
+    }
+
+    .form-card {
+      padding: 32px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .form-card h3 {
+      margin: 0 0 6px;
+      color: var(--green-900);
+      font-size: 1.4rem;
+    }
+
+    .form-intro {
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin: 0 0 22px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 17px;
+    }
+
+    .form-field {
+      margin-bottom: 17px;
+    }
+
+    .form-field.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-field label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--green-900);
+      margin-bottom: 7px;
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      width: 100%;
+      min-height: 47px;
+      border: 1px solid #cfd9d0;
+      border-radius: 7px;
+      padding: 11px 12px;
+      background: white;
+      color: var(--text);
+    }
+
+    .form-field textarea {
+      min-height: 115px;
+      resize: vertical;
+    }
+
+    .consent {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin: 4px 0 20px;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .consent input {
+      margin-top: 5px;
+      accent-color: var(--green-900);
+      flex-shrink: 0;
+    }
+
+    .form-notice {
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      padding: 12px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 17px;
+    }
+
+    .form-status {
+      margin-top: 13px;
+      font-weight: 600;
+      font-size: 0.88rem;
+    }
+
+    /* Contact */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+    }
+
+    .contact-copy h2 {
+      font-size: clamp(2rem, 4vw, 2.6rem);
+      line-height: 1.2;
+      color: var(--green-900);
+      margin: 12px 0 18px;
+    }
+
+    .contact-copy p {
+      color: var(--muted);
+    }
+
+    .contact-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      background: var(--off-white);
+    }
+
+    .contact-row {
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-row:last-child {
+      border-bottom: 0;
+    }
+
+    .contact-row .contact-icon {
+      font-size: 1.35rem;
+    }
+
+    .contact-row strong {
+      display: block;
+      color: var(--green-900);
+      font-size: 0.91rem;
+    }
+
+    .contact-row p {
+      margin: 3px 0 0;
+      color: var(--muted);
+      font-size: 0.87rem;
+      overflow-wrap: anywhere;
+    }
+
+    /* Footer */
+
+    .site-footer {
+      background: var(--green-950);
+      color: #d6e2d8;
+      padding: 60px 0 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr 0.8fr;
+      gap: 55px;
+      padding-bottom: 40px;
+    }
+
+    .footer-brand .brand-copy strong {
+      color: white;
+    }
+
+    .footer-brand .brand-copy small {
+      color: #c1d0c4;
+    }
+
+    .footer-description {
+      max-width: 390px;
+      color: #bdcfc1;
+      font-size: 0.9rem;
+      margin-top: 22px;
+    }
+
+    .footer-column h3 {
+      color: white;
+      font-size: 0.98rem;
+      margin: 0 0 17px;
+    }
+
+    .footer-column a {
+      display: block;
+      text-decoration: none;
+      color: #bdcfc1;
+      font-size: 0.86rem;
+      margin: 10px 0;
+    }
+
+    .footer-column a:hover {
+      color: var(--gold-light);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+      padding: 19px 0;
+      font-size: 0.79rem;
+      color: #bdcfc1;
+    }
+
+    .footer-bottom-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    /* Back to top */
+
+    .back-to-top {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 45px;
+      height: 45px;
+      display: grid;
+      place-items: center;
+      background: var(--green-900);
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: var(--shadow);
+      z-index: 100;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Responsive design */
+
+    @media (max-width: 1050px) {
+      .nav-links {
+        gap: 15px;
+      }
+
+      .hero-grid {
+        gap: 35px;
+      }
+
+      .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .programme-grid,
+      .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 800px) {
+      .nav-container {
+        min-height: 74px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: white;
+        border-bottom: 1px solid var(--border);
+        padding: 12px 5% 20px;
+        box-shadow: 0 14px 20px rgba(0, 0, 0, 0.06);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 12px 0;
+      }
+
+      .nav-links .nav-cta {
+        text-align: center;
+        margin-top: 7px;
+      }
+
+      .hero {
+        padding: 70px 0;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .volunteer-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-grid {
+        gap: 40px;
+      }
+
+      .hero-panel {
+        max-width: 600px;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .trust-item {
+        max-width: 450px;
+      }
+
+      .section {
+        padding: 70px 0;
+      }
+
+      .about-grid,
+      .volunteer-grid,
+      .contact-grid {
+        gap: 35px;
+      }
+
+      .partnership-box {
+        grid-template-columns: 1fr;
+        padding: 32px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+      }
+
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .container {
+        width: 91%;
+      }
+
+      .topbar-inner {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .brand-mark {
+        width: 42px;
+        height: 42px;
+      }
+
+      .brand-copy strong {
+        font-size: 0.92rem;
+      }
+
+      .brand-copy small {
+        font-size: 0.62rem;
+      }
+
+      .hero {
+        padding: 58px 0;
+      }
+
+      .hero h1 {
+        font-size: 2.65rem;
+      }
+
+      .hero-description {
+        font-size: 0.98rem;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hero-actions .button {
+        width: 100%;
+      }
+
+      .hero-panel {
+        padding: 23px;
+      }
+
+      .section {
+        padding: 58px 0;
+      }
+
+      .section-heading {
+        margin-bottom: 32px;
+      }
+
+      .values-grid,
+      .programme-grid,
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .value-card,
+      .programme-card {
+        padding: 23px;
+      }
+
+      .about-visual {
+        min-height: 330px;
+        padding: 24px;
+      }
+
+      .form-card {
+        padding: 22px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-field.full {
+        grid-column: auto;
+      }
+
+      .partnership-box {
+        padding: 26px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .footer-brand {
+        grid-column: auto;
+      }
+
+      .footer-bottom-inner {
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header>
-  <div class="brand">🌱 GICDF Community Connect</div>
-  <nav aria-label="Main navigation">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#programmes">Programmes</a>
-    <a href="#projects">Projects</a>
-    <a href="#volunteer">Volunteer</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header><main>
-<section class="hero" id="home">
-  <div class="badge">GANGARA INTEGRATED COMMUNITY DEVELOPMENT FOUNDATION</div>
-  <h1>Empowering Youths, Transforming Communities.</h1>
-  <p>Working towards stronger communities through education, skills development, women and youth empowerment, environmental awareness and peaceful cooperation.</p>
-  <a class="button" href="#programmes">Explore Our Programmes</a>
-  <a class="button secondary" href="#volunteer">Become a Volunteer</a>
-</section><section id="about">
-  <h2>About GICDF</h2>
-  <p class="intro">Gangara Integrated Community Development Foundation is a community-focused initiative committed to inclusive development and expanding opportunities for people in Gangara and surrounding communities in Makarfi LGA, Kaduna State.</p>
-  <div class="grid">
-    <article class="card"><h3>Our Mission</h3><p>To support sustainable development through women and youth empowerment, education, skills, livelihoods, health awareness and community participation.</p></article>
-    <article class="card"><h3>Our Vision</h3><p>Inclusive, peaceful and self-reliant communities where everyone has the opportunity to contribute and thrive.</p></article>
-    <article class="card"><h3>Our Approach</h3><p>Listening to community needs, working with partners, encouraging volunteerism and promoting transparency and accountability.</p></article>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="topbar">
+  <div class="container topbar-inner">
+    <span><strong>GICDF</strong> · Community-led development</span>
+    <span>Gangara, Makarfi LGA, Kaduna State, Nigeria</span>
   </div>
-</section><section class="light" id="programmes">
-  <h2>Our Development Priorities</h2>
-  <p class="intro">We aim to connect community members with programmes, practical skills and opportunities that support long-term development.</p>
-  <div class="grid">
-    <article class="card"><div class="icon">🎓</div><h3>Education</h3><p>Learning opportunities, educational support and access to relevant information.</p></article>
-    <article class="card"><div class="icon">💻</div><h3>Digital Skills</h3><p>Digital literacy, technology education and preparation for a changing world of work.</p></article>
-    <article class="card"><div class="icon">🛠️</div><h3>Vocational Skills</h3><p>Practical skills, entrepreneurship and livelihood development.</p></article>
-    <article class="card"><div class="icon">🌍</div><h3>Environment</h3><p>Environmental awareness, sanitation and responsible community stewardship.</p></article>
-    <article class="card"><div class="icon">🤝</div><h3>Peacebuilding</h3><p>Community cooperation, inclusion, dialogue and peaceful problem-solving.</p></article>
-    <article class="card"><div class="icon">🏘️</div><h3>Community Development</h3><p>Identifying local needs and encouraging practical, community-led solutions.</p></article>
+</div>
+
+<header class="site-header">
+  <div class="container nav-container">
+
+    <a class="brand" href="#home" aria-label="GICDF home">
+      <span class="brand-mark" aria-hidden="true">🌱</span>
+      <span class="brand-copy">
+        <strong>GICDF</strong>
+        <small>COMMUNITY CONNECT</small>
+      </span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-controls="navLinks"
+      aria-expanded="false">
+      ☰
+    </button>
+
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#programmes">Our Programmes</a>
+      <a href="#projects">Projects</a>
+      <a href="#partnerships">Partnerships</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-cta" href="#volunteer">Get Involved ↗</a>
+    </nav>
+
   </div>
-  <p class="intro small">Specific programme availability and application deadlines will be announced when confirmed by the foundation.</p>
-</section><section id="projects">
-  <h2>Community Projects</h2>
-  <p class="intro">We want community members to participate in identifying needs and shaping development priorities.</p>
-  <div class="grid">
-    <article class="card"><h3>Education and Skills</h3><p>Encouraging access to education, training and practical learning opportunities.</p></article>
-    <article class="card"><h3>Community Needs</h3><p>Listening to residents and identifying local development priorities.</p></article>
-    <article class="card"><h3>Partnerships</h3><p>Building relationships with credible organisations to support sustainable community initiatives.</p></article>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+
+      <div>
+        <span class="eyebrow">Community development · Nigeria</span>
+
+        <h1>
+          Empowering Communities.<br>
+          <span>Transforming Futures.</span>
+        </h1>
+
+        <p class="hero-description">
+          Gangara Integrated Community Development Foundation works
+          towards a future where young people, women and communities
+          have greater opportunities to learn, develop skills and
+          participate in sustainable development.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button" href="#programmes">
+            Explore Our Priorities <span aria-hidden="true">→</span>
+          </a>
+
+          <a class="button button-outline" href="#partnerships">
+            Partner With Us
+          </a>
+        </div>
+
+        <p class="hero-note">
+          Community-led priorities. Inclusive opportunities.
+          Sustainable development.
+        </p>
+      </div>
+
+      <aside class="hero-panel" aria-label="Our development priorities">
+        <span class="panel-label">Our commitment</span>
+
+        <h2>Creating opportunities for communities to thrive.</h2>
+
+        <p>
+          We aim to connect local needs with practical initiatives,
+          community participation and responsible partnerships.
+        </p>
+
+        <ul class="priority-list">
+          <li><span>01</span> Youth empowerment and skills development</li>
+          <li><span>02</span> Education and livelihood opportunities</li>
+          <li><span>03</span> Inclusive and resilient communities</li>
+          <li><span>04</span> Environmental awareness and peacebuilding</li>
+        </ul>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- ORGANISATIONAL PRIORITIES -->
+
+  <div class="trust-strip">
+    <div class="container trust-grid">
+
+      <div class="trust-item">
+        <span class="trust-icon" aria-hidden="true">🎓</span>
+        <div>
+          <strong>Education & Learning</strong>
+          <small>Expanding access to knowledge and skills</small>
+        </div>
+      </div>
+
+      <div class="trust-item">
+        <span class="trust-icon" aria-hidden="true">🤝</span>
+        <div>
+          <strong>Community Partnership</strong>
+          <small>Encouraging collaboration and participation</small>
+        </div>
+      </div>
+
+      <div class="trust-item">
+        <span class="trust-icon" aria-hidden="true">🌍</span>
+        <div>
+          <strong>Sustainable Development</strong>
+          <small>Supporting long-term community resilience</small>
+        </div>
+      </div>
+
+    </div>
   </div>
-  <p class="notice">These are development priorities, not claims of completed or funded projects. Verified project updates can be published as activities progress.</p>
-</section><section class="light" id="volunteer">
-  <h2>Become a Volunteer</h2>
-  <p class="intro">Would you like to contribute your time, knowledge or skills to community development? Register your interest below.</p>
-  <form id="volunteerForm">
-    <label for="vname">Full name</label><input id="vname" name="name" required maxlength="100" autocomplete="name">
-    <label for="vphone">Phone number</label><input id="vphone" name="phone" type="tel" required maxlength="25" autocomplete="tel">
-    <label for="vcommunity">Community</label><input id="vcommunity" name="community" required maxlength="100">
-    <label for="vemail">Email (optional)</label><input id="vemail" name="email" type="email" maxlength="150" autocomplete="email">
-    <label for="vskill">Area of interest</label>
-    <select id="vskill" name="interest" required>
-      <option value="">Select an area</option><option>Education</option><option>Digital skills</option><option>Vocational training</option><option>Community development</option><option>Environment</option><option>Health awareness</option><option>Peacebuilding</option><option>Communications</option><option>Other</option>
-    </select>
-    <label for="vmessage">How would you like to contribute?</label><textarea id="vmessage" name="message" maxlength="1000" required></textarea>
-    <label><input type="checkbox" required style="width:auto"> I agree that GICDF may use the information I provide to respond to my volunteering enquiry.</label>
-    <button class="button" type="submit">Submit Volunteer Interest</button>
-    <p class="status" id="vstatus" role="status"></p>
-    <p class="small">Important: This demonstration form does not transmit or save your information to an online database yet. Do not enter real personal information until secure submission is configured.</p>
-  </form>
-</section><section id="contact">
-  <h2>Contact and Partnerships</h2>
-  <p class="intro">Interested in supporting community development, volunteering or exploring a partnership? Contact the foundation through its verified official channels.</p>
-  <div class="card" style="max-width:650px;margin:auto">
-    <p><strong>Organisation:</strong> Gangara Integrated Community Development Foundation (GICDF)</p>
-    <p><strong>Location:</strong> Gangara, Makarfi LGA, Kaduna State, Nigeria</p>
-    <p><strong>Email:</strong> Add your verified official email here.</p>
-    <p><strong>Telephone:</strong> Add your approved official contact number here.</p>
-    <p class="small">Official contact details will be added after confirmation.</p>
+
+  <!-- ABOUT -->
+
+  <section class="section" id="about">
+    <div class="container about-grid">
+
+      <div class="about-copy">
+        <span class="eyebrow">Who we are</span>
+
+        <h2>Local commitment. Inclusive development. Lasting opportunity.</h2>
+
+        <p>
+          Gangara Integrated Community Development Foundation (GICDF)
+          is a community-focused development initiative serving
+          Gangara and surrounding communities in Makarfi Local
+          Government Area, Kaduna State, Nigeria.
+        </p>
+
+        <p>
+          Our development priorities centre on creating opportunities
+          for young people and women, supporting education and skills,
+          encouraging community participation and promoting peaceful,
+          sustainable development.
+        </p>
+
+        <div class="about-highlight">
+          We believe sustainable development begins when communities
+          have a voice in identifying their needs and shaping solutions.
+        </div>
+
+        <a class="button button-green" href="#values">
+          Discover Our Values →
+        </a>
+      </div>
+
+      <div class="about-visual">
+        <div class="visual-mark" aria-hidden="true">🌱</div>
+
+        <h3>A stronger future starts with empowered communities.</h3>
+
+        <p>
+          Building opportunities through learning, collaboration,
+          inclusion and responsible community action.
+        </p>
+
+        <div class="visual-caption">
+          GICDF Community Connect · Gangara, Kaduna State, Nigeria
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MISSION AND VISION -->
+
+  <section class="section section-light" id="values">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="eyebrow">Our foundation</span>
+        <h2>What guides our work</h2>
+        <p>
+          Our approach is grounded in community participation,
+          equal opportunity and responsible development.
+        </p>
+      </div>
+
+      <div class="values-grid">
+
+        <article class="value-card">
+          <div class="value-icon" aria-hidden="true">🎯</div>
+          <h3>Our Mission</h3>
+          <p>
+            To support inclusive community development through
+            education, youth and women empowerment, skills,
+            livelihoods and community participation.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <div class="value-icon" aria-hidden="true">🌅</div>
+          <h3>Our Vision</h3>
+          <p>
+            Communities where people have meaningful opportunities
+            to learn, contribute, prosper and shape a better future.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <div class="value-icon" aria-hidden="true">⚖️</div>
+          <h3>Our Values</h3>
+          <p>
+            Integrity, inclusion, accountability, respect,
+            collaboration and responsible use of resources.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <div class="value-icon" aria-hidden="true">🌿</div>
+          <h3>Our Approach</h3>
+          <p>
+            Listening to communities, identifying local priorities,
+            building partnerships and promoting sustainable solutions.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMMES -->
+
+  <section class="section" id="programmes">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="eyebrow">Our development priorities</span>
+        <h2>Creating pathways to opportunity</h2>
+        <p>
+          We aim to promote practical initiatives that strengthen
+          individual capabilities and contribute to community wellbeing.
+        </p>
+      </div>
+
+      <div class="programme-grid">
+
+        <article class="programme-card">
+          <div class="programme-icon" aria-hidden="true">🎓</div>
+          <h3>Education & Learning</h3>
+          <p>
+            Promoting educational opportunities, learning support,
+            awareness and access to useful information.
+          </p>
+        </article>
+
+        <article class="programme-card">
+          <div class="programme-icon" aria-hidden="true">💻</div>
+          <h3>Digital Skills & Innovation</h3>
+          <p>
+            Encouraging digital literacy, technology education,
+            innovation and preparation for changing employment needs.
+          </p>
+        </article>
+
+        <article class="programme-card">
+          <div class="programme-icon" aria-hidden="true">🛠️</div>
+          <h3>Youth & Women Empowerment</h3>
+          <p>
+            Supporting skills development, entrepreneurship,
+            participation and pathways towards economic independence.
+          </p>
+        </article>
+
+        <article class="programme-card">
+          <div class="programme-icon" aria-hidden="true">🌾</div>
+          <h3>Livelihoods & Enterprise</h3>
+          <p>
+            Exploring opportunities for vocational development,
+            small enterprise support and sustainable livelihoods.
+          </p>
+        </article>
+
+        <article class="programme-card">
+          <div class="programme-icon" aria-hidden="true">🌍</div>
+          <h3>Environment & Sustainability</h3>
+          <p>
+            Encouraging environmental awareness, sanitation,
+            responsible resource use and community stewardship.
+          </p>
+        </article>
+
+        <article class="programme-card">
+          <div class="programme-icon" aria-hidden="true">🕊️</div>
+          <h3>Peacebuilding & Inclusion</h3>
+          <p>
+            Promoting dialogue, mutual understanding, peaceful
+            problem-solving and inclusive community participation.
+          </p>
+        </article>
+
+      </div>
+
+      <p style="text-align:center;margin-top:32px;color:var(--muted);font-size:.87rem">
+        Programme activities will be announced as they are confirmed
+        and resources become available.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+
+  <section class="section section-light" id="projects">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="eyebrow">Community priorities</span>
+        <h2>Turning community needs into action</h2>
+        <p>
+          We seek to identify local priorities, develop practical
+          initiatives and work with suitable partners to pursue
+          meaningful development outcomes.
+        </p>
+      </div>
+
+      <div class="project-grid">
+
+        <article class="project-card">
+          <div class="project-banner">
+            <span aria-hidden="true">📚</span>
+          </div>
+          <div class="project-body">
+            <span class="status-label">Development priority</span>
+            <h3>Education & Skills Opportunities</h3>
+            <p>
+              Exploring initiatives that can improve access to
+              learning, practical training and digital skills.
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-banner">
+            <span aria-hidden="true">🌱</span>
+          </div>
+          <div class="project-body">
+            <span class="status-label">Development priority</span>
+            <h3>Youth & Women Empowerment</h3>
+            <p>
+              Identifying opportunities for capacity building,
+              entrepreneurship and sustainable livelihoods.
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-banner">
+            <span aria-hidden="true">🏘️</span>
+          </div>
+          <div class="project-body">
+            <span class="status-label">Development priority</span>
+            <h3>Community Development</h3>
+            <p>
+              Encouraging community participation in identifying
+              needs and developing locally relevant solutions.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="transparency-note">
+        <strong>Our commitment to transparency:</strong>
+        The items displayed here represent development priorities,
+        not claims of completed, funded or currently operational
+        projects. Verified activities, funding information and
+        outcomes can be published as they become available.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PARTNERSHIPS -->
+
+  <section class="section" id="partnerships">
+    <div class="container">
+
+      <div class="partnership-box">
+
+        <div>
+          <span class="eyebrow">Work with us</span>
+
+          <h2>Partnerships that create lasting opportunities.</h2>
+
+          <p>
+            We welcome enquiries from credible NGOs, civil society
+            organisations, educational institutions, development
+            agencies, businesses and individuals interested in
+            community-led development.
+          </p>
+        </div>
+
+        <a class="button" href="#contact">
+          Explore Collaboration →
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VOLUNTEER -->
+
+  <section class="section section-light" id="volunteer">
+    <div class="container volunteer-grid">
+
+      <div class="volunteer-copy">
+        <span class="eyebrow">Get involved</span>
+
+        <h2>Your skills can contribute to a stronger community.</h2>
+
+        <p>
+          Community development requires people who are willing
+          to share knowledge, contribute ideas and support
+          responsible initiatives.
+        </p>
+
+        <p>
+          If you are interested in volunteering, tell us about
+          your skills and the areas where you would like to contribute.
+        </p>
+
+        <ul class="volunteer-benefits">
+          <li><span>✓</span> Share knowledge and practical skills.</li>
+          <li><span>✓</span> Support youth and community initiatives.</li>
+          <li><span>✓</span> Contribute ideas and local experience.</li>
+          <li><span>✓</span> Explore opportunities to collaborate.</li>
+        </ul>
+      </div>
+
+      <div class="form-card">
+        <h3>Volunteer Interest Form</h3>
+        <p class="form-intro">
+          Complete the form to express your interest in volunteering.
+        </p>
+
+        <form id="volunteerForm">
+
+          <div class="form-grid">
+
+            <div class="form-field">
+              <label for="fullName">Full name *</label>
+              <input
+                type="text"
+                id="fullName"
+                name="name"
+                autocomplete="name"
+                maxlength="100"
+                required>
+            </div>
+
+            <div class="form-field">
+              <label for="phone">Phone number *</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                autocomplete="tel"
+                maxlength="25"
+                required>
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                maxlength="150">
+            </div>
+
+            <div class="form-field">
+              <label for="community">Community *</label>
+              <input
+                type="text"
+                id="community"
+                name="community"
+                maxlength="100"
+                required>
+            </div>
+
+            <div class="form-field full">
+              <label for="interest">Area of interest *</label>
+              <select id="interest" name="interest" required>
+                <option value="">Select your preferred area</option>
+                <option value="education">Education and learning</option>
+                <option value="digital">Digital skills and innovation</option>
+                <option value="empowerment">Youth and women empowerment</option>
+                <option value="livelihoods">Livelihoods and enterprise</option>
+                <option value="environment">Environment and sustainability</option>
+                <option value="peacebuilding">Peacebuilding and inclusion</option>
+                <option value="communications">Communications and media</option>
+                <option value="administration">Administration and coordination</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-field full">
+              <label for="contribution">How would you like to contribute? *</label>
+              <textarea
+                id="contribution"
+                name="message"
+                maxlength="1000"
+                required></textarea>
+            </div>
+
+          </div>
+
+          <label class="consent" for="consent">
+            <input type="checkbox" id="consent" name="consent" required>
+            <span>
+              I consent to GICDF using the information I provide
+              to respond to my volunteering enquiry. I understand
+              that my information should be handled responsibly.
+            </span>
+          </label>
+
+          <button class="button button-green" type="submit">
+            Submit Volunteer Interest →
+          </button>
+
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+
+          <div class="form-notice">
+            <strong>Submission status:</strong>
+            This form is currently a front-end demonstration.
+            It does not transmit or store submissions. Secure
+            submission must be configured before collecting
+            real personal information.
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+
+  <section class="section" id="contact">
+    <div class="container contact-grid">
+
+      <div class="contact-copy">
+        <span class="eyebrow">Contact GICDF</span>
+
+        <h2>Let's work towards a stronger community.</h2>
+
+        <p>
+          For partnership enquiries, volunteering, community
+          development ideas and other organisational enquiries,
+          please use the foundation's verified official contact
+          channels once they have been configured.
+        </p>
+
+        <p>
+          We welcome constructive engagement from residents,
+          community stakeholders, development organisations
+          and potential partners.
+        </p>
+      </div>
+
+      <div class="contact-card">
+
+        <div class="contact-row">
+          <span class="contact-icon" aria-hidden="true">🏢</span>
+          <div>
+            <strong>Organisation</strong>
+            <p>Gangara Integrated Community Development Foundation</p>
+          </div>
+        </div>
+
+        <div class="contact-row">
+          <span class="contact-icon" aria-hidden="true">📍</span>
+          <div>
+            <strong>Location</strong>
+            <p>Gangara, Makarfi LGA, Kaduna State, Nigeria</p>
+          </div>
+        </div>
+
+        <div class="contact-row">
+          <span class="contact-icon" aria-hidden="true">✉️</span>
+          <div>
+            <strong>Email</strong>
+            <p>Official email address to be added after verification.</p>
+          </div>
+        </div>
+
+        <div class="contact-row">
+          <span class="contact-icon" aria-hidden="true">📞</span>
+          <div>
+            <strong>Telephone</strong>
+            <p>Official organisational contact to be confirmed.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer class="site-footer">
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <a class="brand" href="#home" aria-label="GICDF home">
+          <span class="brand-mark" aria-hidden="true">🌱</span>
+          <span class="brand-copy">
+            <strong>GICDF</strong>
+            <small>COMMUNITY CONNECT</small>
+          </span>
+        </a>
+
+        <p class="footer-description">
+          Working towards inclusive and sustainable community
+          development through education, empowerment, skills,
+          collaboration and local participation.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <a href="#about">About GICDF</a>
+        <a href="#values">Our Mission & Values</a>
+        <a href="#programmes">Our Programmes</a>
+        <a href="#projects">Community Priorities</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Get Involved</h3>
+        <a href="#volunteer">Volunteer</a>
+        <a href="#partnerships">Partnerships</a>
+        <a href="#contact">Contact Us</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <span>
+          © <span id="currentYear"></span>
+          Gangara Integrated Community Development Foundation.
+        </span>
+        <span>Community-led development · Kaduna State, Nigeria</span>
+      </div>
+    </div>
+
   </div>
-</section>
-</main><footer>
-  <p><strong>GICDF Community Connect</strong></p>
-  <p>Empowering Youths, Transforming Communities.</p>
-  <p>Gangara, Makarfi LGA, Kaduna State, Nigeria.</p>
-  <p class="small">A community development platform. All official programmes and project updates are subject to confirmation by the foundation.</p>
-  <p class="small">© <span id="year"></span> GICDF. All rights reserved.</p>
 </footer>
+
+<a class="back-to-top" id="backToTop" href="#home"
+   aria-label="Back to top">↑</a>
+
 <script>
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("volunteerForm").addEventListener("submit", function(event) {
-  event.preventDefault();
-  document.getElementById("vstatus").textContent =
-    "The form design is ready, but online submissions are not enabled yet. Please wait until the secure database is connected.";
-});
+  "use strict";
+
+  // Automatically update the copyright year.
+  document.getElementById("currentYear").textContent =
+    new Date().getFullYear();
+
+  // Accessible mobile navigation.
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  function closeMenu() {
+    navLinks.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Open navigation menu");
+    menuToggle.textContent = "☰";
+  }
+
+  menuToggle.addEventListener("click", function () {
+    const isOpen = navLinks.classList.toggle("open");
+
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute(
+      "aria-label",
+      isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
+
+    menuToggle.textContent = isOpen ? "✕" : "☰";
+  });
+
+  navLinks.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", closeMenu);
+  });
+
+  // Close the mobile menu when Escape is pressed.
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      closeMenu();
+    }
+  });
+
+  // Show the back-to-top button after scrolling.
+  const backToTop = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", function () {
+    backToTop.classList.toggle("visible", window.scrollY > 450);
+  }, { passive: true });
+
+  // Demonstration-only form handling.
+  // No personal information is transmitted or stored.
+  const volunteerForm = document.getElementById("volunteerForm");
+  const formStatus = document.getElementById("formStatus");
+
+  volunteerForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    if (!volunteerForm.checkValidity()) {
+      volunteerForm.reportValidity();
+      return;
+    }
+
+    formStatus.textContent =
+      "The form is valid, but online submission is not enabled yet. " +
+      "Please do not submit real personal information until secure " +
+      "form processing has been configured.";
+  });
 </script>
+
 </body>
 </html>
+```
