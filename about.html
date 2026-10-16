@@ -1,213 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learn about Gangara Integrated Community Development Foundation, our mission, vision, values and commitment to community development.">
-  <title>About Us | GICDF Community Connect</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | GICDF Community Connect</title>
+    <meta name="description" content="Learn about Gangara Integrated Community Development Foundation (GICDF), our history, mission, vision, and core values in Makarfi LGA, Kaduna State, Nigeria.">
+    <meta name="theme-color" content="#124734">
+
+    <!-- Open Graph / Social Sharing Meta Tags -->
+    <meta property="og:title" content="About Us | GICDF Community Connect">
+    <meta property="og:description" content="Discover our mission, vision, and commitment to community-led development in Gangara, Makarfi LGA, Kaduna State.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.gicdf.org/about.html">
+    <meta property="og:image" content="assets/images/gicdf-logo.png">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/favicon.png">
+    
+    <style>
+        /* Screen Reader Utility Class */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Page-Specific Styles for About */
+        .page-header {
+            padding: 64px 20px;
+            background: linear-gradient(135deg, #103f30, #176449);
+            color: #ffffff;
+            text-align: center;
+        }
+        .page-header .eyebrow {
+            display: inline-block;
+            color: #f4d47c;
+            font-weight: 700;
+            letter-spacing: 2px;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        .page-header h1 {
+            color: #ffffff;
+            font-size: clamp(2.2rem, 4vw, 3.2rem);
+            margin: 0 0 16px;
+        }
+        .page-header p {
+            color: #edf7f1;
+            font-size: 1.05rem;
+            max-width: 680px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        .content-section {
+            padding: 70px 20px;
+        }
+        .content-container {
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+        .about-story-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 48px;
+            align-items: center;
+        }
+        .about-story h2 {
+            color: #124734;
+            font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+            margin-top: 0;
+            line-height: 1.25;
+        }
+        .about-story p {
+            color: #505c54;
+            line-height: 1.85;
+            margin-bottom: 20px;
+        }
+        .vision-mission-cards {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+            margin-top: 50px;
+        }
+        .vm-card {
+            background: #f5f7f2;
+            border: 1px solid #e3e9e2;
+            border-radius: 14px;
+            padding: 32px;
+        }
+        .vm-card h3 {
+            color: #124734;
+            font-size: 1.35rem;
+            margin-top: 0;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .vm-card p {
+            color: #59645d;
+            line-height: 1.8;
+            margin: 0;
+        }
+        .values-section {
+            background: #f5f7f2;
+            padding: 70px 20px;
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+            margin-top: 36px;
+        }
+        .value-card {
+            background: #ffffff;
+            border: 1px solid #e5eae5;
+            border-radius: 12px;
+            padding: 28px;
+            box-shadow: 0 5px 20px rgba(18, 71, 52, 0.04);
+        }
+        .value-card .card-icon {
+            font-size: 2rem;
+            margin-bottom: 14px;
+        }
+        .value-card h3 {
+            color: #124734;
+            margin: 0 0 10px;
+            font-size: 1.2rem;
+        }
+        .value-card p {
+            color: #59645d;
+            line-height: 1.75;
+            margin: 0;
+        }
+        .section-heading {
+            max-width: 760px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .section-heading .eyebrow {
+            color: #98711b;
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+        }
+        .section-heading h2 {
+            color: #124734;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            margin: 10px 0;
+        }
+        .section-heading p {
+            color: #5c665f;
+            line-height: 1.8;
+        }
+        @media (max-width: 850px) {
+            .about-story-grid, .vision-mission-cards, .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<header class="site-header">
-  <div class="header-inner">
-    <a href="index.html" class="brand">
-      <img src="assets/images/gicdf-logo.png" alt="GICDF Logo"
-           onerror="this.style.display='none'">
-      <span>GICDF <small>Community Connect</small></span>
-    </a>
+    <!-- SITE HEADER -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html" aria-label="GICDF Home">
+                <img src="assets/images/gicdf-logo.png" alt="GICDF logo" onerror="this.style.display='none'">
+                <span>GICDF <small>Community Connect</small></span>
+            </a>
+            
+            <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-navigation">
+                <span aria-hidden="true">☰</span>
+                <span class="sr-only">Toggle navigation menu</span>
+            </button>
 
-    <button class="menu-toggle" aria-label="Open navigation menu"
-            aria-expanded="false">&#9776;</button>
+            <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html" aria-current="page">About</a>
+                <a href="programmes.html">Programmes</a>
+                <a href="projects.html">Projects</a>
+                <a href="partnerships.html">Partnerships</a>
+                <a href="news.html">News</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="governance.html">Governance</a>
+                <a href="contact.html">Contact</a>
+                <a class="nav-cta" href="get-involved.html">Get Involved</a>
+            </nav>
+        </div>
+    </header>
 
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="about.html" class="active">About Us</a>
-      <a href="programmes.html">Programmes</a>
-      <a href="projects.html">Projects</a>
-      <a href="partnerships.html">Partnerships</a>
-      <a href="get-involved.html">Get Involved</a>
-      <a href="news.html">News</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="governance.html">Governance</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+    <main>
+        <!-- PAGE HEADER -->
+        <header class="page-header">
+            <span class="eyebrow">Who We Are</span>
+            <h1>About GICDF</h1>
+            <p>Rooted in Gangara, Makarfi LGA, Kaduna State — committed to sustainable community development, youth empowerment, and lasting social progress.</p>
+        </header>
 
-<main>
-  <section class="page-banner">
-    <div class="container">
-      <p>Who We Are</p>
-      <h1>About GICDF</h1>
-      <p>Building stronger communities through opportunity, participation and sustainable development.</p>
-    </div>
-  </section>
+        <!-- OUR STORY & BACKGROUND -->
+        <section class="content-section">
+            <div class="content-container">
+                <div class="about-story-grid">
+                    <div class="about-story">
+                        <span style="color: #98711b; font-weight: 800; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1.8px;">Our Background</span>
+                        <h2>Building Progress from the Ground Up</h2>
+                        <p>
+                            Gangara Integrated Community Development Foundation (GICDF) was established out of a shared vision to address grassroots socio-economic challenges, promote educational advancement, and create meaningful opportunities for young people in Gangara and surrounding communities within Makarfi Local Government Area of Kaduna State, Nigeria.
+                        </p>
+                        <p>
+                            We recognize that real development cannot be imposed from the outside; it must be cultivated from within. By listening closely to community members, fostering local leadership, and establishing strategic partnerships, GICDF acts as a catalyst for inclusive growth, peacebuilding, and long-term self-reliance.
+                        </p>
+                    </div>
+                    <div style="background: #f5f7f2; border: 1px solid #e3e9e2; border-radius: 16px; padding: 36px;">
+                        <h3 style="color: #124734; margin-top: 0; font-size: 1.3rem;">At a Glance</h3>
+                        <ul style="padding-left: 20px; color: #505c54; line-height: 2; margin-bottom: 0;">
+                            <li><strong>Name:</strong> Gangara Integrated Community Development Foundation (GICDF)</li>
+                            <li><strong>Location:</strong> Gangara, Makarfi LGA, Kaduna State, Nigeria</li>
+                            <li><strong>Focus:</strong> Youth Empowerment, Education, Peacebuilding, & Community Development</li>
+                            <li><strong>Approach:</strong> Community-led participation and stakeholder collaboration</li>
+                        </ul>
+                    </div>
+                </div>
 
-  <section class="section">
-    <div class="container">
-      <div class="section-heading">
-        <span class="eyebrow">Our Story</span>
-        <h2>Community Development Begins with People</h2>
-      </div>
+                <!-- VISION & MISSION -->
+                <div class="vision-mission-cards">
+                    <div class="vm-card">
+                        <h3><span aria-hidden="true">🔭</span> Our Vision</h3>
+                        <p>
+                            To build a vibrant, self-reliant, and peaceful community where every individual—especially young people—has equal access to opportunities, quality education, and the tools required to lead fulfilling, productive lives.
+                        </p>
+                    </div>
+                    <div class="vm-card">
+                        <h3><span aria-hidden="true">🎯</span> Our Mission</h3>
+                        <p>
+                            To empower youth, strengthen community participation, advance education, and promote social cohesion through grassroots engagement, practical skill-building, and collaborative development initiatives.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <p>
-        Gangara Integrated Community Development Foundation (GICDF) is a
-        community-focused initiative based in Gangara, Makarfi Local Government
-        Area, Kaduna State, Nigeria.
-      </p>
+        <!-- CORE VALUES -->
+        <section class="values-section">
+            <div class="content-container">
+                <div class="section-heading">
+                    <span class="eyebrow">Our Principles</span>
+                    <h2>What Guides Everything We Do</h2>
+                    <p>Our work is anchored on core ethical principles that foster trust, respect, and enduring collaboration across the community.</p>
+                </div>
+                <div class="values-grid">
+                    <article class="value-card">
+                        <div class="card-icon" aria-hidden="true">🤝</div>
+                        <h3>Community Participation</h3>
+                        <p>We actively listen to local voices, ensuring that community members are co-creators in the decisions, planning, and execution of projects that impact their lives.</p>
+                    </article>
+                    <article class="value-card">
+                        <div class="card-icon" aria-hidden="true">⚖️</div>
+                        <h3>Integrity & Accountability</h3>
+                        <p>We maintain transparency in our operations, honoring public trust through responsible stewardship of resources and ethical leadership.</p>
+                    </article>
+                    <article class="value-card">
+                        <div class="card-icon" aria-hidden="true">🌍</div>
+                        <h3>Inclusion & Unity</h3>
+                        <p>We embrace diversity and foster social cohesion, building bridges across different groups to ensure fair and equitable access to opportunities for all.</p>
+                    </article>
+                    <article class="value-card">
+                        <div class="card-icon" aria-hidden="true">🌱</div>
+                        <h3>Sustainable Impact</h3>
+                        <p>We design and advocate for practical, long-term solutions that address root challenges rather than temporary fixes, promoting lasting self-reliance.</p>
+                    </article>
+                    <article class="value-card">
+                        <div class="card-icon" aria-hidden="true">💡</div>
+                        <h3>Innovation & Learning</h3>
+                        <p>We encourage creative thinking, digital literacy, and adaptive learning strategies to help our youth and community thrive in a rapidly changing world.</p>
+                    </article>
+                    <article class="value-card">
+                        <div class="card-icon" aria-hidden="true">🤝</div>
+                        <h3>Collaborative Partnership</h3>
+                        <p>We believe in the power of partnership—working alongside NGOs, government agencies, and well-meaning individuals to maximize our reach and impact.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
 
-      <p>
-        We are committed to supporting inclusive community development by
-        encouraging young people, strengthening local participation and
-        promoting practical responses to the needs and aspirations of our
-        communities.
-      </p>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>
+                <h3>GICDF Community Connect</h3>
+                <p>Gangara Integrated Community Development Foundation</p>
+                <p>Working towards inclusive opportunities and stronger communities.</p>
+            </div>
+            <div>
+                <h3>Explore</h3>
+                <p><a href="about.html">About Us</a></p>
+                <p><a href="programmes.html">Programmes</a></p>
+                <p><a href="projects.html">Projects</a></p>
+                <p><a href="partnerships.html">Partnerships</a></p>
+            </div>
+            <div>
+                <h3>Connect</h3>
+                <p><a href="get-involved.html">Get Involved</a></p>
+                <p><a href="governance.html">Governance</a></p>
+                <p><a href="news.html">News and Updates</a></p>
+                <p><a href="contact.html">Contact Us</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span class="current-year">2026</span> GICDF Community Connect. All rights reserved.</p>
+            <p>Gangara, Makarfi LGA, Kaduna State, Nigeria.</p>
+        </div>
+    </footer>
 
-      <p>
-        Our development priorities include education, youth empowerment,
-        skills acquisition, community welfare, environmental responsibility,
-        peacebuilding and accountable leadership. We aim to work constructively
-        with community members, institutions, civil society organisations and
-        development partners to identify needs and pursue sustainable solutions.
-      </p>
-
-      <p>
-        We believe lasting progress is achieved when communities participate
-        in shaping their future and when opportunities are accessible to people
-        regardless of background.
-      </p>
-    </div>
-  </section>
-
-  <section class="section section-light">
-    <div class="container cards">
-      <article class="card">
-        <h3>Our Vision</h3>
-        <p>
-          To contribute to peaceful, inclusive and thriving communities where
-          young people and families can access opportunities and participate
-          meaningfully in development.
-        </p>
-      </article>
-
-      <article class="card">
-        <h3>Our Mission</h3>
-        <p>
-          To promote community-led development through youth empowerment,
-          education, skills development, social welfare, civic participation
-          and constructive partnerships.
-        </p>
-      </article>
-
-      <article class="card">
-        <h3>Our Purpose</h3>
-        <p>
-          To help connect community needs with ideas, people, resources and
-          partnerships that can support practical and sustainable progress.
-        </p>
-      </article>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-heading">
-        <span class="eyebrow">What Guides Us</span>
-        <h2>Our Core Values</h2>
-        <p>The principles we aim to uphold in our work and relationships.</p>
-      </div>
-
-      <div class="cards">
-        <article class="card">
-          <h3>Integrity</h3>
-          <p>Acting honestly and responsibly while encouraging transparency in our activities.</p>
-        </article>
-
-        <article class="card">
-          <h3>Inclusion</h3>
-          <p>Encouraging participation and opportunity for people across our communities.</p>
-        </article>
-
-        <article class="card">
-          <h3>Service</h3>
-          <p>Putting community needs, dignity and wellbeing at the centre of our efforts.</p>
-        </article>
-
-        <article class="card">
-          <h3>Collaboration</h3>
-          <p>Working with residents, institutions and partners to pursue shared goals.</p>
-        </article>
-
-        <article class="card">
-          <h3>Accountability</h3>
-          <p>Promoting responsible decision-making, clear communication and proper stewardship of resources.</p>
-        </article>
-
-        <article class="card">
-          <h3>Sustainability</h3>
-          <p>Supporting practical approaches that can create lasting community benefits.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-light">
-    <div class="container">
-      <div class="section-heading">
-        <span class="eyebrow">Our Approach</span>
-        <h2>How We Aim to Make a Difference</h2>
-      </div>
-
-      <div class="cards">
-        <article class="card">
-          <h3>Listen to Communities</h3>
-          <p>Engage residents to understand priorities, challenges and local ideas.</p>
-        </article>
-
-        <article class="card">
-          <h3>Develop Practical Responses</h3>
-          <p>Help turn identified needs into realistic programmes, proposals and community initiatives.</p>
-        </article>
-
-        <article class="card">
-          <h3>Build Partnerships</h3>
-          <p>Connect with organisations and individuals whose expertise and resources align with community priorities.</p>
-        </article>
-
-        <article class="card">
-          <h3>Promote Accountability</h3>
-          <p>Encourage clear responsibilities, responsible resource management and honest reporting.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container text-center">
-      <h2>Be Part of Community Progress</h2>
-      <p>Your skills, ideas, time and partnerships can help support meaningful development.</p>
-      <a href="get-involved.html" class="btn btn-primary">Get Involved</a>
-      <a href="contact.html" class="btn btn-secondary">Contact Us</a>
-    </div>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <p><strong>Gangara Integrated Community Development Foundation (GICDF)</strong></p>
-    <p>Gangara, Makarfi LGA, Kaduna State, Nigeria.</p>
-    <p>
-      <a href="index.html">Home</a> |
-      <a href="about.html">About Us</a> |
-      <a href="programmes.html">Programmes</a> |
-      <a href="projects.html">Projects</a> |
-      <a href="contact.html">Contact</a>
-    </p>
-    <p>&copy; <span class="current-year">2026</span> GICDF. All rights reserved.</p>
-  </div>
-</footer>
-
-<script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
-</html>
+  </html>
+                  
