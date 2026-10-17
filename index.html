@@ -2,1737 +2,1200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>GICDF Community Connect | Building Stronger Communities</title>
-
-    <meta name="description" content="Gangara Integrated Community Development Foundation promotes youth empowerment, education, community development, peacebuilding, environmental sustainability, and equal opportunities in Gangara, Makarfi LGA, Kaduna State, Nigeria.">
-
-    <meta name="keywords" content="GICDF, Gangara, community development, youth empowerment, education, skills development, Kaduna State, Nigeria, NGO">
-
-    <meta name="author" content="Gangara Integrated Community Development Foundation">
-
-    <meta name="theme-color" content="#075c3b">
-
-    <!-- Website logo and favicon -->
-    <link rel="icon" type="image/png" href="Assets/images/gicdf-logo.png">
-    <link rel="apple-touch-icon" href="Assets/images/gicdf-logo.png">
-
-    <!-- Social media preview -->
-    <meta property="og:title" content="GICDF Community Connect">
-    <meta property="og:description" content="Building stronger communities through youth empowerment, education, opportunity, and sustainable development.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://edreessaleesu1.github.io/GICDF-Community-Connect/Assets/images/gicdf-logo.png">
-    <meta property="og:url" content="https://edreessaleesu1.github.io/GICDF-Community-Connect/">
-
-    <style>
-        :root {
-            --green: #075c3b;
-            --green-dark: #043d29;
-            --green-light: #eaf5ee;
-            --gold: #d9a52e;
-            --gold-light: #fff5d8;
-            --white: #ffffff;
-            --text: #26352d;
-            --muted: #66746b;
-            --background: #f7faf7;
-            --border: #e0e9e2;
-            --shadow: 0 12px 35px rgba(0, 50, 30, 0.09);
-            --radius: 16px;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 90px;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            color: var(--text);
-            background: var(--white);
-            line-height: 1.7;
-        }
-
-        img {
-            display: block;
-            max-width: 100%;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        button {
-            font: inherit;
-        }
-
-        .container {
-            width: min(1140px, 92%);
-            margin: 0 auto;
-        }
-
-        /* Announcement bar */
-
-        .topbar {
-            background: var(--green-dark);
-            color: var(--white);
-            font-size: 13px;
-            padding: 8px 0;
-        }
-
-        .topbar-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .topbar strong {
-            color: #f4cf70;
-        }
-
-        /* Header */
-
-        header {
-            background: var(--white);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 3px 18px rgba(0, 0, 0, 0.06);
-        }
-
-        .navbar {
-            min-height: 84px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            min-width: 0;
-        }
-
-        .brand img {
-            width: 64px;
-            height: 64px;
-            object-fit: contain;
-            flex-shrink: 0;
-        }
-
-        .brand-text {
-            line-height: 1.25;
-        }
-
-        .brand-text strong {
-            display: block;
-            color: var(--green);
-            font-size: 17px;
-            letter-spacing: 0.3px;
-        }
-
-        .brand-text span {
-            display: block;
-            font-size: 11px;
-            color: var(--muted);
-            margin-top: 4px;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 23px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            font-size: 14px;
-            font-weight: 600;
-            transition: color 0.2s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--green);
-        }
-
-        .nav-links .nav-cta {
-            background: var(--green);
-            color: var(--white);
-            padding: 11px 17px;
-            border-radius: 7px;
-        }
-
-        .nav-links .nav-cta:hover {
-            background: var(--green-dark);
-            color: var(--white);
-        }
-
-        .menu-toggle {
-            display: none;
-            background: var(--green);
-            color: var(--white);
-            border: none;
-            border-radius: 7px;
-            padding: 9px 12px;
-            cursor: pointer;
-        }
-
-        /* Buttons */
-
-        .btn {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            gap: 8px;
-            padding: 13px 23px;
-            border-radius: 7px;
-            font-weight: 700;
-            font-size: 14px;
-            transition: transform 0.2s ease, background 0.2s ease;
-            border: 2px solid transparent;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-        }
-
-        .btn-primary {
-            background: var(--gold);
-            color: #172b1e;
-        }
-
-        .btn-primary:hover {
-            background: #edbd49;
-        }
-
-        .btn-outline {
-            border-color: rgba(255, 255, 255, 0.75);
-            color: var(--white);
-        }
-
-        .btn-outline:hover {
-            background: rgba(255, 255, 255, 0.12);
-        }
-
-        .btn-green {
-            background: var(--green);
-            color: var(--white);
-        }
-
-        .btn-green:hover {
-            background: var(--green-dark);
-        }
-
-        /* Hero */
-
-        .hero {
-            position: relative;
-            overflow: hidden;
-            background:
-                radial-gradient(circle at 90% 15%, rgba(217, 165, 46, 0.20), transparent 28%),
-                linear-gradient(125deg, #043d29 0%, #075c3b 60%, #0c7049 100%);
-            color: var(--white);
-            padding: 95px 0 100px;
-        }
-
-        .hero::after {
-            content: "";
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 50%;
-            right: -130px;
-            bottom: -230px;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 790px;
-        }
-
-        .eyebrow {
-            display: inline-block;
-            color: #f4d47e;
-            text-transform: uppercase;
-            font-weight: 700;
-            font-size: 12px;
-            letter-spacing: 2px;
-            margin-bottom: 18px;
-        }
-
-        .hero h1 {
-            font-size: clamp(35px, 5.2vw, 60px);
-            line-height: 1.13;
-            margin-bottom: 24px;
-            max-width: 800px;
-        }
-
-        .hero h1 span {
-            color: #f2c65d;
-        }
-
-        .hero p {
-            font-size: 17px;
-            color: rgba(255, 255, 255, 0.88);
-            max-width: 680px;
-            margin-bottom: 30px;
-        }
-
-        .hero-actions {
-            display: flex;
-            gap: 14px;
-            flex-wrap: wrap;
-        }
-
-        .hero-note {
-            margin-top: 28px;
-            font-size: 12px;
-            color: rgba(255, 255, 255, 0.72);
-        }
-
-        /* Impact strip */
-
-        .impact-strip {
-            background: var(--white);
-            position: relative;
-            margin-top: -1px;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .impact-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            padding: 27px 0;
-            gap: 25px;
-        }
-
-        .impact-item {
-            text-align: center;
-            padding: 8px 18px;
-        }
-
-        .impact-item strong {
-            display: block;
-            color: var(--green);
-            font-size: 17px;
-            margin-bottom: 4px;
-        }
-
-        .impact-item span {
-            color: var(--muted);
-            font-size: 13px;
-        }
-
-        /* General sections */
-
-        section {
-            padding: 82px 0;
-        }
-
-        .section-heading {
-            max-width: 720px;
-            margin: 0 auto 42px;
-            text-align: center;
-        }
-
-        .section-label {
-            display: inline-block;
-            color: var(--green);
-            font-size: 12px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1.7px;
-            margin-bottom: 10px;
-        }
-
-        .section-heading h2 {
-            color: var(--green-dark);
-            font-size: clamp(27px, 3.5vw, 38px);
-            line-height: 1.25;
-            margin-bottom: 15px;
-        }
-
-        .section-heading p {
-            color: var(--muted);
-            font-size: 15px;
-        }
-
-        /* About */
-
-        .about {
-            background: var(--background);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1.05fr 0.95fr;
-            gap: 55px;
-            align-items: center;
-        }
-
-        .about-copy .section-label {
-            margin-bottom: 12px;
-        }
-
-        .about-copy h2 {
-            color: var(--green-dark);
-            font-size: clamp(27px, 3.5vw, 38px);
-            line-height: 1.25;
-            margin-bottom: 20px;
-        }
-
-        .about-copy p {
-            color: var(--muted);
-            margin-bottom: 17px;
-        }
-
-        .about-points {
-            list-style: none;
-            margin: 23px 0 28px;
-        }
-
-        .about-points li {
-            margin: 11px 0;
-            padding-left: 29px;
-            position: relative;
-            font-weight: 600;
-            font-size: 14px;
-        }
-
-        .about-points li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            top: 1px;
-            background: var(--green-light);
-            color: var(--green);
-            width: 21px;
-            height: 21px;
-            border-radius: 50%;
-            display: grid;
-            place-items: center;
-            font-size: 12px;
-        }
-
-        .about-card {
-            background: var(--white);
-            border-radius: var(--radius);
-            padding: 35px;
-            box-shadow: var(--shadow);
-            border-top: 5px solid var(--gold);
-        }
-
-        .about-card h3 {
-            color: var(--green);
-            font-size: 23px;
-            margin-bottom: 13px;
-        }
-
-        .about-card p {
-            color: var(--muted);
-            margin-bottom: 22px;
-        }
-
-        .principle {
-            padding: 17px 0;
-            border-top: 1px solid var(--border);
-        }
-
-        .principle strong {
-            display: block;
-            color: var(--green-dark);
-            margin-bottom: 4px;
-        }
-
-        .principle span {
-            color: var(--muted);
-            font-size: 14px;
-        }
-
-        /* Programmes */
-
-        .programme-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .programme-card {
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 29px;
-            background: var(--white);
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
-        }
-
-        .programme-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow);
-        }
-
-        .programme-icon {
-            width: 53px;
-            height: 53px;
-            border-radius: 12px;
-            display: grid;
-            place-items: center;
-            background: var(--green-light);
-            font-size: 25px;
-            margin-bottom: 22px;
-        }
-
-        .programme-card h3 {
-            color: var(--green-dark);
-            font-size: 19px;
-            margin-bottom: 12px;
-        }
-
-        .programme-card p {
-            color: var(--muted);
-            font-size: 14px;
-            margin-bottom: 20px;
-        }
-
-        .text-link {
-            color: var(--green);
-            font-size: 14px;
-            font-weight: 800;
-        }
-
-        .text-link:hover {
-            color: #0c8755;
-        }
-
-        /* Values */
-
-        .values {
-            background: var(--green-light);
-        }
-
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .value-card {
-            text-align: center;
-            background: var(--white);
-            padding: 27px 20px;
-            border-radius: 12px;
-        }
-
-        .value-card .value-icon {
-            font-size: 27px;
-            margin-bottom: 12px;
-        }
-
-        .value-card h3 {
-            color: var(--green-dark);
-            font-size: 16px;
-            margin-bottom: 8px;
-        }
-
-        .value-card p {
-            color: var(--muted);
-            font-size: 13px;
-        }
-
-        /* Approach */
-
-        .approach-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .approach-card {
-            padding: 25px 24px;
-            border-left: 3px solid var(--gold);
-            background: var(--background);
-            border-radius: 0 12px 12px 0;
-        }
-
-        .approach-card h3 {
-            color: var(--green-dark);
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .approach-card p {
-            color: var(--muted);
-            font-size: 14px;
-        }
-
-        /* Partnership banner */
-
-        .partnership {
-            padding: 0 0 82px;
-        }
-
-        .partnership-box {
-            background: linear-gradient(115deg, var(--green-dark), var(--green));
-            color: var(--white);
-            border-radius: 20px;
-            padding: 48px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 30px;
-        }
-
-        .partnership-box .section-label {
-            color: #f4d47e;
-        }
-
-        .partnership-box h2 {
-            font-size: clamp(25px, 3vw, 35px);
-            line-height: 1.25;
-            margin-bottom: 12px;
-        }
-
-        .partnership-box p {
-            color: rgba(255, 255, 255, 0.82);
-            max-width: 650px;
-            font-size: 14px;
-        }
-
-        .partnership-box .btn {
-            flex-shrink: 0;
-        }
-
-        /* Contact */
-
-        .contact {
-            background: var(--background);
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 0.9fr 1.1fr;
-            gap: 45px;
-            align-items: start;
-        }
-
-        .contact-info h3 {
-            color: var(--green-dark);
-            font-size: 25px;
-            margin-bottom: 15px;
-        }
-
-        .contact-info > p {
-            color: var(--muted);
-            margin-bottom: 25px;
-        }
-
-        .contact-item {
-            display: flex;
-            gap: 14px;
-            align-items: flex-start;
-            margin: 22px 0;
-        }
-
-        .contact-item .contact-icon {
-            background: var(--green-light);
-            border-radius: 10px;
-            width: 42px;
-            height: 42px;
-            display: grid;
-            place-items: center;
-            flex-shrink: 0;
-        }
-
-        .contact-item strong {
-            display: block;
-            color: var(--green-dark);
-            font-size: 14px;
-        }
-
-        .contact-item span,
-        .contact-item a {
-            color: var(--muted);
-            font-size: 14px;
-            overflow-wrap: anywhere;
-        }
-
-        .contact-card {
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 32px;
-        }
-
-        .contact-card h3 {
-            color: var(--green-dark);
-            font-size: 22px;
-            margin-bottom: 12px;
-        }
-
-        .contact-card p {
-            color: var(--muted);
-            font-size: 14px;
-            margin-bottom: 22px;
-        }
-
-        .contact-actions {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .contact-notice {
-            margin-top: 22px;
-            background: var(--gold-light);
-            color: #674b0d;
-            padding: 14px;
-            border-radius: 8px;
-            font-size: 13px;
-        }
-
-        /* Footer */
-
-        footer {
-            background: #032e20;
-            color: var(--white);
-            padding: 55px 0 20px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1.4fr 0.8fr 0.8fr;
-            gap: 40px;
-            padding-bottom: 38px;
-        }
-
-        .footer-brand {
-            display: flex;
-            align-items: center;
-            gap: 13px;
-            margin-bottom: 18px;
-        }
-
-        .footer-brand img {
-            width: 62px;
-            height: 62px;
-            object-fit: contain;
-            background: var(--white);
-            border-radius: 50%;
-            padding: 4px;
-        }
-
-        .footer-brand strong {
-            font-size: 16px;
-            line-height: 1.35;
-        }
-
-        .footer-about p {
-            color: rgba(255, 255, 255, 0.73);
-            font-size: 13px;
-            max-width: 380px;
-        }
-
-        .footer-column h4 {
-            color: #f2c65d;
-            font-size: 15px;
-            margin-bottom: 17px;
-        }
-
-        .footer-column ul {
-            list-style: none;
-        }
-
-        .footer-column li {
-            margin: 10px 0;
-        }
-
-        .footer-column a {
-            color: rgba(255, 255, 255, 0.75);
-            font-size: 13px;
-        }
-
-        .footer-column a:hover {
-            color: var(--white);
-        }
-
-        .footer-bottom {
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.14);
-            display: flex;
-            justify-content: space-between;
-            gap: 15px;
-            flex-wrap: wrap;
-            color: rgba(255, 255, 255, 0.62);
-            font-size: 12px;
-        }
-
-        .back-to-top {
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
-            width: 43px;
-            height: 43px;
-            border: none;
-            border-radius: 50%;
-            background: var(--gold);
-            color: #173322;
-            font-size: 20px;
-            font-weight: 800;
-            cursor: pointer;
-            box-shadow: var(--shadow);
-            display: none;
-            z-index: 900;
-        }
-
-        .back-to-top.visible {
-            display: block;
-        }
-
-        /* Tablet */
-
-        @media (max-width: 950px) {
-            .nav-links {
-                gap: 14px;
-            }
-
-            .nav-links a {
-                font-size: 13px;
-            }
-
-            .brand-text strong {
-                font-size: 15px;
-            }
-
-            .brand img {
-                width: 54px;
-                height: 54px;
-            }
-
-            .about-grid {
-                gap: 30px;
-            }
-
-            .programme-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .values-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .footer-about {
-                grid-column: 1 / -1;
-            }
-        }
-
-        /* Mobile */
-
-        @media (max-width: 720px) {
-            .topbar-inner {
-                justify-content: center;
-                text-align: center;
-            }
-
-            .navbar {
-                min-height: 76px;
-            }
-
-            .brand {
-                gap: 9px;
-            }
-
-            .brand img {
-                width: 48px;
-                height: 48px;
-            }
-
-            .brand-text strong {
-                font-size: 13px;
-            }
-
-            .brand-text span {
-                font-size: 10px;
-            }
-
-            .menu-toggle {
-                display: block;
-                flex-shrink: 0;
-            }
-
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: var(--white);
-                padding: 16px 5% 22px;
-                box-shadow: 0 10px 18px rgba(0, 0, 0, 0.08);
-                flex-direction: column;
-                align-items: stretch;
-                gap: 0;
-            }
-
-            .nav-links.open {
-                display: flex;
-            }
-
-            .nav-links li {
-                border-bottom: 1px solid var(--border);
-            }
-
-            .nav-links li:last-child {
-                border-bottom: none;
-                padding-top: 12px;
-            }
-
-            .nav-links a {
-                display: block;
-                padding: 11px 0;
-                font-size: 14px;
-            }
-
-            .nav-links .nav-cta {
-                text-align: center;
-            }
-
-            .hero {
-                padding: 70px 0 75px;
-            }
-
-            .hero p {
-                font-size: 15px;
-            }
-
-            .hero-actions {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            .hero-actions .btn {
-                width: 100%;
-            }
-
-            .impact-grid {
-                grid-template-columns: 1fr;
-                gap: 8px;
-                padding: 20px 0;
-            }
-
-            .impact-item {
-                padding: 9px 10px;
-            }
-
-            section {
-                padding: 62px 0;
-            }
-
-            .about-grid,
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .about-card {
-                padding: 26px;
-            }
-
-            .programme-grid,
-            .approach-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .values-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 12px;
-            }
-
-            .value-card {
-                padding: 22px 12px;
-            }
-
-            .partnership {
-                padding-bottom: 62px;
-            }
-
-            .partnership-box {
-                padding: 30px 24px;
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .contact-card {
-                padding: 24px;
-            }
-
-            .contact-actions {
-                flex-direction: column;
-            }
-
-            .contact-actions .btn {
-                width: 100%;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 25px 18px;
-            }
-
-            .footer-about {
-                grid-column: 1 / -1;
-            }
-
-            .footer-brand {
-                align-items: flex-start;
-            }
-
-            .footer-brand img {
-                width: 51px;
-                height: 51px;
-            }
-
-            .footer-brand strong {
-                font-size: 14px;
-            }
-        }
-
-        @media (max-width: 380px) {
-            .brand-text strong {
-                font-size: 11px;
-            }
-
-            .brand-text span {
-                font-size: 9px;
-            }
-
-            .brand img {
-                width: 40px;
-                height: 40px;
-            }
-
-            .menu-toggle {
-                padding: 8px;
-                font-size: 12px;
-            }
-
-            .values-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            html {
-                scroll-behavior: auto;
-            }
-
-            *,
-            *::before,
-            *::after {
-                transition: none !important;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GICDF Community Connect | Building Stronger Communities</title>
+
+  <meta name="description" content="Gangara Integrated Community Development Foundation supports youth empowerment, education, community development, peacebuilding and sustainable opportunities.">
+
+  <meta name="theme-color" content="#104d35">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --green: #104d35;
+      --green-dark: #0a3525;
+      --green-light: #eaf3ed;
+      --gold: #d9ad50;
+      --cream: #faf9f5;
+      --white: #ffffff;
+      --text: #26352d;
+      --muted: #68756d;
+      --border: #e5e9e5;
+      --shadow: 0 15px 45px rgba(16, 77, 53, 0.10);
+      --radius: 18px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: "Manrope", sans-serif;
+      line-height: 1.2;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(1160px, 90%);
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--green);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .section {
+      padding: 88px 0;
+    }
+
+    .section-heading {
+      max-width: 680px;
+      margin-bottom: 42px;
+    }
+
+    .section-heading h2 {
+      color: var(--green-dark);
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      margin-bottom: 16px;
+      letter-spacing: -1.2px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 22px;
+      border-radius: 7px;
+      font-weight: 700;
+      font-size: 0.94rem;
+      transition: 0.25s ease;
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      color: var(--white);
+      background: var(--green);
+    }
+
+    .btn-primary:hover {
+      background: var(--green-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-gold {
+      color: var(--green-dark);
+      background: var(--gold);
+    }
+
+    .btn-gold:hover {
+      background: #e7bf68;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      color: var(--green);
+      border-color: rgba(16, 77, 53, 0.3);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: var(--green-light);
+    }
+
+    /* Navigation */
+
+    .topbar {
+      background: var(--green-dark);
+      color: rgba(255,255,255,0.9);
+      padding: 8px 0;
+      font-size: 0.78rem;
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.97);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-inner {
+      min-height: 86px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 190px;
+    }
+
+    .brand img {
+      width: 61px;
+      height: 61px;
+      object-fit: contain;
+    }
+
+    .brand-name {
+      font-family: "Manrope", sans-serif;
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: var(--green-dark);
+      line-height: 1.25;
+    }
+
+    .brand-name small {
+      display: block;
+      color: var(--muted);
+      font-size: 0.67rem;
+      font-weight: 600;
+      margin-top: 4px;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #37473c;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-cta {
+      white-space: nowrap;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: transparent;
+      color: var(--green);
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    /* Hero */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      color: var(--white);
+      background:
+        linear-gradient(90deg, rgba(5, 36, 24, 0.92) 0%, rgba(5, 36, 24, 0.75) 48%, rgba(5, 36, 24, 0.18) 100%),
+        url("https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=2000&q=85") center/cover no-repeat;
+      min-height: 590px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content {
+      max-width: 730px;
+      padding: 100px 0;
+    }
+
+    .hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #f0d58f;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 23px;
+    }
+
+    .hero-label::before {
+      content: "";
+      width: 35px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 800;
+      letter-spacing: -2.5px;
+      line-height: 1.08;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+    }
+
+    .hero p {
+      max-width: 580px;
+      color: rgba(255,255,255,0.88);
+      font-size: 1.08rem;
+      margin-bottom: 32px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .hero .btn-outline {
+      border-color: rgba(255,255,255,0.65);
+      color: var(--white);
+    }
+
+    .hero .btn-outline:hover {
+      color: var(--green-dark);
+      background: var(--white);
+    }
+
+    /* Introduction */
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 75px;
+      align-items: center;
+    }
+
+    .intro-image {
+      position: relative;
+      padding: 0 20px 20px 0;
+    }
+
+    .intro-image img {
+      width: 100%;
+      height: 390px;
+      object-fit: cover;
+      border-radius: var(--radius);
+    }
+
+    .intro-image::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 45%;
+      height: 42%;
+      border-right: 7px solid var(--gold);
+      border-bottom: 7px solid var(--gold);
+      border-radius: 0 0 12px 0;
+      z-index: -1;
+    }
+
+    .intro-copy h2 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      letter-spacing: -1.2px;
+      color: var(--green-dark);
+      margin-bottom: 20px;
+    }
+
+    .intro-copy p {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 800;
+      color: var(--green);
+      margin-top: 6px;
+    }
+
+    .text-link:hover {
+      color: #98721e;
+    }
+
+    /* Focus areas */
+
+    .focus-section {
+      background: var(--cream);
+    }
+
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .focus-card {
+      padding: 30px 24px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .focus-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+    }
+
+    .focus-icon {
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      background: var(--green-light);
+      color: var(--green);
+      border-radius: 14px;
+      font-size: 1.7rem;
+      margin-bottom: 23px;
+    }
+
+    .focus-card h3 {
+      color: var(--green-dark);
+      font-size: 1.12rem;
+      margin-bottom: 13px;
+    }
+
+    .focus-card p {
+      color: var(--muted);
+      font-size: 0.91rem;
+      margin-bottom: 18px;
+    }
+
+    .focus-card a {
+      color: var(--green);
+      font-size: 0.88rem;
+      font-weight: 800;
+    }
+
+    /* Work */
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .work-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--white);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .work-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .work-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .work-content {
+      padding: 25px;
+    }
+
+    .work-tag {
+      display: inline-block;
+      color: var(--green);
+      background: var(--green-light);
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      margin-bottom: 13px;
+    }
+
+    .work-content h3 {
+      font-size: 1.2rem;
+      color: var(--green-dark);
+      margin-bottom: 12px;
+    }
+
+    .work-content p {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-bottom: 16px;
+    }
+
+    .work-note {
+      padding: 16px 20px;
+      background: #fff9e9;
+      border-left: 4px solid var(--gold);
+      border-radius: 5px;
+      color: #67552f;
+      font-size: 0.88rem;
+      margin-top: 30px;
+    }
+
+    /* Mission banner */
+
+    .mission-banner {
+      padding: 65px 0;
+      color: var(--white);
+      background: var(--green);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mission-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 35px;
+    }
+
+    .mission-copy {
+      max-width: 720px;
+    }
+
+    .mission-copy .eyebrow {
+      color: #f1d28a;
+    }
+
+    .mission-copy h2 {
+      font-size: clamp(1.9rem, 4vw, 3rem);
+      margin-bottom: 15px;
+    }
+
+    .mission-copy p {
+      color: rgba(255,255,255,0.82);
+    }
+
+    .mission-inner .btn {
+      flex-shrink: 0;
+    }
+
+    /* Partnership */
+
+    .partner-section {
+      background: var(--cream);
+    }
+
+    .partner-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 55px;
+      display: grid;
+      grid-template-columns: 1.4fr 0.6fr;
+      gap: 35px;
+      align-items: center;
+      box-shadow: var(--shadow);
+    }
+
+    .partner-box h2 {
+      color: var(--green-dark);
+      font-size: clamp(2rem, 4vw, 2.7rem);
+      margin-bottom: 16px;
+    }
+
+    .partner-box p {
+      color: var(--muted);
+      max-width: 670px;
+    }
+
+    .partner-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .partner-actions .btn {
+      width: 100%;
+    }
+
+    /* Footer */
+
+    .footer {
+      background: #082d20;
+      color: rgba(255,255,255,0.8);
+      padding: 65px 0 22px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr 0.8fr 1fr;
+      gap: 40px;
+      margin-bottom: 45px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .footer-brand img {
+      width: 65px;
+      height: 65px;
+      object-fit: contain;
+      background: white;
+      border-radius: 10px;
+      padding: 4px;
+    }
+
+    .footer-brand strong {
+      color: var(--white);
+      font-family: "Manrope", sans-serif;
+      line-height: 1.3;
+    }
+
+    .footer-about p {
+      font-size: 0.9rem;
+      max-width: 300px;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .footer h3 {
+      color: var(--white);
+      font-size: 1rem;
+      margin-bottom: 19px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .footer-links a,
+    .footer-contact p {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.88rem;
+      overflow-wrap: anywhere;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+
+    .footer-bottom {
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* Responsive layout */
+
+    @media (max-width: 1000px) {
+      .nav-links {
+        gap: 13px;
+      }
+
+      .nav-links a {
+        font-size: 0.79rem;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .focus-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 760px) {
+      .topbar-inner {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .nav-inner {
+        min-height: 76px;
+      }
+
+      .brand img {
+        width: 52px;
+        height: 52px;
+      }
+
+      .brand-name {
+        font-size: 0.88rem;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        padding: 22px 5%;
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links a {
+        font-size: 0.95rem;
+      }
+
+      .hero {
+        min-height: 540px;
+        background-position: 58% center;
+      }
+
+      .hero-content {
+        padding: 80px 0;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.55rem, 10vw, 4rem);
+        letter-spacing: -1.7px;
+      }
+
+      .section {
+        padding: 65px 0;
+      }
+
+      .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .intro-image img {
+        height: 300px;
+      }
+
+      .focus-grid {
+        gap: 15px;
+      }
+
+      .focus-card {
+        padding: 23px 18px;
+      }
+
+      .work-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .work-card img {
+        height: 240px;
+      }
+
+      .mission-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .partner-box {
+        padding: 30px 24px;
+        grid-template-columns: 1fr;
+      }
+
+      .partner-actions {
+        max-width: 320px;
+      }
+
+      .footer-grid {
+        gap: 30px 20px;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .container {
+        width: 91%;
+      }
+
+      .brand {
+        gap: 8px;
+      }
+
+      .brand-name {
+        max-width: 190px;
+        font-size: 0.78rem;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 280px;
+      }
+
+      .focus-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .focus-card {
+        padding: 25px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- Announcement bar -->
-    <div class="topbar">
-        <div class="container topbar-inner">
-            <span>Serving Gangara, Makarfi LGA, Kaduna State, Nigeria</span>
-            <span><strong>Community first. Opportunity for all.</strong></span>
-        </div>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>Community-led development. Sustainable opportunities.</span>
+      <span>Gangara, Makarfi LGA, Kaduna State, Nigeria</span>
     </div>
-
-    <!-- Navigation -->
-    <header>
-        <nav class="container navbar" aria-label="Main navigation">
-
-            <a href="#home" class="brand" aria-label="GICDF homepage">
-                <img
-                    src="Assets/images/gicdf-logo.png"
-                    alt="GICDF official logo"
-                    width="64"
-                    height="64"
-                >
-
-                <span class="brand-text">
-                    <strong>GICDF</strong>
-                    <span>Community Connect</span>
-                </span>
-            </a>
-
-            <button
-                class="menu-toggle"
-                id="menuToggle"
-                type="button"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
-                aria-controls="navLinks"
-            >
-                ☰ Menu
-            </button>
-
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#programmes">Our Programmes</a></li>
-                <li><a href="#values">Our Values</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a class="nav-cta" href="#get-involved">Get Involved</a></li>
-            </ul>
-
-        </nav>
-    </header>
-
-    <main>
-
-        <!-- Hero -->
-        <section class="hero" id="home">
-            <div class="container">
-                <div class="hero-content">
-
-                    <span class="eyebrow">Gangara Integrated Community Development Foundation</span>
-
-                    <h1>
-                        Building Stronger Communities.
-                        <span>Creating Better Opportunities.</span>
-                    </h1>
-
-                    <p>
-                        We work with young people, families, community leaders,
-                        partners, and other stakeholders to promote education,
-                        practical skills, sustainable livelihoods, peace, and
-                        inclusive community development in Gangara and surrounding
-                        communities.
-                    </p>
-
-                    <div class="hero-actions">
-                        <a href="#programmes" class="btn btn-primary">
-                            Explore Our Programmes →
-                        </a>
-
-                        <a href="#about" class="btn btn-outline">
-                            Discover Our Mission
-                        </a>
-                    </div>
-
-                    <p class="hero-note">
-                        A community-driven initiative committed to dignity,
-                        participation, opportunity, and sustainable progress.
-                    </p>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Focus areas -->
-        <div class="impact-strip">
-            <div class="container impact-grid">
-
-                <div class="impact-item">
-                    <strong>Youth Empowerment</strong>
-                    <span>Skills, leadership, and meaningful opportunities</span>
-                </div>
-
-                <div class="impact-item">
-                    <strong>Community Development</strong>
-                    <span>Local participation and sustainable solutions</span>
-                </div>
-
-                <div class="impact-item">
-                    <strong>Education &amp; Peace</strong>
-                    <span>Learning, inclusion, cooperation, and security</span>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- About -->
-        <section class="about" id="about">
-            <div class="container about-grid">
-
-                <div class="about-copy">
-                    <span class="section-label">Who We Are</span>
-
-                    <h2>Development begins when communities work together.</h2>
-
-                    <p>
-                        Gangara Integrated Community Development Foundation
-                        (GICDF) is a community-focused initiative committed to
-                        improving lives and expanding opportunities for people
-                        in Gangara, Makarfi Local Government Area, Kaduna State,
-                        and neighbouring communities.
-                    </p>
-
-                    <p>
-                        We believe lasting progress is built through collaboration,
-                        responsible leadership, education, practical skills,
-                        community participation, and partnerships that respond
-                        to real local needs.
-                    </p>
-
-                    <p>
-                        Our approach is non-partisan and inclusive. We seek
-                        constructive engagement with community members,
-                        traditional institutions, public bodies, civil society
-                        organisations, and development partners.
-                    </p>
-
-                    <ul class="about-points">
-                        <li>Community-led and needs-based development</li>
-                        <li>Equal opportunities for young people and vulnerable groups</li>
-                        <li>Transparency, accountability, and responsible leadership</li>
-                        <li>Partnerships that support long-term progress</li>
-                    </ul>
-
-                    <a href="#contact" class="btn btn-green">
-                        Connect With Us →
-                    </a>
-                </div>
-
-                <div class="about-card">
-                    <h3>Our Purpose</h3>
-
-                    <p>
-                        To mobilise people, knowledge, resources, and partnerships
-                        towards stronger communities where individuals can learn,
-                        contribute, live with dignity, and access meaningful
-                        opportunities.
-                    </p>
-
-                    <div class="principle">
-                        <strong>Our Vision</strong>
-                        <span>
-                            Thriving, peaceful, inclusive, and self-reliant
-                            communities where everyone has an opportunity to
-                            contribute and progress.
-                        </span>
-                    </div>
-
-                    <div class="principle">
-                        <strong>Our Mission</strong>
-                        <span>
-                            To support community development through youth
-                            empowerment, education, skills development,
-                            civic participation, environmental responsibility,
-                            and strategic partnerships.
-                        </span>
-                    </div>
-
-                    <div class="principle">
-                        <strong>Our Commitment</strong>
-                        <span>
-                            To listen to communities, encourage practical
-                            solutions, use resources responsibly, and promote
-                            cooperation for sustainable development.
-                        </span>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Programmes -->
-        <section id="programmes">
-            <div class="container">
-
-                <div class="section-heading">
-                    <span class="section-label">What We Do</span>
-
-                    <h2>Creating pathways to community progress</h2>
-
-                    <p>
-                        Our programme areas respond to community priorities
-                        and aim to build practical, sustainable opportunities
-                        through participation and collaboration.
-                    </p>
-                </div>
-
-                <div class="programme-grid">
-
-                    <article class="programme-card">
-                        <div class="programme-icon" aria-hidden="true">🎓</div>
-
-                        <h3>Education &amp; Learning</h3>
-
-                        <p>
-                            Promoting access to learning, educational awareness,
-                            mentorship, literacy, and opportunities that help
-                            young people develop their potential.
-                        </p>
-
-                        <a href="#get-involved" class="text-link">
-                            Support learning →
-                        </a>
-                    </article>
-
-                    <article class="programme-card">
-                        <div class="programme-icon" aria-hidden="true">💡</div>
-
-                        <h3>Youth Skills &amp; Empowerment</h3>
-
-                        <p>
-                            Encouraging digital literacy, vocational skills,
-                            entrepreneurship, leadership, and employability
-                            for a more confident and productive youth population.
-                        </p>
-
-                        <a href="#get-involved" class="text-link">
-                            Empower young people →
-                        </a>
-                    </article>
-
-                    <article class="programme-card">
-                        <div class="programme-icon" aria-hidden="true">🏘️</div>
-
-                        <h3>Community Development</h3>
-
-                        <p>
-                            Supporting locally identified development priorities,
-                            community mobilisation, social welfare, and
-                            constructive engagement on public needs.
-                        </p>
-
-                        <a href="#get-involved" class="text-link">
-                            Build together →
-                        </a>
-                    </article>
-
-                    <article class="programme-card">
-                        <div class="programme-icon" aria-hidden="true">🕊️</div>
-
-                        <h3>Peace &amp; Social Cohesion</h3>
-
-                        <p>
-                            Encouraging dialogue, mutual respect, conflict
-                            prevention, peaceful coexistence, and cooperation
-                            among community members.
-                        </p>
-
-                        <a href="#get-involved" class="text-link">
-                            Promote peace →
-                        </a>
-                    </article>
-
-                    <article class="programme-card">
-                        <div class="programme-icon" aria-hidden="true">🌱</div>
-
-                        <h3>Environment &amp; Sustainability</h3>
-
-                        <p>
-                            Promoting environmental awareness, responsible
-                            resource use, cleaner surroundings, and community
-                            participation in sustainable practices.
-                        </p>
-
-                        <a href="#get-involved" class="text-link">
-                            Protect our environment →
-                        </a>
-                    </article>
-
-                    <article class="programme-card">
-                        <div class="programme-icon" aria-hidden="true">🤝</div>
-
-                        <h3>Civic Engagement &amp; Partnerships</h3>
-
-                        <p>
-                            Creating constructive connections between residents,
-                            community institutions, civil society, and development
-                            partners to support transparent and inclusive progress.
-                        </p>
-
-                        <a href="#get-involved" class="text-link">
-                            Become a partner →
-                        </a>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Values -->
-        <section class="values" id="values">
-            <div class="container">
-
-                <div class="section-heading">
-                    <span class="section-label">What Guides Us</span>
-
-                    <h2>Our values define our work</h2>
-
-                    <p>
-                        The principles we uphold in our relationships,
-                        programmes, decisions, and service to communities.
-                    </p>
-                </div>
-
-                <div class="values-grid">
-
-                    <article class="value-card">
-                        <div class="value-icon" aria-hidden="true">⚖️</div>
-                        <h3>Integrity</h3>
-                        <p>
-                            Acting honestly and handling responsibilities
-                            with care and accountability.
-                        </p>
-                    </article>
-
-                    <article class="value-card">
-                        <div class="value-icon" aria-hidden="true">🫶</div>
-                        <h3>Inclusion</h3>
-                        <p>
-                            Respecting people and encouraging participation
-                            without unfair discrimination.
-                        </p>
-                    </article>
-
-                    <article class="value-card">
-                        <div class="value-icon" aria-hidden="true">🌍</div>
-                        <h3>Unity</h3>
-                        <p>
-                            Bringing people together around shared needs
-                            and constructive solutions.
-                        </p>
-                    </article>
-
-                    <article class="value-card">
-                        <div class="value-icon" aria-hidden="true">🌿</div>
-                        <h3>Sustainability</h3>
-                        <p>
-                            Supporting solutions that can continue to
-                            benefit communities over time.
-                        </p>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Our approach -->
-        <section id="approach">
-            <div class="container">
-
-                <div class="section-heading">
-                    <span class="section-label">How We Work</span>
-
-                    <h2>Local voices. Shared responsibility. Lasting progress.</h2>
-
-                    <p>
-                        Effective community development begins with listening
-                        and grows through cooperation, practical action, and
-                        learning from results.
-                    </p>
-                </div>
-
-                <div class="approach-grid">
-
-                    <article class="approach-card">
-                        <h3>01. Listen &amp; Understand</h3>
-                        <p>
-                            Engage community members and stakeholders to
-                            understand local priorities, challenges, and
-                            opportunities before proposing interventions.
-                        </p>
-                    </article>
-
-                    <article class="approach-card">
-                        <h3>02. Collaborate &amp; Act</h3>
-                        <p>
-                            Work with suitable partners and volunteers to
-                            develop realistic activities, mobilise resources,
-                            and support community-led solutions.
-                        </p>
-                    </article>
-
-                    <article class="approach-card">
-                        <h3>03. Review &amp; Improve</h3>
-                        <p>
-                            Encourage responsible reporting, feedback,
-                            transparent decision-making, and continuous
-                            improvement in community initiatives.
-                        </p>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Get involved -->
-        <section class="partnership" id="get-involved">
-            <div class="container">
-
-                <div class="partnership-box">
-
-                    <div>
-                        <span class="section-label">Let's Work Together</span>
-
-                        <h2>Be part of a stronger community.</h2>
-
-                        <p>
-                            Are you a community member, volunteer, organisation,
-                            institution, or development partner interested in
-                            education, youth empowerment, skills development,
-                            peacebuilding, or sustainable community progress?
-                            We welcome constructive conversations and
-                            opportunities to collaborate.
-                        </p>
-                    </div>
-
-                    <a href="#contact" class="btn btn-primary">
-                        Get Involved →
-                    </a>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact -->
-        <section class="contact" id="contact">
-            <div class="container">
-
-                <div class="section-heading">
-                    <span class="section-label">Contact GICDF</span>
-
-                    <h2>Let's start a conversation</h2>
-
-                    <p>
-                        Contact us to discuss community priorities,
-                        volunteering, partnership opportunities, or
-                        ideas for sustainable local development.
-                    </p>
-                </div>
-
-                <div class="contact-grid">
-
-                    <div class="contact-info">
-                        <h3>Connect with our community initiative</h3>
-
-                        <p>
-                            We value meaningful engagement with residents,
-                            community institutions, civil society, and
-                            organisations working towards shared development goals.
-                        </p>
-
-                        <div class="contact-item">
-                            <div class="contact-icon" aria-hidden="true">📍</div>
-
-                            <div>
-                                <strong>Location</strong>
-                                <span>
-                                    Gangara, Makarfi Local Government Area,
-                                    Kaduna State, Nigeria
-                                </span>
-                            </div>
-                        </div>
-
-                        <div class="contact-item">
-                            <div class="contact-icon" aria-hidden="true">✉️</div>
-
-                            <div>
-                                <strong>Email</strong>
-                                <span>
-                                    Please use the contact option on this page
-                                    once our official email address is configured.
-                                </span>
-                            </div>
-                        </div>
-
-                        <div class="contact-item">
-                            <div class="contact-icon" aria-hidden="true">🤝</div>
-
-                            <div>
-                                <strong>Partnerships</strong>
-                                <span>
-                                    Community organisations, volunteers,
-                                    institutions, and development partners
-                                    are welcome to connect.
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="contact-card">
-                        <h3>How would you like to contribute?</h3>
-
-                        <p>
-                            Whether you want to volunteer, propose a community
-                            project, support a programme, or explore a partnership,
-                            we welcome your interest.
-                        </p>
-
-                        <div class="contact-actions">
-                            <a
-                                class="btn btn-green"
-                                href="https://github.com/edreessaleesu1/GICDF-Community-Connect"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                View Our Website Project
-                            </a>
-
-                            <a
-                                class="btn btn-primary"
-                                href="#get-involved"
-                            >
-                                Explore Opportunities
-                            </a>
-                        </div>
-
-                        <div class="contact-notice">
-                            <strong>Website improvement:</strong>
-                            Add GICDF's official email address, verified phone
-                            number, and approved social media links here when
-                            they are available. Avoid publishing personal contact
-                            details without the owner's consent.
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-
-            <div class="footer-grid">
-
-                <div class="footer-about">
-
-                    <div class="footer-brand">
-                        <img
-                            src="Assets/images/gicdf-logo.png"
-                            alt="GICDF logo"
-                            width="62"
-                            height="62"
-                            loading="lazy"
-                        >
-
-                        <strong>
-                            Gangara Integrated Community<br>
-                            Development Foundation
-                        </strong>
-                    </div>
-
-                    <p>
-                        Working towards inclusive community development,
-                        youth empowerment, education, peace, and sustainable
-                        opportunities in Gangara and surrounding communities.
-                    </p>
-                </div>
-
-                <div class="footer-column">
-                    <h4>Explore</h4>
-
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#programmes">Our Programmes</a></li>
-                        <li><a href="#values">Our Values</a></li>
-                        <li><a href="#approach">Our Approach</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h4>Get Involved</h4>
-
-                    <ul>
-                        <li><a href="#get-involved">Volunteer</a></li>
-                        <li><a href="#get-involved">Partner With Us</a></li>
-                        <li><a href="#get-involved">Support Education</a></li>
-                        <li><a href="#get-involved">Youth Empowerment</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
-                    </ul>
-                </div>
-
-            </div>
-
-            <div class="footer-bottom">
-                <span>
-                    &copy; <span id="currentYear"></span>
-                    Gangara Integrated Community Development Foundation.
-                    All rights reserved.
-                </span>
-
-                <span>Community first. Opportunity for all.</span>
-            </div>
+  </div>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+
+      <a href="index.html" class="brand" aria-label="GICDF homepage">
+        <img src="Assets/images/gicdf-logo.png" alt="GICDF logo">
+        <span class="brand-name">
+          GICDF Community Connect
+          <small>Building stronger communities</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="programmes.html">Programmes</a></li>
+          <li><a href="projects.html">Our Work</a></li>
+          <li><a href="governance.html">Governance</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn-primary nav-cta" href="get-involved.html">Get Involved ↗</a>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+
+          <div class="hero-label">Together, we can do more</div>
+
+          <h1>
+            Building stronger communities.<br>
+            <span>Creating better futures.</span>
+          </h1>
+
+          <p>
+            We work towards a future where young people and communities have
+            greater access to education, skills, opportunity, and the support
+            needed to thrive.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="about.html">Discover Our Mission ↗</a>
+            <a class="btn btn-outline" href="get-involved.html">Be Part of the Change</a>
+          </div>
 
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <button
-        class="back-to-top"
-        id="backToTop"
-        type="button"
-        aria-label="Back to top"
-    >
-        ↑
-    </button>
+    <!-- WHO WE ARE -->
 
-    <script>
-        // Mobile navigation
-        const menuToggle = document.getElementById("menuToggle");
-        const navLinks = document.getElementById("navLinks");
+    <section class="section">
+      <div class="container intro-grid">
 
-        menuToggle.addEventListener("click", function () {
-            const isOpen = navLinks.classList.toggle("open");
+        <div class="intro-image">
+          <img
+            src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1000&q=85"
+            alt="Young people participating in a group activity">
+        </div>
 
-            menuToggle.setAttribute("aria-expanded", String(isOpen));
-            menuToggle.setAttribute(
-                "aria-label",
-                isOpen ? "Close navigation menu" : "Open navigation menu"
-            );
+        <div class="intro-copy">
+          <span class="eyebrow">Who We Are</span>
 
-            menuToggle.innerHTML = isOpen ? "✕ Close" : "☰ Menu";
-        });
+          <h2>Local commitment.<br>Lasting community impact.</h2>
 
-        // Close mobile navigation after selecting a link
-        navLinks.querySelectorAll("a").forEach(function (link) {
-            link.addEventListener("click", function () {
-                navLinks.classList.remove("open");
-                menuToggle.setAttribute("aria-expanded", "false");
-                menuToggle.setAttribute("aria-label", "Open navigation menu");
-                menuToggle.innerHTML = "☰ Menu";
-            });
-        });
+          <p>
+            Gangara Integrated Community Development Foundation (GICDF) is a
+            community-focused organisation working to promote inclusive
+            development and sustainable opportunities.
+          </p>
 
-        // Automatically update copyright year
-        document.getElementById("currentYear").textContent =
-            new Date().getFullYear();
+          <p>
+            Our priorities include youth empowerment, education, community
+            development, peacebuilding, and stronger community participation.
+          </p>
 
-        // Back-to-top button
-        const backToTop = document.getElementById("backToTop");
+          <a class="text-link" href="about.html">Learn more about GICDF <span>→</span></a>
+        </div>
 
-        window.addEventListener("scroll", function () {
-            backToTop.classList.toggle("visible", window.scrollY > 400);
-        });
+      </div>
+    </section>
 
-        backToTop.addEventListener("click", function () {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        });
-    </script>
+    <!-- FOCUS AREAS -->
+
+    <section class="section focus-section">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">What Matters to Us</span>
+          <h2>Creating opportunities where they matter most.</h2>
+          <p>
+            Our focus is on practical, inclusive approaches that respond to
+            community needs and help people build a better future.
+          </p>
+        </div>
+
+        <div class="focus-grid">
+
+          <article class="focus-card">
+            <div class="focus-icon" aria-hidden="true">✦</div>
+            <h3>Youth Empowerment</h3>
+            <p>
+              Supporting young people through skills development, leadership,
+              entrepreneurship, and opportunities for growth.
+            </p>
+            <a href="programmes.html">Explore programmes →</a>
+          </article>
+
+          <article class="focus-card">
+            <div class="focus-icon" aria-hidden="true">▤</div>
+            <h3>Education & Learning</h3>
+            <p>
+              Promoting access to learning, educational support, and lifelong
+              opportunities for individuals and communities.
+            </p>
+            <a href="programmes.html">Explore programmes →</a>
+          </article>
+
+          <article class="focus-card">
+            <div class="focus-icon" aria-hidden="true">⌂</div>
+            <h3>Community Development</h3>
+            <p>
+              Encouraging locally driven solutions, community participation,
+              and initiatives that improve wellbeing.
+            </p>
+            <a href="projects.html">Explore our work →</a>
+          </article>
+
+          <article class="focus-card">
+            <div class="focus-icon" aria-hidden="true">♡</div>
+            <h3>Peace & Inclusion</h3>
+            <p>
+              Encouraging dialogue, peaceful coexistence, social inclusion,
+              and constructive community engagement.
+            </p>
+            <a href="programmes.html">Explore programmes →</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR WORK -->
+
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">Our Work</span>
+          <h2>Change begins with people.</h2>
+          <p>
+            Explore our areas of interest and the kinds of community initiatives
+            we aim to support and develop.
+          </p>
+        </div>
+
+        <div class="work-grid">
+
+          <article class="work-card">
+            <img
+              src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=85"
+              alt="Students learning together">
+            <div class="work-content">
+              <span class="work-tag">Education</span>
+              <h3>Learning & Youth Development</h3>
+              <p>
+                Promoting learning opportunities, personal development, and
+                skills that can help young people participate in community life.
+              </p>
+              <a class="text-link" href="programmes.html">Our programmes →</a>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <img
+              src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=85"
+              alt="People collaborating around a table">
+            <div class="work-content">
+              <span class="work-tag">Empowerment</span>
+              <h3>Skills & Opportunity</h3>
+              <p>
+                Exploring opportunities for capacity building, enterprise,
+                leadership, and practical skills development.
+              </p>
+              <a class="text-link" href="programmes.html">Explore our priorities →</a>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <img
+              src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=900&q=85"
+              alt="A diverse group of people gathered together">
+            <div class="work-content">
+              <span class="work-tag">Community</span>
+              <h3>Stronger Communities</h3>
+              <p>
+                Encouraging participation, cooperation, peaceful coexistence,
+                and community-led development.
+              </p>
+              <a class="text-link" href="about.html">Our mission →</a>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="work-note">
+          <strong>Our commitment to transparency:</strong>
+          The photographs above are illustrative stock images, not evidence of
+          GICDF projects. We will replace them with genuine activity photographs
+          and verified project information as these become available.
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+
+    <section class="mission-banner">
+      <div class="container mission-inner">
+
+        <div class="mission-copy">
+          <span class="eyebrow">A Shared Responsibility</span>
+          <h2>Better communities are built together.</h2>
+          <p>
+            Every idea, skill, partnership, and act of service can help create
+            opportunities for people and communities.
+          </p>
+        </div>
+
+        <a class="btn btn-gold" href="get-involved.html">Join Our Efforts ↗</a>
+
+      </div>
+    </section>
+
+    <!-- PARTNERSHIPS -->
+
+    <section class="section partner-section">
+      <div class="container">
+
+        <div class="partner-box">
+
+          <div>
+            <span class="eyebrow">Work With Us</span>
+            <h2>Let's create meaningful change together.</h2>
+            <p>
+              We welcome conversations with development organisations,
+              civil society groups, public institutions, businesses, volunteers,
+              and individuals interested in community development.
+              Together, we can explore practical ways to support local priorities.
+            </p>
+          </div>
+
+          <div class="partner-actions">
+            <a class="btn btn-primary" href="partnerships.html">Explore Partnerships ↗</a>
+            <a class="btn btn-outline" href="contact.html">Contact GICDF</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-about">
+          <div class="footer-brand">
+            <img src="Assets/images/gicdf-logo.png" alt="GICDF logo">
+            <strong>GICDF<br>Community Connect</strong>
+          </div>
+
+          <p>
+            Working towards inclusive community development, youth empowerment,
+            education, peacebuilding, and sustainable opportunities.
+          </p>
+        </div>
+
+        <div>
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="programmes.html">Programmes</a></li>
+            <li><a href="projects.html">Our Work</a></li>
+            <li><a href="news.html">News & Updates</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Get Involved</h3>
+          <ul class="footer-links">
+            <li><a href="get-involved.html">Volunteer</a></li>
+            <li><a href="partnerships.html">Partner With Us</a></li>
+            <li><a href="governance.html">Governance</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Our Location</h3>
+          <p>Gangara, Makarfi LGA,<br>Kaduna State, Nigeria.</p>
+          <br>
+          <p>For enquiries and collaboration opportunities, please use our contact page.</p>
+          <br>
+          <a class="text-link" style="color:#f0d58f" href="contact.html">Contact GICDF →</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="currentYear"></span> GICDF Community Connect. All rights reserved.</span>
+        <span>Community-led development. Shared progress.</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", function () {
+      const isOpen = navLinks.classList.toggle("active");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
+      menuToggle.textContent = isOpen ? "×" : "☰";
+    });
+
+    document.querySelectorAll("#navLinks a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+  </script>
 
 </body>
 </html>
