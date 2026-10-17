@@ -1,175 +1,1011 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore the GICDF community gallery featuring documented activities, events, volunteers and development initiatives.">
-  <title>Gallery | GICDF Community Connect</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+  <meta name="description" content="Explore the community development priorities, educational interests, youth empowerment and activities of Gangara Integrated Community Development Foundation.">
+  <meta name="theme-color" content="#14532d">
+  <title>Gallery | GICDF Community Connect</title>  <style>
+    :root {
+      --green: #14532d;
+      --dark-green: #0b2e1a;
+      --light-green: #eaf4ed;
+      --gold: #d4a62a;
+      --white: #ffffff;
+      --text: #26332b;
+      --muted: #65736a;
+      --border: #e3e9e4;
+      --background: #f7faf7;
+      --shadow: 0 10px 30px rgba(11, 46, 26, 0.09);
+    }
 
-<header class="site-header">
-  <div class="header-inner">
-    <a href="index.html" class="brand">
-      <img src="assets/images/gicdf-logo.png" alt="GICDF Logo"
-           onerror="this.style.display='none'">
-      <span>GICDF <small>Community Connect</small></span>
-    </a>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    <button class="menu-toggle" aria-label="Open navigation menu"
-            aria-expanded="false">&#9776;</button>
+    html {
+      scroll-behavior: smooth;
+    }
 
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="programmes.html">Programmes</a>
-      <a href="projects.html">Projects</a>
-      <a href="partnerships.html">Partnerships</a>
-      <a href="get-involved.html">Get Involved</a>
-      <a href="news.html">News</a>
-      <a href="gallery.html" class="active">Gallery</a>
-      <a href="governance.html">Governance</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--white);
+    }
 
-<main>
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-  <section class="page-banner">
-    <div class="container">
-      <p>Our Community Story</p>
-      <h1>GICDF Gallery</h1>
-      <p>A space to document community participation, activities and development progress.</p>
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    /* HEADER AND NAVIGATION */
+    .site-header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-inner {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+    }
+
+    .brand-name {
+      color: var(--green);
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+
+    .brand-name span {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 500;
+      margin-top: 4px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 17px;
+    }
+
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 700;
+      color: #34483a;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--green);
+    }
+
+    .nav-links .nav-cta {
+      background: var(--green);
+      color: var(--white);
+      padding: 10px 14px;
+      border-radius: 5px;
+    }
+
+    .nav-links .nav-cta:hover {
+      background: var(--dark-green);
+    }
+
+    .menu-toggle {
+      display: none;
+      padding: 8px 12px;
+      font-size: 22px;
+      color: var(--green);
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(120deg, var(--dark-green), var(--green));
+      color: var(--white);
+      padding: 82px 0 76px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border: 42px solid rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+      right: -95px;
+      bottom: -170px;
+    }
+
+    .hero-content {
+      max-width: 760px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      color: #ffe29a;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-bottom: 14px;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 5vw, 56px);
+      line-height: 1.15;
+      letter-spacing: -1px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 680px;
+      color: #e2eee5;
+      font-size: 17px;
+      margin-bottom: 27px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 21px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: 800;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--dark-green);
+    }
+
+    .btn-white {
+      background: var(--white);
+      color: var(--green);
+    }
+
+    /* SECTION STYLES */
+    section {
+      padding: 72px 0;
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin-bottom: 35px;
+    }
+
+    .section-label {
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      margin-bottom: 10px;
+    }
+
+    .section-heading h2 {
+      color: var(--dark-green);
+      font-size: clamp(27px, 3vw, 37px);
+      line-height: 1.25;
+      margin-bottom: 13px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* INTRODUCTION */
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.8fr;
+      gap: 38px;
+      align-items: center;
+    }
+
+    .intro-copy h2 {
+      color: var(--dark-green);
+      font-size: 30px;
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+
+    .intro-copy p {
+      color: var(--muted);
+      margin-bottom: 13px;
+    }
+
+    .intro-note {
+      background: var(--light-green);
+      border-left: 5px solid var(--gold);
+      border-radius: 6px;
+      padding: 25px;
+    }
+
+    .intro-note h3 {
+      color: var(--green);
+      font-size: 19px;
+      margin-bottom: 10px;
+    }
+
+    .intro-note p {
+      color: #526357;
+      font-size: 14px;
+    }
+
+    /* GALLERY CATEGORIES */
+    .gallery-section {
+      background: var(--background);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .gallery-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      overflow: hidden;
+      box-shadow: 0 5px 18px rgba(11, 46, 26, 0.04);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .gallery-image {
+      height: 225px;
+      background: var(--light-green);
+      overflow: hidden;
+    }
+
+    .gallery-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .gallery-card:hover .gallery-image img {
+      transform: scale(1.04);
+    }
+
+    .gallery-content {
+      padding: 23px;
+    }
+
+    .gallery-tag {
+      display: inline-block;
+      background: var(--light-green);
+      color: var(--green);
+      padding: 5px 9px;
+      border-radius: 3px;
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      margin-bottom: 12px;
+    }
+
+    .gallery-content h3 {
+      color: var(--dark-green);
+      font-size: 19px;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+
+    .gallery-content p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .illustrative-note {
+      font-size: 11px !important;
+      color: #7b877e !important;
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+    }
+
+    /* PHOTO SUBMISSION */
+    .contribute {
+      background: var(--white);
+    }
+
+    .contribute-panel {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+      align-items: center;
+      padding: 35px;
+      background: var(--light-green);
+      border-radius: 10px;
+    }
+
+    .contribute-panel h2 {
+      color: var(--dark-green);
+      font-size: 29px;
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+
+    .contribute-panel p {
+      color: #526357;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .contribute-list {
+      list-style: none;
+    }
+
+    .contribute-list li {
+      padding: 11px 0;
+      border-bottom: 1px solid #d3e3d7;
+      color: #34483a;
+      font-size: 14px;
+    }
+
+    .contribute-list li::before {
+      content: "✓";
+      color: var(--green);
+      font-weight: 900;
+      margin-right: 10px;
+    }
+
+    /* TRANSPARENCY */
+    .transparency {
+      background: var(--background);
+      border-top: 1px solid var(--border);
+    }
+
+    .transparency-inner {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .transparency-inner h2 {
+      color: var(--dark-green);
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .transparency-inner p {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    /* CTA */
+    .cta {
+      background: var(--dark-green);
+      text-align: center;
+      color: var(--white);
+    }
+
+    .cta h2 {
+      font-size: clamp(27px, 3vw, 38px);
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 680px;
+      margin: 0 auto 25px;
+      color: #d9e8dd;
+    }
+
+    .cta .btn {
+      margin: 4px;
+    }
+
+    /* FOOTER */
+    .site-footer {
+      background: #071e11;
+      color: #d9e5dc;
+      padding: 48px 0 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 35px;
+      padding-bottom: 35px;
+    }
+
+    .footer-brand {
+      color: var(--white);
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 13px;
+    }
+
+    .footer-grid p {
+      color: #b8cabe;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .footer-grid h3 {
+      color: var(--white);
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 9px;
+      font-size: 13px;
+    }
+
+    .footer-links a:hover {
+      color: #ffe29a;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #254332;
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+      color: #a9bcae;
+      font-size: 12px;
+    }
+
+    /* RESPONSIVE LAYOUT */
+    @media (max-width: 1050px) {
+      .nav-links {
+        gap: 10px;
+      }
+
+      .nav-links a {
+        font-size: 11px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 780px) {
+      .header-inner {
+        min-height: 74px;
+        flex-wrap: wrap;
+        padding: 10px 0;
+      }
+
+      .brand img {
+        width: 48px;
+        height: 48px;
+      }
+
+      .brand-name {
+        font-size: 12px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 5px 0 12px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 11px 5px;
+        font-size: 14px;
+        border-top: 1px solid var(--border);
+      }
+
+      .nav-links .nav-cta {
+        text-align: center;
+        margin-top: 8px;
+      }
+
+      .hero {
+        padding: 62px 0;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+
+      .intro-grid,
+      .contribute-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-about {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .gallery-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-about {
+        grid-column: auto;
+      }
+
+      .gallery-image {
+        height: 230px;
+      }
+
+      .contribute-panel {
+        padding: 24px 19px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+    }
+  </style></head><body>  <!-- HEADER -->  <header class="site-header">
+    <div class="container header-inner">  <a href="index.html" class="brand" aria-label="GICDF home">
+    <img src="Assets/images/gicdf-logo.png" alt="GICDF logo">
+    <div class="brand-name">
+      GICDF COMMUNITY CONNECT
+      <span>Building stronger communities</span>
     </div>
-  </section>
+  </a>
 
-  <section class="section">
-    <div class="container">
+  <button
+    class="menu-toggle"
+    id="menuToggle"
+    aria-label="Open navigation menu"
+    aria-expanded="false"
+    aria-controls="mainNav">☰</button>
 
-      <div class="section-heading">
-        <span class="eyebrow">Community in Focus</span>
-        <h2>Stories Told Through Pictures</h2>
-        <p>
-          This gallery will feature photographs and visual records of verified
-          GICDF activities, community engagements, events and project milestones.
-        </p>
-      </div>
+  <nav class="nav-links" id="mainNav" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="programmes.html">Programmes</a>
+    <a href="projects.html">Projects</a>
+    <a href="partnerships.html">Partnerships</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html" class="active">Gallery</a>
+    <a href="governance.html">Governance</a>
+    <a href="contact.html">Contact</a>
+    <a href="get-involved.html" class="nav-cta">Get Involved</a>
+  </nav>
 
-      <div class="gallery-grid">
+</div>
 
-        <article class="gallery-item">
-          <div class="gallery-placeholder">
-            <span>📚</span>
-            <p>Education and Learning</p>
-          </div>
-          <div class="gallery-caption">
-            <h3>Education and Learning</h3>
-            <p>Space for photographs of documented educational activities.</p>
-          </div>
-        </article>
+  </header>  <main><!-- HERO -->
+<section class="hero">
+  <div class="container hero-content">
+    <span class="eyebrow">Our Community • Our Future</span>
 
-        <article class="gallery-item">
-          <div class="gallery-placeholder">
-            <span>💡</span>
-            <p>Youth Empowerment</p>
-          </div>
-          <div class="gallery-caption">
-            <h3>Youth Empowerment</h3>
-            <p>Space for verified youth training and skills-development activities.</p>
-          </div>
-        </article>
+    <h1>Stories of Community, Hope and Opportunity</h1>
 
-        <article class="gallery-item">
-          <div class="gallery-placeholder">
-            <span>🤝</span>
-            <p>Community Engagement</p>
-          </div>
-          <div class="gallery-caption">
-            <h3>Community Engagement</h3>
-            <p>Space for documented consultations and community gatherings.</p>
-          </div>
-        </article>
-
-        <article class="gallery-item">
-          <div class="gallery-placeholder">
-            <span>🌱</span>
-            <p>Environmental Activities</p>
-          </div>
-          <div class="gallery-caption">
-            <h3>Environmental Activities</h3>
-            <p>Space for photographs of actual environmental initiatives.</p>
-          </div>
-        </article>
-
-        <article class="gallery-item">
-          <div class="gallery-placeholder">
-            <span>🕊️</span>
-            <p>Peace and Cooperation</p>
-          </div>
-          <div class="gallery-caption">
-            <h3>Peace and Cooperation</h3>
-            <p>Space for documented peacebuilding and social-cohesion activities.</p>
-          </div>
-        </article>
-
-        <article class="gallery-item">
-          <div class="gallery-placeholder">
-            <span>🏘️</span>
-            <p>Community Development</p>
-          </div>
-          <div class="gallery-caption">
-            <h3>Community Development</h3>
-            <p>Space for verified project activities and community progress.</p>
-          </div>
-        </article>
-
-      </div>
-
-      <p class="text-center" style="margin-top: 28px;">
-        These are gallery categories, not claims that the activities have
-        already taken place. Photographs can be added as genuine records
-        become available.
-      </p>
-
-    </div>
-  </section>
-
-  <section class="section section-light">
-    <div class="container text-center">
-      <h2>Have Photographs to Contribute?</h2>
-      <p>
-        Community members and authorised contributors can contact GICDF
-        about photographs of relevant activities. Appropriate permission
-        should be obtained before publishing identifiable people's images.
-      </p>
-
-      <a href="mailto:info.gicdf@gmail.com?subject=GICDF%20Gallery%20Contribution"
-         class="btn btn-primary">Contribute Photographs</a>
-
-      <a href="contact.html" class="btn btn-secondary">Contact Us</a>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <p><strong>Gangara Integrated Community Development Foundation (GICDF)</strong></p>
-    <p>Gangara, Makarfi LGA, Kaduna State, Nigeria.</p>
     <p>
-      <a href="index.html">Home</a> |
-      <a href="about.html">About Us</a> |
-      <a href="programmes.html">Programmes</a> |
-      <a href="projects.html">Projects</a> |
-      <a href="news.html">News</a> |
-      <a href="contact.html">Contact</a>
+      Discover the areas of community development that inspire
+      GICDF's work, from education and youth empowerment to
+      environmental awareness and inclusive community participation.
     </p>
-    <p>&copy; <span class="current-year">2026</span> GICDF. All rights reserved.</p>
-  </div>
-</footer>
 
-<script src="assets/js/main.js"></script>
-</body>
+    <a href="#gallery" class="btn btn-gold">Explore the Gallery</a>
+  </div>
+</section>
+
+<!-- INTRODUCTION -->
+<section>
+  <div class="container intro-grid">
+
+    <div class="intro-copy">
+      <div class="section-heading">
+        <div class="section-label">A Shared Vision</div>
+        <h2>Every community has a story worth sharing</h2>
+      </div>
+
+      <p>
+        Gangara Integrated Community Development Foundation is
+        committed to supporting a future where young people,
+        families and communities can access opportunities for
+        learning, participation and sustainable development.
+      </p>
+
+      <p>
+        This gallery highlights our development priorities and
+        provides space for photographs and visual records of
+        activities as they are documented and verified.
+      </p>
+    </div>
+
+    <aside class="intro-note">
+      <h3>Authentic stories matter</h3>
+      <p>
+        The images currently displayed are illustrative stock
+        photographs. They do not represent verified GICDF projects,
+        beneficiaries, staff or events. They can be replaced with
+        authentic photographs as approved images become available.
+      </p>
+    </aside>
+
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section" id="gallery">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="section-label">Our Focus Areas</div>
+      <h2>Explore our community development priorities</h2>
+      <p>
+        These visual themes represent areas of interest, not claims
+        that particular activities have already taken place.
+      </p>
+    </div>
+
+    <div class="gallery-grid">
+
+      <!-- CARD 1 -->
+      <article class="gallery-card">
+        <div class="gallery-image">
+          <img
+            src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80"
+            alt="Illustrative photograph of a student learning"
+            loading="lazy">
+        </div>
+
+        <div class="gallery-content">
+          <span class="gallery-tag">Education</span>
+          <h3>Learning and Education</h3>
+          <p>
+            Education can open doors to knowledge, confidence and
+            new opportunities for children and young people.
+          </p>
+          <p class="illustrative-note">
+            Illustrative photograph — not a documented GICDF activity.
+          </p>
+        </div>
+      </article>
+
+      <!-- CARD 2 -->
+      <article class="gallery-card">
+        <div class="gallery-image">
+          <img
+            src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80"
+            alt="Illustrative photograph of a group of young people together"
+            loading="lazy">
+        </div>
+
+        <div class="gallery-content">
+          <span class="gallery-tag">Youth</span>
+          <h3>Youth Empowerment</h3>
+          <p>
+            Young people can contribute to stronger communities
+            through learning, leadership, collaboration and initiative.
+          </p>
+          <p class="illustrative-note">
+            Illustrative photograph — not a documented GICDF activity.
+          </p>
+        </div>
+      </article>
+
+      <!-- CARD 3 -->
+      <article class="gallery-card">
+        <div class="gallery-image">
+          <img
+            src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80"
+            alt="Illustrative photograph of people collaborating around a table"
+            loading="lazy">
+        </div>
+
+        <div class="gallery-content">
+          <span class="gallery-tag">Skills</span>
+          <h3>Skills and Capacity Building</h3>
+          <p>
+            Practical knowledge, digital skills and shared expertise
+            can help people prepare for changing opportunities.
+          </p>
+          <p class="illustrative-note">
+            Illustrative photograph — not a documented GICDF activity.
+          </p>
+        </div>
+      </article>
+
+      <!-- CARD 4 -->
+      <article class="gallery-card">
+        <div class="gallery-image">
+          <img
+            src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=900&q=80"
+            alt="Illustrative photograph of people participating in a community activity"
+            loading="lazy">
+        </div>
+
+        <div class="gallery-content">
+          <span class="gallery-tag">Community</span>
+          <h3>Community Participation</h3>
+          <p>
+            Listening, cooperation and local participation are
+            important foundations for understanding community needs.
+          </p>
+          <p class="illustrative-note">
+            Illustrative photograph — not a documented GICDF activity.
+          </p>
+        </div>
+      </article>
+
+      <!-- CARD 5 -->
+      <article class="gallery-card">
+        <div class="gallery-image">
+          <img
+            src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=900&q=80"
+            alt="Illustrative photograph of a natural landscape"
+            loading="lazy">
+        </div>
+
+        <div class="gallery-content">
+          <span class="gallery-tag">Environment</span>
+          <h3>Environmental Sustainability</h3>
+          <p>
+            Environmental awareness and responsible use of natural
+            resources support healthier, more resilient communities.
+          </p>
+          <p class="illustrative-note">
+            Illustrative photograph — not a documented GICDF activity.
+          </p>
+        </div>
+      </article>
+
+      <!-- CARD 6 -->
+      <article class="gallery-card">
+        <div class="gallery-image">
+          <img
+            src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=900&q=80"
+            alt="Illustrative photograph of people spending time together"
+            loading="lazy">
+        </div>
+
+        <div class="gallery-content">
+          <span class="gallery-tag">Inclusion</span>
+          <h3>Peace and Social Inclusion</h3>
+          <p>
+            Respect, dialogue and inclusive participation can help
+            communities build trust and work towards shared goals.
+          </p>
+          <p class="illustrative-note">
+            Illustrative photograph — not a documented GICDF activity.
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- AUTHENTIC PHOTO CONTRIBUTIONS -->
+<section class="contribute">
+  <div class="container">
+
+    <div class="contribute-panel">
+
+      <div>
+        <div class="section-label">Help Tell Our Story</div>
+
+        <h2>Let's build a gallery that reflects our real community</h2>
+
+        <p>
+          As GICDF activities are documented, approved photographs
+          can help visitors understand the people, places and
+          experiences connected with our work.
+        </p>
+
+        <p>
+          If you have relevant photographs to share, please contact
+          us before sending them. We will discuss their intended use
+          and any necessary permissions.
+        </p>
+
+        <a href="contact.html" class="btn btn-gold">Contact Our Team</a>
+      </div>
+
+      <ul class="contribute-list">
+        <li>Use genuine photographs from documented activities.</li>
+        <li>Obtain appropriate consent before publishing identifiable people.</li>
+        <li>Protect children's privacy and obtain appropriate guardian consent.</li>
+        <li>Use accurate captions, dates and locations.</li>
+        <li>Respect the dignity and privacy of community members.</li>
+      </ul>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- TRANSPARENCY -->
+<section class="transparency">
+  <div class="container transparency-inner">
+
+    <div class="section-label">Our Approach</div>
+
+    <h2>Show the work honestly. Respect every story.</h2>
+
+    <p>
+      A meaningful community gallery should reflect real experiences,
+      respect the people represented and communicate accurately.
+      GICDF aims to present visual information responsibly as
+      verified photographs and approved activity records become
+      available.
+    </p>
+
+    <a href="about.html" class="btn btn-gold">Learn About GICDF</a>
+
+  </div>
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="cta">
+  <div class="container">
+
+    <h2>Be part of a stronger community</h2>
+
+    <p>
+      Interested in education, youth empowerment, skills development,
+      environmental awareness or inclusive community development?
+      Explore ways to connect with GICDF.
+    </p>
+
+    <a href="get-involved.html" class="btn btn-gold">Get Involved</a>
+    <a href="partnerships.html" class="btn btn-white">Explore Partnerships</a>
+
+  </div>
+</section>
+
+  </main>  <!-- FOOTER -->  <footer class="site-footer">
+    <div class="container">  <div class="footer-grid">
+
+    <div class="footer-about">
+      <div class="footer-brand">GICDF Community Connect</div>
+
+      <p>
+        Gangara Integrated Community Development Foundation works
+        towards inclusive community development, youth empowerment,
+        education, skills development and peaceful communities.
+      </p>
+
+      <p>Gangara, Makarfi LGA, Kaduna State, Nigeria.</p>
+    </div>
+
+    <div>
+      <h3>Quick Links</h3>
+
+      <ul class="footer-links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="programmes.html">Our Programmes</a></li>
+        <li><a href="projects.html">Projects &amp; Initiatives</a></li>
+        <li><a href="partnerships.html">Partnerships</a></li>
+        <li><a href="news.html">News &amp; Updates</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Connect With Us</h3>
+
+      <ul class="footer-links">
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="governance.html">Governance</a></li>
+        <li><a href="mailto:info.gicdf@gmail.com">Email GICDF</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>
+      &copy; <span id="currentYear"></span>
+      Gangara Integrated Community Development Foundation.
+      All rights reserved.
+    </p>
+
+    <p>Community • Opportunity • Sustainable Development</p>
+  </div>
+
+</div>
+
+  </footer>  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+
+    menuToggle.addEventListener("click", function () {
+      const isOpen = mainNav.classList.toggle("open");
+
+      menuToggle.setAttribute("aria-expanded", isOpen);
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
+
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    document.querySelectorAll("#mainNav a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        mainNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+  </script></body>
   </html>
