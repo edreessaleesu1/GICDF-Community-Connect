@@ -1,204 +1,1420 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore GICDF's programme priorities in youth empowerment, education, skills development, community welfare, peacebuilding and environmental sustainability.">
-  <title>Our Programmes | GICDF Community Connect</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>About Us | GICDF Community Connect</title>
 
+<meta name="description" content="Discover Gangara Integrated Community Development Foundation (GICDF), our mission, vision, values, and commitment to empowering communities through education, youth development, inclusion, and sustainable progress.">
+
+<meta name="theme-color" content="#123c2b">
+
+<meta property="og:title" content="About GICDF | Building Stronger Communities">
+<meta property="og:description" content="Learn about our vision for empowered people, stronger communities, and sustainable development.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://edreessaleesu1.github.io/GICDF-Community-Connect/about.html">
+
+<link rel="icon" href="Assets/images/favicon.png">
+<link rel="stylesheet" href="Assets/css/style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+    :root {
+        --green: #123c2b;
+        --green-dark: #09291d;
+        --green-light: #eaf3ed;
+        --gold: #d6a63f;
+        --gold-light: #f8efd9;
+        --white: #ffffff;
+        --cream: #fbfaf6;
+        --text: #34443a;
+        --muted: #718075;
+        --border: #e7ece7;
+        --shadow: 0 18px 50px rgba(18, 60, 43, 0.09);
+        --radius: 22px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 100px;
+    }
+
+    body {
+        margin: 0;
+        font-family: "DM Sans", sans-serif;
+        color: var(--text);
+        background: var(--white);
+        line-height: 1.75;
+    }
+
+    body,
+    button,
+    a {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    a {
+        color: inherit;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: "Playfair Display", Georgia, serif;
+        color: var(--green);
+        line-height: 1.2;
+        margin-top: 0;
+    }
+
+    p {
+        margin-top: 0;
+    }
+
+    .container {
+        width: min(1140px, calc(100% - 40px));
+        margin-inline: auto;
+    }
+
+    .section {
+        padding: 88px 0;
+    }
+
+    .section-heading {
+        max-width: 700px;
+        margin: 0 auto 48px;
+        text-align: center;
+    }
+
+    .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: #9b741e;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 17px;
+    }
+
+    .eyebrow::before {
+        content: "";
+        width: 30px;
+        height: 2px;
+        background: var(--gold);
+    }
+
+    .section-heading h2 {
+        font-size: clamp(2rem, 4vw, 3.1rem);
+        margin-bottom: 18px;
+    }
+
+    .section-heading p {
+        color: var(--muted);
+        font-size: 1.02rem;
+        margin-bottom: 0;
+    }
+
+    /* Header */
+
+    .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid rgba(18, 60, 43, 0.08);
+    }
+
+    .header-inner {
+        min-height: 86px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        min-width: 0;
+        text-decoration: none;
+    }
+
+    .brand img {
+        width: 58px;
+        height: 58px;
+        object-fit: contain;
+    }
+
+    .brand-copy {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.25;
+    }
+
+    .brand-copy strong {
+        color: var(--green);
+        font-size: 1.02rem;
+        font-weight: 800;
+        letter-spacing: 0.3px;
+    }
+
+    .brand-copy span {
+        color: var(--muted);
+        font-size: 0.68rem;
+        margin-top: 4px;
+        letter-spacing: 0.6px;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 21px;
+    }
+
+    .nav-links a {
+        position: relative;
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #435449;
+        transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+        color: var(--green);
+    }
+
+    .nav-links a.active::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -10px;
+        height: 2px;
+        background: var(--gold);
+    }
+
+    .nav-links .nav-cta {
+        padding: 12px 17px;
+        border-radius: 8px;
+        color: var(--white);
+        background: var(--green);
+    }
+
+    .nav-links .nav-cta:hover {
+        background: var(--green-dark);
+        color: var(--white);
+    }
+
+    .nav-links .nav-cta::after {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: none;
+        width: 44px;
+        height: 44px;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        background: var(--white);
+        color: var(--green);
+        font-size: 1.45rem;
+        cursor: pointer;
+    }
+
+    /* Hero */
+
+    .about-hero {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        padding: 105px 0 100px;
+        background:
+            radial-gradient(circle at 88% 15%, rgba(214, 166, 63, 0.2), transparent 25%),
+            radial-gradient(circle at 8% 90%, rgba(69, 126, 87, 0.3), transparent 28%),
+            linear-gradient(125deg, #09291d 0%, #123c2b 58%, #20543a 100%);
+    }
+
+    .about-hero::before,
+    .about-hero::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+    }
+
+    .about-hero::before {
+        width: 460px;
+        height: 460px;
+        right: -130px;
+        top: -180px;
+    }
+
+    .about-hero::after {
+        width: 320px;
+        height: 320px;
+        right: -60px;
+        top: -110px;
+    }
+
+    .hero-content {
+        max-width: 850px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .hero-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 15px;
+        margin-bottom: 25px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 100px;
+        color: #f5d98f;
+        background: rgba(255, 255, 255, 0.06);
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 1.7px;
+        text-transform: uppercase;
+    }
+
+    .hero-label span {
+        width: 7px;
+        height: 7px;
+        background: var(--gold);
+        border-radius: 50%;
+    }
+
+    .about-hero h1 {
+        color: var(--white);
+        font-size: clamp(2.7rem, 6vw, 5rem);
+        letter-spacing: -1.5px;
+        margin-bottom: 25px;
+    }
+
+    .about-hero h1 em {
+        color: #e6c16d;
+        font-weight: 500;
+    }
+
+    .about-hero p {
+        max-width: 700px;
+        margin: 0 auto;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: clamp(1rem, 2vw, 1.16rem);
+    }
+
+    .hero-actions {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 35px;
+    }
+
+    .btn {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 23px;
+        border: 1px solid transparent;
+        border-radius: 9px;
+        text-decoration: none;
+        font-size: 0.92rem;
+        font-weight: 700;
+        transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover {
+        transform: translateY(-3px);
+    }
+
+    .btn-gold {
+        background: var(--gold);
+        color: var(--green-dark);
+    }
+
+    .btn-gold:hover {
+        background: #e6bc5b;
+    }
+
+    .btn-outline-light {
+        border-color: rgba(255, 255, 255, 0.35);
+        color: var(--white);
+        background: rgba(255, 255, 255, 0.04);
+    }
+
+    .btn-outline-light:hover {
+        background: rgba(255, 255, 255, 0.12);
+    }
+
+    /* Intro */
+
+    .intro-section {
+        background: var(--cream);
+    }
+
+    .intro-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 70px;
+    }
+
+    .intro-visual {
+        position: relative;
+        min-height: 430px;
+    }
+
+    .intro-photo {
+        width: 100%;
+        height: 430px;
+        object-fit: cover;
+        border-radius: 24px;
+        box-shadow: var(--shadow);
+    }
+
+    .photo-note {
+        position: absolute;
+        right: -22px;
+        bottom: 28px;
+        max-width: 245px;
+        padding: 20px 22px;
+        border-radius: 16px;
+        background: var(--white);
+        box-shadow: var(--shadow);
+    }
+
+    .photo-note strong {
+        display: block;
+        color: var(--green);
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 1.2rem;
+        line-height: 1.35;
+        margin-bottom: 6px;
+    }
+
+    .photo-note span {
+        color: var(--muted);
+        font-size: 0.83rem;
+    }
+
+    .intro-copy h2 {
+        font-size: clamp(2rem, 4vw, 3.1rem);
+        margin-bottom: 22px;
+    }
+
+    .intro-copy p {
+        color: #637168;
+        margin-bottom: 18px;
+    }
+
+    .intro-copy .lead {
+        color: var(--green);
+        font-size: 1.12rem;
+        font-weight: 600;
+    }
+
+    .gold-line {
+        width: 62px;
+        height: 4px;
+        background: var(--gold);
+        border-radius: 10px;
+        margin: 26px 0;
+    }
+
+    /* Purpose cards */
+
+    .purpose-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+
+    .purpose-card {
+        position: relative;
+        overflow: hidden;
+        padding: 35px 30px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: var(--white);
+        box-shadow: 0 8px 30px rgba(18, 60, 43, 0.035);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .purpose-card:hover {
+        transform: translateY(-7px);
+        box-shadow: var(--shadow);
+    }
+
+    .purpose-card::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: var(--gold);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.25s ease;
+    }
+
+    .purpose-card:hover::after {
+        transform: scaleX(1);
+    }
+
+    .purpose-icon {
+        display: grid;
+        place-items: center;
+        width: 62px;
+        height: 62px;
+        border-radius: 18px;
+        background: var(--green-light);
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+
+    .purpose-card:nth-child(2) .purpose-icon {
+        background: var(--gold-light);
+    }
+
+    .purpose-card h3 {
+        font-size: 1.55rem;
+        margin-bottom: 14px;
+    }
+
+    .purpose-card p {
+        color: var(--muted);
+        font-size: 0.95rem;
+        margin-bottom: 0;
+    }
+
+    /* Focus areas */
+
+    .focus-section {
+        background: var(--green);
+    }
+
+    .focus-section .section-heading h2 {
+        color: var(--white);
+    }
+
+    .focus-section .section-heading p {
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .focus-section .eyebrow {
+        color: #f0ce7a;
+    }
+
+    .focus-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+    }
+
+    .focus-card {
+        padding: 27px 23px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 17px;
+        background: rgba(255, 255, 255, 0.055);
+        transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .focus-card:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .focus-card .focus-icon {
+        display: inline-block;
+        font-size: 1.8rem;
+        margin-bottom: 19px;
+    }
+
+    .focus-card h3 {
+        color: var(--white);
+        font-size: 1.22rem;
+        margin-bottom: 12px;
+    }
+
+    .focus-card p {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.88rem;
+        margin-bottom: 0;
+    }
+
+    /* Values */
+
+    .values-section {
+        background: var(--cream);
+    }
+
+    .values-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .value-card {
+        display: flex;
+        align-items: flex-start;
+        gap: 17px;
+        padding: 25px;
+        border: 1px solid var(--border);
+        border-radius: 17px;
+        background: var(--white);
+        transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .value-card:hover {
+        transform: translateY(-4px);
+        border-color: #d5b76d;
+    }
+
+    .value-number {
+        display: grid;
+        place-items: center;
+        flex: 0 0 43px;
+        height: 43px;
+        border-radius: 12px;
+        background: var(--gold-light);
+        color: #87641b;
+        font-size: 0.82rem;
+        font-weight: 800;
+    }
+
+    .value-card h3 {
+        font-family: "DM Sans", sans-serif;
+        font-size: 1.03rem;
+        font-weight: 800;
+        margin-bottom: 8px;
+    }
+
+    .value-card p {
+        color: var(--muted);
+        font-size: 0.88rem;
+        margin-bottom: 0;
+    }
+
+    /* Community promise */
+
+    .promise-section {
+        padding: 82px 0;
+    }
+
+    .promise-box {
+        position: relative;
+        overflow: hidden;
+        padding: 60px;
+        border-radius: 26px;
+        background:
+            radial-gradient(circle at 100% 0%, rgba(214, 166, 63, 0.2), transparent 34%),
+            linear-gradient(120deg, #f0f5ef, #fbfaf6);
+    }
+
+    .promise-box h2 {
+        max-width: 700px;
+        font-size: clamp(2rem, 4vw, 3.1rem);
+        margin-bottom: 20px;
+    }
+
+    .promise-box p {
+        max-width: 720px;
+        color: #637168;
+        margin-bottom: 28px;
+    }
+
+    .promise-box .btn {
+        background: var(--green);
+        color: var(--white);
+    }
+
+    .promise-box .btn:hover {
+        background: var(--green-dark);
+    }
+
+    /* Footer */
+
+    .site-footer {
+        padding: 65px 0 25px;
+        background: #09251a;
+        color: rgba(255, 255, 255, 0.74);
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: 45px;
+        padding-bottom: 45px;
+    }
+
+    .footer-brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        margin-bottom: 18px;
+    }
+
+    .footer-brand img {
+        width: 54px;
+        height: 54px;
+        object-fit: contain;
+        background: var(--white);
+        border-radius: 10px;
+    }
+
+    .footer-brand strong {
+        display: block;
+        color: var(--white);
+        font-size: 1.05rem;
+    }
+
+    .footer-brand span {
+        display: block;
+        color: #e2bf68;
+        font-size: 0.73rem;
+        margin-top: 4px;
+    }
+
+    .footer-about {
+        max-width: 340px;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.66);
+    }
+
+    .footer-column h3 {
+        color: var(--white);
+        font-family: "DM Sans", sans-serif;
+        font-size: 0.96rem;
+        margin-bottom: 19px;
+    }
+
+    .footer-column ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-column li {
+        margin-bottom: 11px;
+    }
+
+    .footer-column a {
+        color: rgba(255, 255, 255, 0.68);
+        font-size: 0.87rem;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    .footer-column a:hover {
+        color: #f0ce7a;
+    }
+
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding-top: 23px;
+        border-top: 1px solid rgba(255, 255, 255, 0.13);
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.55);
+    }
+
+    .footer-bottom p {
+        margin: 0;
+    }
+
+    .footer-bottom a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .footer-bottom a:hover {
+        color: var(--white);
+    }
+
+    /* Responsive layout */
+
+    @media (max-width: 1050px) {
+        .nav-links {
+            gap: 13px;
+        }
+
+        .nav-links a {
+            font-size: 0.79rem;
+        }
+
+        .intro-grid {
+            gap: 45px;
+        }
+
+        .focus-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .footer-grid {
+            grid-template-columns: 1.4fr 1fr 1fr;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .header-inner {
+            min-height: 76px;
+        }
+
+        .brand img {
+            width: 49px;
+            height: 49px;
+        }
+
+        .brand-copy strong {
+            font-size: 0.91rem;
+        }
+
+        .brand-copy span {
+            font-size: 0.61rem;
+        }
+
+        .menu-toggle {
+            display: inline-grid;
+            place-items: center;
+        }
+
+        .nav-links {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            display: none;
+            align-items: stretch;
+            gap: 0;
+            padding: 12px 20px 22px;
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.06);
+        }
+
+        .nav-links.open {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nav-links a {
+            padding: 13px 7px;
+            font-size: 0.92rem;
+        }
+
+        .nav-links a.active::after {
+            display: none;
+        }
+
+        .nav-links .nav-cta {
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        .about-hero {
+            padding: 78px 0;
+        }
+
+        .section {
+            padding: 68px 0;
+        }
+
+        .intro-grid {
+            grid-template-columns: 1fr;
+            gap: 48px;
+        }
+
+        .intro-visual {
+            max-width: 590px;
+            width: calc(100% - 12px);
+        }
+
+        .purpose-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .values-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .promise-box {
+            padding: 42px 32px;
+        }
+
+        .footer-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 35px;
+        }
+    }
+
+    @media (max-width: 520px) {
+        .container {
+            width: min(100% - 30px, 1140px);
+        }
+
+        .brand {
+            gap: 8px;
+        }
+
+        .brand-copy strong {
+            font-size: 0.82rem;
+        }
+
+        .brand-copy span {
+            max-width: 175px;
+            font-size: 0.58rem;
+        }
+
+        .about-hero {
+            padding: 67px 0;
+        }
+
+        .about-hero h1 {
+            letter-spacing: -0.7px;
+        }
+
+        .hero-actions {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .btn {
+            width: 100%;
+        }
+
+        .intro-photo {
+            height: 330px;
+        }
+
+        .intro-visual {
+            min-height: 360px;
+        }
+
+        .photo-note {
+            right: -5px;
+            bottom: 10px;
+            max-width: 220px;
+            padding: 15px;
+        }
+
+        .focus-grid,
+        .values-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .purpose-card {
+            padding: 28px 24px;
+        }
+
+        .promise-box {
+            padding: 35px 23px;
+        }
+
+        .footer-grid {
+            grid-template-columns: 1fr;
+            gap: 28px;
+        }
+
+        .footer-bottom {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            scroll-behavior: auto !important;
+            transition-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+        }
+    }
+</style>
+
+</head><body><!-- Website Header -->
 <header class="site-header">
-  <div class="header-inner">
-    <a href="index.html" class="brand">
-      <img src="assets/images/gicdf-logo.png" alt="GICDF Logo"
-           onerror="this.style.display='none'">
-      <span>GICDF <small>Community Connect</small></span>
-    </a>
+    <div class="container header-inner">
 
-    <button class="menu-toggle" aria-label="Open navigation menu"
-            aria-expanded="false">&#9776;</button>
+        <a class="brand" href="index.html" aria-label="GICDF Community Connect home">
+            <img src="Assets/images/gicdf-logo.png" alt="GICDF logo">
+            <span class="brand-copy">
+                <strong>GICDF</strong>
+                <span>Community Connect</span>
+            </span>
+        </a>
 
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="programmes.html" class="active">Programmes</a>
-      <a href="projects.html">Projects</a>
-      <a href="partnerships.html">Partnerships</a>
-      <a href="get-involved.html">Get Involved</a>
-      <a href="news.html">News</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="governance.html">Governance</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
+        <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-controls="primaryNavigation"
+                aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="nav-links" id="primaryNavigation" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active" aria-current="page">About</a>
+            <a href="programmes.html">Programmes</a>
+            <a href="projects.html">Projects</a>
+            <a href="partnerships.html">Partners</a>
+            <a href="news.html">News</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="governance.html">Governance</a>
+            <a href="contact.html">Contact</a>
+            <a href="get-involved.html" class="nav-cta">Get Involved ↗</a>
+        </nav>
+
+    </div>
 </header>
+
 
 <main>
 
-  <section class="page-banner">
-    <div class="container">
-      <p>Our Areas of Focus</p>
-      <h1>Programmes for Community Progress</h1>
-      <p>Creating opportunities, strengthening communities and supporting sustainable development.</p>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="container hero-content">
 
-  <section class="section">
-    <div class="container">
-      <div class="section-heading">
-        <span class="eyebrow">Our Priorities</span>
-        <h2>Where We Aim to Make a Difference</h2>
-        <p>
-          GICDF's programme priorities are designed to respond to community
-          needs and encourage inclusive participation. Activities will depend
-          on identified needs, available resources and suitable partnerships.
-        </p>
-      </div>
+            <div class="hero-label">
+                <span></span>
+                Who We Are
+            </div>
 
-      <div class="cards">
+            <h1>
+                Stronger Communities.<br>
+                <em>Brighter Futures.</em>
+            </h1>
 
-        <article class="card">
-          <h3>Youth Empowerment and Skills Development</h3>
-          <p>
-            Promote access to practical skills, digital literacy,
-            entrepreneurship, vocational training, career guidance and
-            opportunities for young people.
-          </p>
-          <p><strong>Intended outcome:</strong> Young people better equipped to pursue livelihoods and contribute to community development.</p>
-        </article>
+            <p>
+                We believe lasting progress begins when people have the
+                opportunity, knowledge, and support to shape a better future
+                for themselves and their communities.
+            </p>
 
-        <article class="card">
-          <h3>Education and Learning Support</h3>
-          <p>
-            Encourage educational participation, learning support, mentorship,
-            literacy, digital learning and collaboration with relevant
-            educational stakeholders.
-          </p>
-          <p><strong>Intended outcome:</strong> Improved access to learning opportunities and stronger educational engagement.</p>
-        </article>
+            <div class="hero-actions">
+                <a href="#our-story" class="btn btn-gold">
+                    Discover Our Story <span aria-hidden="true">↓</span>
+                </a>
 
-        <article class="card">
-          <h3>Community Development and Welfare</h3>
-          <p>
-            Support community needs assessments, local development initiatives,
-            social welfare activities and constructive engagement around
-            essential community services.
-          </p>
-          <p><strong>Intended outcome:</strong> Communities better able to identify priorities and pursue practical solutions.</p>
-        </article>
+                <a href="get-involved.html" class="btn btn-outline-light">
+                    Join Our Mission <span aria-hidden="true">↗</span>
+                </a>
+            </div>
 
-        <article class="card">
-          <h3>Peacebuilding and Social Cohesion</h3>
-          <p>
-            Encourage dialogue, mutual understanding, peaceful conflict
-            resolution, community cooperation and positive relationships
-            among residents.
-          </p>
-          <p><strong>Intended outcome:</strong> Stronger trust, cooperation and peaceful community relations.</p>
-        </article>
+        </div>
+    </section>
 
-        <article class="card">
-          <h3>Health and Environmental Sustainability</h3>
-          <p>
-            Promote health awareness, environmental education, sanitation,
-            responsible waste management and community participation in
-            environmental protection.
-          </p>
-          <p><strong>Intended outcome:</strong> Greater awareness and participation in healthier, cleaner environments.</p>
-        </article>
 
-        <article class="card">
-          <h3>Leadership and Civic Participation</h3>
-          <p>
-            Encourage responsible leadership, civic awareness, volunteerism,
-            community dialogue and transparent, inclusive decision-making.
-          </p>
-          <p><strong>Intended outcome:</strong> More informed participation and stronger accountability in community affairs.</p>
-        </article>
+    <!-- Our Story -->
+    <section class="section intro-section" id="our-story">
+        <div class="container intro-grid">
 
-        <article class="card">
-          <h3>Women and Vulnerable Groups</h3>
-          <p>
-            Encourage inclusive development opportunities for women, persons
-            with disabilities and other groups who may face barriers to
-            participation.
-          </p>
-          <p><strong>Intended outcome:</strong> More inclusive access to community opportunities and support.</p>
-        </article>
+            <div class="intro-visual">
+                <!-- Replace this illustrative stock image with an authentic GICDF community photograph. -->
+                <img
+                    class="intro-photo"
+                    src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=1100&q=85"
+                    alt="People working together during a community activity"
+                    loading="lazy">
 
-        <article class="card">
-          <h3>Community Partnerships and Resource Mobilisation</h3>
-          <p>
-            Build relationships with civil society organisations, public
-            institutions, responsible businesses, donors and volunteers to
-            support shared development priorities.
-          </p>
-          <p><strong>Intended outcome:</strong> Stronger cooperation and improved access to relevant expertise and resources.</p>
-        </article>
+                <div class="photo-note">
+                    <strong>Progress begins with people.</strong>
+                    <span>Working together for stronger, more resilient communities.</span>
+                </div>
+            </div>
 
-      </div>
-    </div>
-  </section>
+            <div class="intro-copy">
+                <span class="eyebrow">Our Story</span>
 
-  <section class="section section-light">
-    <div class="container">
-      <div class="section-heading">
-        <span class="eyebrow">From Ideas to Action</span>
-        <h2>How Programme Activities Are Developed</h2>
-      </div>
+                <h2>Rooted in community. Driven by possibility.</h2>
 
-      <div class="cards">
-        <article class="card">
-          <h3>01. Identify Needs</h3>
-          <p>Listen to residents and identify priorities through appropriate community engagement.</p>
-        </article>
+                <p class="lead">
+                    Gangara Integrated Community Development Foundation
+                    (GICDF) is committed to supporting community-led
+                    development and creating opportunities for people to thrive.
+                </p>
 
-        <article class="card">
-          <h3>02. Plan Responsibly</h3>
-          <p>Develop realistic objectives, activities, budgets, timelines and monitoring measures.</p>
-        </article>
+                <p>
+                    We recognise that every community has strengths, ideas,
+                    and people with the potential to create positive change.
+                    Our role is to help nurture that potential through
+                    collaboration, learning, inclusion, and practical action.
+                </p>
 
-        <article class="card">
-          <h3>03. Seek Collaboration</h3>
-          <p>Identify suitable partners, funding opportunities, volunteers and technical support.</p>
-        </article>
+                <p>
+                    Our areas of interest include youth empowerment,
+                    education, skills development, community wellbeing,
+                    peacebuilding, environmental responsibility, and
+                    sustainable development.
+                </p>
 
-        <article class="card">
-          <h3>04. Monitor and Learn</h3>
-          <p>Review progress, document activities and use lessons learned to improve future work.</p>
-        </article>
-      </div>
-    </div>
-  </section>
+                <p>
+                    We believe meaningful progress is built with communities,
+                    not simply delivered to them. By listening to local voices
+                    and encouraging shared responsibility, we aim to help
+                    create solutions that respond to real needs.
+                </p>
 
-  <section class="section">
-    <div class="container text-center">
-      <h2>Have an Idea for Your Community?</h2>
-      <p>Share a community need, propose an initiative or explore opportunities to work with GICDF.</p>
-      <a href="contact.html" class="btn btn-primary">Contact Us</a>
-      <a href="partnerships.html" class="btn btn-secondary">Explore Partnerships</a>
-    </div>
-  </section>
+                <div class="gold-line"></div>
+
+                <a href="programmes.html" class="btn"
+                   style="background: var(--green); color: white;">
+                    Explore Our Focus Areas <span aria-hidden="true">→</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Vision, Mission, Approach -->
+    <section class="section">
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="eyebrow">Our Foundation</span>
+                <h2>What guides our work</h2>
+                <p>
+                    Our purpose, direction, and approach shape how we work
+                    with people and communities.
+                </p>
+            </div>
+
+            <div class="purpose-grid">
+
+                <article class="purpose-card">
+                    <div class="purpose-icon" aria-hidden="true">🌍</div>
+                    <h3>Our Vision</h3>
+                    <p>
+                        Empowered people and thriving communities where
+                        everyone has the opportunity to contribute to a
+                        peaceful, inclusive, and sustainable future.
+                    </p>
+                </article>
+
+                <article class="purpose-card">
+                    <div class="purpose-icon" aria-hidden="true">🎯</div>
+                    <h3>Our Mission</h3>
+                    <p>
+                        To promote community development by supporting
+                        education, youth empowerment, skills development,
+                        inclusion, wellbeing, and collaborative action.
+                    </p>
+                </article>
+
+                <article class="purpose-card">
+                    <div class="purpose-icon" aria-hidden="true">🤝</div>
+                    <h3>Our Approach</h3>
+                    <p>
+                        To listen, collaborate, build local capacity, and
+                        encourage community participation in identifying
+                        challenges and developing practical solutions.
+                    </p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Areas of Focus -->
+    <section class="section focus-section">
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="eyebrow">Where We Focus</span>
+                <h2>Creating opportunities that matter</h2>
+                <p>
+                    We aim to support practical, inclusive initiatives that
+                    respond to community priorities and help people build
+                    a stronger future.
+                </p>
+            </div>
+
+            <div class="focus-grid">
+
+                <article class="focus-card">
+                    <span class="focus-icon" aria-hidden="true">🎓</span>
+                    <h3>Education & Learning</h3>
+                    <p>
+                        Encouraging learning opportunities, educational
+                        awareness, and access to knowledge that helps people
+                        reach their potential.
+                    </p>
+                </article>
+
+                <article class="focus-card">
+                    <span class="focus-icon" aria-hidden="true">💡</span>
+                    <h3>Youth Empowerment</h3>
+                    <p>
+                        Promoting leadership, practical skills, innovation,
+                        and pathways that help young people participate
+                        meaningfully in society.
+                    </p>
+                </article>
+
+                <article class="focus-card">
+                    <span class="focus-icon" aria-hidden="true">🏘️</span>
+                    <h3>Community Development</h3>
+                    <p>
+                        Supporting local participation, community-led
+                        initiatives, and collective efforts to address
+                        shared development priorities.
+                    </p>
+                </article>
+
+                <article class="focus-card">
+                    <span class="focus-icon" aria-hidden="true">🕊️</span>
+                    <h3>Peace & Inclusion</h3>
+                    <p>
+                        Encouraging dialogue, mutual understanding,
+                        inclusion, and peaceful cooperation across
+                        communities.
+                    </p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Core Values -->
+    <section class="section values-section">
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="eyebrow">Our Principles</span>
+                <h2>Values that shape every step</h2>
+                <p>
+                    These principles describe the standards we aspire to
+                    uphold in our relationships, decisions, and activities.
+                </p>
+            </div>
+
+            <div class="values-grid">
+
+                <article class="value-card">
+                    <div class="value-number">01</div>
+                    <div>
+                        <h3>Integrity & Accountability</h3>
+                        <p>
+                            Acting honestly, taking responsibility, and
+                            promoting transparency in our work.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="value-card">
+                    <div class="value-number">02</div>
+                    <div>
+                        <h3>Community Participation</h3>
+                        <p>
+                            Listening to local voices and encouraging people
+                            to help shape the decisions that affect them.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="value-card">
+                    <div class="value-number">03</div>
+                    <div>
+                        <h3>Inclusion & Unity</h3>
+                        <p>
+                            Respecting differences and promoting equal
+                            opportunities, dignity, and belonging.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="value-card">
+                    <div class="value-number">04</div>
+                    <div>
+                        <h3>Sustainable Impact</h3>
+                        <p>
+                            Focusing on approaches that build local capacity
+                            and support lasting community progress.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="value-card">
+                    <div class="value-number">05</div>
+                    <div>
+                        <h3>Collaboration</h3>
+                        <p>
+                            Building constructive relationships with
+                            community members, organisations, and other
+                            stakeholders.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="value-card">
+                    <div class="value-number">06</div>
+                    <div>
+                        <h3>Learning & Innovation</h3>
+                        <p>
+                            Remaining open to new ideas, learning from
+                            experience, and improving how we serve communities.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Call to Action -->
+    <section class="promise-section">
+        <div class="container">
+
+            <div class="promise-box">
+                <span class="eyebrow">Be Part of the Change</span>
+
+                <h2>Every stronger community begins with people who care.</h2>
+
+                <p>
+                    Whether you want to volunteer, share an idea, support
+                    a community initiative, or explore a partnership,
+                    your contribution can help move meaningful development forward.
+                </p>
+
+                <a href="get-involved.html" class="btn">
+                    Get Involved <span aria-hidden="true">↗</span>
+                </a>
+
+            </div>
+        </div>
+    </section>
 
 </main>
 
+
+<!-- Website Footer -->
 <footer class="site-footer">
-  <div class="container">
-    <p><strong>Gangara Integrated Community Development Foundation (GICDF)</strong></p>
-    <p>Gangara, Makarfi LGA, Kaduna State, Nigeria.</p>
-    <p>
-      <a href="index.html">Home</a> |
-      <a href="about.html">About Us</a> |
-      <a href="programmes.html">Programmes</a> |
-      <a href="projects.html">Projects</a> |
-      <a href="contact.html">Contact</a>
-    </p>
-    <p>&copy; <span class="current-year">2026</span> GICDF. All rights reserved.</p>
-  </div>
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+                <a class="footer-brand" href="index.html">
+                    <img src="Assets/images/gicdf-logo.png" alt="GICDF logo">
+                    <span>
+                        <strong>GICDF</strong>
+                        <span>Community Connect</span>
+                    </span>
+                </a>
+
+                <p class="footer-about">
+                    Working towards empowered people, stronger communities,
+                    and sustainable opportunities through participation,
+                    learning, and collaboration.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programmes.html">Programmes</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="news.html">News & Updates</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Get Involved</h3>
+                <ul>
+                    <li><a href="get-involved.html">Volunteer</a></li>
+                    <li><a href="partnerships.html">Partner With Us</a></li>
+                    <li><a href="gallery.html">Photo Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Accountability</h3>
+                <ul>
+                    <li><a href="governance.html">Governance</a></li>
+                    <li><a href="contact.html">Contact the Organisation</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                &copy; <span id="currentYear"></span>
+                Gangara Integrated Community Development Foundation.
+                All rights reserved.
+            </p>
+
+            <p>Community first. Progress together.</p>
+        </div>
+
+    </div>
 </footer>
 
-<script src="assets/js/main.js"></script>
+
+<script>
+    // Mobile navigation
+    const menuToggle = document.getElementById("menuToggle");
+    const primaryNavigation = document.getElementById("primaryNavigation");
+
+    menuToggle.addEventListener("click", function () {
+        const isOpen = primaryNavigation.classList.toggle("open");
+
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation menu" : "Open navigation menu"
+        );
+
+        menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    // Close the mobile menu after a navigation link is selected
+    primaryNavigation.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            primaryNavigation.classList.remove("open");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "Open navigation menu");
+            menuToggle.textContent = "☰";
+        });
+    });
+
+    // Update the copyright year automatically
+    document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+</script>
+
 </body>
   </html>
