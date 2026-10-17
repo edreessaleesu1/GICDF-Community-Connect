@@ -1,263 +1,1074 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learn about GICDF's governance principles, organisational accountability, responsible leadership and commitment to transparency.">
-  <title>Governance and Accountability | GICDF Community Connect</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+  <meta name="description" content="Learn about the governance principles, accountability commitments and organisational structure of Gangara Integrated Community Development Foundation.">
+  <meta name="theme-color" content="#14532d">
+  <title>Governance & Accountability | GICDF Community Connect</title>  <style>
+    :root {
+      --green: #14532d;
+      --dark-green: #0b2e1a;
+      --light-green: #eaf4ed;
+      --gold: #d4a62a;
+      --white: #ffffff;
+      --text: #26332b;
+      --muted: #65736a;
+      --border: #e3e9e4;
+      --background: #f7faf7;
+      --shadow: 0 10px 30px rgba(11, 46, 26, 0.08);
+    }
 
-<header class="site-header">
-  <div class="header-inner">
-    <a href="index.html" class="brand">
-      <img src="assets/images/gicdf-logo.png" alt="GICDF Logo"
-           onerror="this.style.display='none'">
-      <span>GICDF <small>Community Connect</small></span>
-    </a>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    <button class="menu-toggle" aria-label="Open navigation menu"
-            aria-expanded="false">&#9776;</button>
+    html {
+      scroll-behavior: smooth;
+    }
 
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="programmes.html">Programmes</a>
-      <a href="projects.html">Projects</a>
-      <a href="partnerships.html">Partnerships</a>
-      <a href="get-involved.html">Get Involved</a>
-      <a href="news.html">News</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="governance.html" class="active">Governance</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--white);
+    }
 
-<main>
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-  <section class="page-banner">
-    <div class="container">
-      <p>Integrity, Responsibility and Trust</p>
-      <h1>Governance and Accountability</h1>
-      <p>Building public confidence through responsible leadership and transparent practices.</p>
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    /* HEADER */
+    .site-header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-inner {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+    }
+
+    .brand-name {
+      color: var(--green);
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+
+    .brand-name span {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 500;
+      margin-top: 4px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 700;
+      color: #34483a;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--green);
+    }
+
+    .nav-links .nav-cta {
+      background: var(--green);
+      color: var(--white);
+      padding: 10px 14px;
+      border-radius: 5px;
+    }
+
+    .nav-links .nav-cta:hover {
+      background: var(--dark-green);
+    }
+
+    .menu-toggle {
+      display: none;
+      padding: 8px 12px;
+      font-size: 22px;
+      color: var(--green);
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(120deg, var(--dark-green), var(--green));
+      color: var(--white);
+      padding: 82px 0 76px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 310px;
+      height: 310px;
+      border: 42px solid rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+      right: -100px;
+      bottom: -175px;
+    }
+
+    .hero-content {
+      max-width: 790px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      color: #ffe29a;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-bottom: 14px;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 5vw, 55px);
+      line-height: 1.15;
+      letter-spacing: -1px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 690px;
+      color: #e2eee5;
+      font-size: 17px;
+      margin-bottom: 27px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 21px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: 800;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--dark-green);
+    }
+
+    .btn-white {
+      background: var(--white);
+      color: var(--green);
+    }
+
+    /* GENERAL SECTIONS */
+    section {
+      padding: 72px 0;
+    }
+
+    .section-heading {
+      max-width: 730px;
+      margin-bottom: 35px;
+    }
+
+    .section-label {
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      margin-bottom: 10px;
+    }
+
+    .section-heading h2 {
+      color: var(--dark-green);
+      font-size: clamp(27px, 3vw, 37px);
+      line-height: 1.25;
+      margin-bottom: 13px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* INTRODUCTION */
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.8fr;
+      gap: 38px;
+      align-items: center;
+    }
+
+    .intro-copy h2 {
+      color: var(--dark-green);
+      font-size: 30px;
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+
+    .intro-copy p {
+      color: var(--muted);
+      margin-bottom: 13px;
+    }
+
+    .intro-note {
+      background: var(--light-green);
+      border-left: 5px solid var(--gold);
+      border-radius: 6px;
+      padding: 25px;
+    }
+
+    .intro-note h3 {
+      color: var(--green);
+      font-size: 19px;
+      margin-bottom: 10px;
+    }
+
+    .intro-note p {
+      color: #526357;
+      font-size: 14px;
+    }
+
+    /* PRINCIPLES */
+    .principles {
+      background: var(--background);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .principle-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .principle-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 25px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .principle-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .principle-icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: var(--light-green);
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    .principle-card h3 {
+      color: var(--green);
+      font-size: 18px;
+      margin-bottom: 9px;
+    }
+
+    .principle-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* ORGANISATIONAL STRUCTURE */
+    .structure {
+      background: var(--white);
+    }
+
+    .structure-flow {
+      max-width: 790px;
+      margin: auto;
+      display: grid;
+      gap: 13px;
+    }
+
+    .structure-item {
+      padding: 20px 24px;
+      text-align: center;
+      background: var(--light-green);
+      border: 1px solid #d7e7da;
+      border-radius: 7px;
+    }
+
+    .structure-item:first-child {
+      background: var(--green);
+      color: var(--white);
+      border-color: var(--green);
+    }
+
+    .structure-item h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .structure-item p {
+      font-size: 13px;
+      color: inherit;
+      opacity: 0.9;
+    }
+
+    .structure-arrow {
+      text-align: center;
+      color: var(--gold);
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .structure-disclaimer {
+      max-width: 790px;
+      margin: 24px auto 0;
+      color: var(--muted);
+      font-size: 13px;
+      background: var(--background);
+      border-left: 4px solid var(--gold);
+      padding: 17px 20px;
+    }
+
+    /* ACCOUNTABILITY */
+    .accountability {
+      background: var(--background);
+      border-top: 1px solid var(--border);
+    }
+
+    .accountability-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+      align-items: start;
+    }
+
+    .accountability-copy h2 {
+      color: var(--dark-green);
+      font-size: 30px;
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+
+    .accountability-copy p {
+      color: var(--muted);
+      margin-bottom: 13px;
+    }
+
+    .accountability-list {
+      list-style: none;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px 24px;
+    }
+
+    .accountability-list li {
+      padding: 13px 0;
+      border-bottom: 1px solid var(--border);
+      color: #34483a;
+      font-size: 14px;
+    }
+
+    .accountability-list li:last-child {
+      border-bottom: none;
+    }
+
+    .accountability-list li::before {
+      content: "✓";
+      color: var(--green);
+      font-weight: 900;
+      margin-right: 10px;
+    }
+
+    /* POLICIES */
+    .policies {
+      background: var(--white);
+    }
+
+    .policy-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .policy-card {
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      padding: 23px;
+    }
+
+    .policy-card h3 {
+      color: var(--green);
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .policy-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .policy-status {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 5px 9px;
+      border-radius: 3px;
+      background: #fff4d7;
+      color: #73530a;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    /* CTA */
+    .cta {
+      background: var(--dark-green);
+      text-align: center;
+      color: var(--white);
+    }
+
+    .cta h2 {
+      font-size: clamp(27px, 3vw, 38px);
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 700px;
+      margin: 0 auto 25px;
+      color: #d9e8dd;
+    }
+
+    .cta .btn {
+      margin: 4px;
+    }
+
+    /* FOOTER */
+    .site-footer {
+      background: #071e11;
+      color: #d9e5dc;
+      padding: 48px 0 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 35px;
+      padding-bottom: 35px;
+    }
+
+    .footer-brand {
+      color: var(--white);
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 13px;
+    }
+
+    .footer-grid p {
+      color: #b8cabe;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .footer-grid h3 {
+      color: var(--white);
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 9px;
+      font-size: 13px;
+    }
+
+    .footer-links a:hover {
+      color: #ffe29a;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #254332;
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+      color: #a9bcae;
+      font-size: 12px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1050px) {
+      .nav-links {
+        gap: 10px;
+      }
+
+      .nav-links a {
+        font-size: 11px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .principle-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 780px) {
+      .header-inner {
+        min-height: 74px;
+        flex-wrap: wrap;
+        padding: 10px 0;
+      }
+
+      .brand img {
+        width: 48px;
+        height: 48px;
+      }
+
+      .brand-name {
+        font-size: 12px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 5px 0 12px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 11px 5px;
+        font-size: 14px;
+        border-top: 1px solid var(--border);
+      }
+
+      .nav-links .nav-cta {
+        text-align: center;
+        margin-top: 8px;
+      }
+
+      .hero {
+        padding: 62px 0;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+
+      .intro-grid,
+      .accountability-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-about {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .principle-grid,
+      .policy-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-about {
+        grid-column: auto;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+    }
+  </style></head><body>  <!-- HEADER -->  <header class="site-header">
+    <div class="container header-inner">  <a href="index.html" class="brand" aria-label="GICDF home">
+    <img src="Assets/images/gicdf-logo.png" alt="GICDF logo">
+    <div class="brand-name">
+      GICDF COMMUNITY CONNECT
+      <span>Building stronger communities</span>
     </div>
-  </section>
+  </a>
 
-  <section class="section">
-    <div class="container">
-      <div class="section-heading">
-        <span class="eyebrow">Our Principles</span>
-        <h2>Responsible Community Leadership</h2>
-      </div>
+  <button
+    class="menu-toggle"
+    id="menuToggle"
+    aria-label="Open navigation menu"
+    aria-expanded="false"
+    aria-controls="mainNav">☰</button>
 
-      <p>
-        Gangara Integrated Community Development Foundation (GICDF) recognises
-        that public trust is essential to effective community development.
-        We aim to promote responsible leadership, ethical conduct, transparency
-        and accountability in our organisational activities.
-      </p>
+  <nav class="nav-links" id="mainNav" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="programmes.html">Programmes</a>
+    <a href="projects.html">Projects</a>
+    <a href="partnerships.html">Partnerships</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="governance.html" class="active">Governance</a>
+    <a href="contact.html">Contact</a>
+    <a href="get-involved.html" class="nav-cta">Get Involved</a>
+  </nav>
 
-      <p>
-        Our governance arrangements should support decisions that reflect
-        the organisation's purpose, applicable legal requirements and the
-        interests of the communities we seek to serve.
-      </p>
+</div>
 
-      <p>
-        This page outlines our governance commitments. Formal governance
-        structures, policies and procedures should be read alongside the
-        organisation's approved constitution and applicable registration documents.
-      </p>
-    </div>
-  </section>
+  </header>  <main><!-- HERO -->
+<section class="hero">
+  <div class="container hero-content">
+    <span class="eyebrow">Integrity • Accountability • Trust</span>
 
-  <section class="section section-light">
-    <div class="container">
-      <div class="section-heading">
-        <span class="eyebrow">Our Commitments</span>
-        <h2>Governance Standards We Aim to Uphold</h2>
-      </div>
+    <h1>Governance and Accountability</h1>
 
-      <div class="cards">
-
-        <article class="card">
-          <h3>Transparency</h3>
-          <p>
-            Communicate relevant organisational information clearly and
-            provide appropriate reporting on activities and use of resources.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Accountability</h3>
-          <p>
-            Encourage clear responsibilities, documented decisions and
-            appropriate oversight of programmes and organisational affairs.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Integrity and Ethics</h3>
-          <p>
-            Promote honest conduct, responsible decision-making and respect
-            for the dignity and rights of others.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Financial Responsibility</h3>
-          <p>
-            Encourage proper authorisation, accurate recordkeeping, budget
-            oversight and responsible management of funds and assets.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Inclusion and Fairness</h3>
-          <p>
-            Promote fair treatment, respectful participation and decisions
-            consistent with the organisation's objectives and policies.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Legal and Policy Compliance</h3>
-          <p>
-            Seek to comply with applicable laws, registration obligations,
-            approved policies and relevant donor requirements.
-          </p>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-heading">
-        <span class="eyebrow">Organisational Responsibility</span>
-        <h2>Governance in Practice</h2>
-        <p>
-          Effective governance requires more than statements of principle.
-          It depends on appropriate structures, documented procedures and
-          consistent implementation.
-        </p>
-      </div>
-
-      <div class="cards">
-
-        <article class="card">
-          <h3>Leadership and Oversight</h3>
-          <p>
-            Roles and decision-making responsibilities should be defined in
-            the approved constitution and relevant governance documents.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Financial Records</h3>
-          <p>
-            Income, expenditure, supporting documents and financial approvals
-            should be recorded and reviewed appropriately.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Programme Monitoring</h3>
-          <p>
-            Activities should have clear objectives, appropriate monitoring
-            arrangements and honest reporting of progress and challenges.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Safeguarding and Complaints</h3>
-          <p>
-            Appropriate procedures should be developed to address concerns,
-            protect participants and handle complaints responsibly.
-          </p>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-light">
-    <div class="container">
-      <div class="section-heading">
-        <span class="eyebrow">Organisational Documents</span>
-        <h2>Policies and Reports</h2>
-        <p>
-          As approved documents become available for public release, this
-          section can provide access to relevant organisational policies,
-          reports and governance information.
-        </p>
-      </div>
-
-      <div class="cards">
-
-        <article class="card">
-          <h3>Constitution</h3>
-          <p>
-            The approved constitution should describe the organisation's
-            objectives, governance structure and decision-making procedures.
-          </p>
-          <p><strong>Publication status:</strong> No document linked yet.</p>
-        </article>
-
-        <article class="card">
-          <h3>Financial Reports</h3>
-          <p>
-            Appropriate financial reports can help stakeholders understand
-            how organisational resources are managed.
-          </p>
-          <p><strong>Publication status:</strong> No report linked yet.</p>
-        </article>
-
-        <article class="card">
-          <h3>Policies and Procedures</h3>
-          <p>
-            Relevant policies may cover financial management, safeguarding,
-            conflicts of interest, complaints and ethical conduct.
-          </p>
-          <p><strong>Publication status:</strong> Documents will be added when approved for publication.</p>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container text-center">
-      <h2>Questions About Our Governance?</h2>
-      <p>
-        Contact GICDF to make an appropriate enquiry about our governance
-        principles, organisational information or accountability practices.
-      </p>
-      <a href="contact.html" class="btn btn-primary">Contact Us</a>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <p><strong>Gangara Integrated Community Development Foundation (GICDF)</strong></p>
-    <p>Gangara, Makarfi LGA, Kaduna State, Nigeria.</p>
     <p>
-      <a href="index.html">Home</a> |
-      <a href="about.html">About Us</a> |
-      <a href="programmes.html">Programmes</a> |
-      <a href="partnerships.html">Partnerships</a> |
-      <a href="governance.html">Governance</a> |
-      <a href="contact.html">Contact</a>
+      Strong community development requires responsible leadership,
+      clear decision-making, transparent processes and respect for
+      the people an organisation exists to serve.
     </p>
-    <p>&copy; <span class="current-year">2026</span> GICDF. All rights reserved.</p>
-  </div>
-</footer>
 
-<script src="assets/js/main.js"></script>
-</body>
-        </html>
+    <a href="#principles" class="btn btn-gold">Our Principles</a>
+  </div>
+</section>
+
+<!-- INTRODUCTION -->
+<section>
+  <div class="container intro-grid">
+
+    <div class="intro-copy">
+      <div class="section-heading">
+        <div class="section-label">Responsible Leadership</div>
+        <h2>Building trust through good governance</h2>
+      </div>
+
+      <p>
+        Gangara Integrated Community Development Foundation (GICDF)
+        aims to promote community development through responsible,
+        inclusive and accountable organisational practices.
+      </p>
+
+      <p>
+        Our governance approach should support the proper use of
+        resources, responsible conduct, meaningful participation
+        and decisions that align with the organisation's approved
+        objectives and governing documents.
+      </p>
+    </div>
+
+    <aside class="intro-note">
+      <h3>Governance must be more than words</h3>
+      <p>
+        Governance arrangements, appointments, policies and
+        reporting practices should reflect GICDF's actual approved
+        documents and implemented procedures. This page describes
+        guiding principles; it is not a substitute for official
+        legal or financial records.
+      </p>
+    </aside>
+
+  </div>
+</section>
+
+<!-- PRINCIPLES -->
+<section class="principles" id="principles">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="section-label">Our Guiding Principles</div>
+      <h2>The values that should guide our decisions</h2>
+      <p>
+        These principles provide a foundation for responsible
+        organisational conduct and community engagement.
+      </p>
+    </div>
+
+    <div class="principle-grid">
+
+      <article class="principle-card">
+        <div class="principle-icon" aria-hidden="true">🔎</div>
+        <h3>Transparency</h3>
+        <p>
+          Communicate clearly about organisational priorities,
+          decisions and activities, while protecting confidential
+          and personal information.
+        </p>
+      </article>
+
+      <article class="principle-card">
+        <div class="principle-icon" aria-hidden="true">⚖️</div>
+        <h3>Accountability</h3>
+        <p>
+          Encourage responsible conduct, appropriate oversight,
+          accurate records and explanations for important decisions.
+        </p>
+      </article>
+
+      <article class="principle-card">
+        <div class="principle-icon" aria-hidden="true">🤝</div>
+        <h3>Integrity</h3>
+        <p>
+          Promote honesty, ethical conduct, responsible stewardship
+          and respect for the organisation's mission.
+        </p>
+      </article>
+
+      <article class="principle-card">
+        <div class="principle-icon" aria-hidden="true">🌍</div>
+        <h3>Inclusion</h3>
+        <p>
+          Encourage fair participation and respectful engagement
+          across different groups within the community.
+        </p>
+      </article>
+
+      <article class="principle-card">
+        <div class="principle-icon" aria-hidden="true">📋</div>
+        <h3>Responsible Management</h3>
+        <p>
+          Support careful planning, proper documentation,
+          appropriate authorisation and responsible use of resources.
+        </p>
+      </article>
+
+      <article class="principle-card">
+        <div class="principle-icon" aria-hidden="true">🛡️</div>
+        <h3>Safeguarding and Respect</h3>
+        <p>
+          Seek to protect the dignity, privacy and safety of
+          community members, volunteers and other participants.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- STRUCTURE -->
+<section class="structure" id="structure">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="section-label">Organisational Structure</div>
+      <h2>Clear roles support effective governance</h2>
+      <p>
+        An organisation's responsibilities should be defined by its
+        applicable law, approved constitution, formal appointments
+        and adopted procedures.
+      </p>
+    </div>
+
+    <div class="structure-flow">
+
+      <div class="structure-item">
+        <h3>Board of Trustees</h3>
+        <p>
+          Where formally constituted, provides the oversight and
+          responsibilities established by the governing documents
+          and applicable law.
+        </p>
+      </div>
+
+      <div class="structure-arrow" aria-hidden="true">↓</div>
+
+      <div class="structure-item">
+        <h3>Governance or Advisory Bodies</h3>
+        <p>
+          Any formally established council or advisory body operates
+          within its approved mandate and delegated responsibilities.
+        </p>
+      </div>
+
+      <div class="structure-arrow" aria-hidden="true">↓</div>
+
+      <div class="structure-item">
+        <h3>Executive Management</h3>
+        <p>
+          Responsible for coordinating organisational work within
+          approved authority, budgets and procedures.
+        </p>
+      </div>
+
+      <div class="structure-arrow" aria-hidden="true">↓</div>
+
+      <div class="structure-item">
+        <h3>Members, Volunteers and Committees</h3>
+        <p>
+          Support agreed activities and community engagement
+          according to their roles and responsibilities.
+        </p>
+      </div>
+
+    </div>
+
+    <p class="structure-disclaimer">
+      <strong>Important:</strong> This is an illustrative governance
+      model, not confirmation that every body listed has been
+      formally established or appointed within GICDF. The final
+      structure must be checked against the organisation's approved
+      constitution, registration documents and actual appointments.
+    </p>
+
+  </div>
+</section>
+
+<!-- ACCOUNTABILITY -->
+<section class="accountability">
+  <div class="container accountability-grid">
+
+    <div class="accountability-copy">
+      <div class="section-label">Responsible Stewardship</div>
+
+      <h2>Accountability in decisions and resource management</h2>
+
+      <p>
+        Community trust depends on responsible handling of money,
+        property, information and other resources entrusted to an
+        organisation.
+      </p>
+
+      <p>
+        GICDF should maintain appropriate financial and
+        administrative records and use documented authorisation
+        procedures consistent with its governing documents,
+        applicable legal requirements and any funding agreements.
+      </p>
+
+      <p>
+        Reporting and review arrangements should be proportionate
+        to the organisation's activities and obligations.
+      </p>
+    </div>
+
+    <ul class="accountability-list">
+      <li>Keep accurate records of income, expenditure and supporting documents.</li>
+      <li>Use appropriate approval procedures for financial transactions.</li>
+      <li>Document important meetings, decisions and assigned responsibilities.</li>
+      <li>Identify and manage conflicts of interest appropriately.</li>
+      <li>Protect organisational records and personal information.</li>
+      <li>Meet applicable reporting, filing and regulatory obligations.</li>
+      <li>Review activities and learn from feedback and identified shortcomings.</li>
+    </ul>
+
+  </div>
+</section>
+
+<!-- POLICIES AND DOCUMENTATION -->
+<section class="policies" id="policies">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="section-label">Policies and Documentation</div>
+      <h2>Documenting our commitments</h2>
+      <p>
+        Formal policies help translate organisational values into
+        practical procedures. Documents should only be described
+        as approved or published when that status has been verified.
+      </p>
+    </div>
+
+    <div class="policy-grid">
+
+      <article class="policy-card">
+        <h3>Constitution and Governing Documents</h3>
+        <p>
+          Define the organisation's objectives, governance
+          arrangements, membership provisions and decision-making
+          responsibilities.
+        </p>
+        <span class="policy-status">Refer to approved documents</span>
+      </article>
+
+      <article class="policy-card">
+        <h3>Financial Management</h3>
+        <p>
+          Establish appropriate procedures for budgeting,
+          authorisation, record-keeping, reporting and financial review.
+        </p>
+        <span class="policy-status">Publish when approved</span>
+      </article>
+
+      <article class="policy-card">
+        <h3>Conflict of Interest</h3>
+        <p>
+          Help decision-makers identify, disclose and manage
+          situations in which personal interests could affect
+          organisational responsibilities.
+        </p>
+        <span class="policy-status">Publish when approved</span>
+      </article>
+
+      <article class="policy-card">
+        <h3>Safeguarding and Complaints</h3>
+        <p>
+          Support appropriate ways to raise concerns, protect
+          participants and respond to complaints respectfully.
+        </p>
+        <span class="policy-status">Publish when approved</span>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+
+    <h2>Trust grows through responsible action</h2>
+
+    <p>
+      We welcome constructive enquiries from community members,
+      organisations and potential partners interested in GICDF's
+      objectives, governance approach and development priorities.
+    </p>
+
+    <a href="contact.html" class="btn btn-gold">Contact GICDF</a>
+    <a href="about.html" class="btn btn-white">Learn About Us</a>
+
+  </div>
+</section>
+
+  </main>  <!-- FOOTER -->  <footer class="site-footer">
+    <div class="container">  <div class="footer-grid">
+
+    <div class="footer-about">
+      <div class="footer-brand">GICDF Community Connect</div>
+
+      <p>
+        Gangara Integrated Community Development Foundation works
+        towards inclusive community development, youth empowerment,
+        education, skills development and peaceful communities.
+      </p>
+
+      <p>Gangara, Makarfi LGA, Kaduna State, Nigeria.</p>
+    </div>
+
+    <div>
+      <h3>Quick Links</h3>
+
+      <ul class="footer-links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="programmes.html">Our Programmes</a></li>
+        <li><a href="projects.html">Projects &amp; Initiatives</a></li>
+        <li><a href="partnerships.html">Partnerships</a></li>
+        <li><a href="news.html">News &amp; Updates</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Connect With Us</h3>
+
+      <ul class="footer-links">
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="mailto:info.gicdf@gmail.com">Email GICDF</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>
+      &copy; <span id="currentYear"></span>
+      Gangara Integrated Community Development Foundation.
+      All rights reserved.
+    </p>
+
+    <p>Community • Opportunity • Sustainable Development</p>
+  </div>
+
+</div>
+
+  </footer>  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+
+    menuToggle.addEventListener("click", function () {
+      const isOpen = mainNav.classList.toggle("open");
+
+      menuToggle.setAttribute("aria-expanded", isOpen);
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
+
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    document.querySelectorAll("#mainNav a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        mainNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+  </script></body>
+  </html>
