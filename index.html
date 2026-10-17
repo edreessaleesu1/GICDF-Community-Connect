@@ -3,304 +3,1229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>gicdf Community Connect | Building Stronger Communities</title>
-    <meta name="description" content="Gangara Integrated Community Development Foundation promotes youth empowerment, education, community development, peacebuilding and sustainable opportunities in Gangara, Makarfi LGA, Kaduna State, Nigeria.">
+
+    <title>GICDF Community Connect | Building Stronger Communities</title>
+
+    <meta name="description" content="Gangara Integrated Community Development Foundation works to empower young people, advance education, promote peace, and support sustainable community development in Gangara, Makarfi LGA, Kaduna State, Nigeria.">
+
     <meta name="theme-color" content="#124734">
 
-    <!-- Open Graph / Social Sharing Meta Tags -->
-    <meta property="og:title" content="GICDF Community Connect | Building Stronger Communities">
-    <meta property="og:description" content="Empowering youth, advancing education, and promoting sustainable community development in Gangara, Makarfi LGA, Kaduna State.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.gicdf.org/">
-    <meta property="og:image" content="assets/images/gicdf-logo.png">
-
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="GICDF Community Connect">
-    <meta name="twitter:description" content="Empowering youth and building stronger communities in Gangara, Makarfi LGA, Kaduna State, Nigeria.">
-    <meta name="twitter:image" content="assets/images/gicdf-logo.png">
-
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" href="assets/images/favicon.png">
-    
     <style>
-        /* Screen Reader Utility Class */
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
+        :root {
+            --green: #124734;
+            --green-light: #176449;
+            --gold: #e4bd57;
+            --cream: #f5f7f2;
+            --white: #ffffff;
+            --text: #28372f;
+            --muted: #627067;
+            --border: #e2e9e2;
+            --shadow: 0 8px 28px rgba(18, 71, 52, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .container {
+            width: min(1120px, 92%);
+            margin: 0 auto;
+        }
+
+        /* HEADER */
+
+        .header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            min-height: 78px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            min-width: 0;
+        }
+
+        .brand-mark {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+            border-radius: 12px;
+            background: var(--green);
+            color: var(--gold);
+            display: grid;
+            place-items: center;
+            font-size: 17px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .brand-name {
+            color: var(--green);
+            font-weight: 800;
+            font-size: 15px;
+            line-height: 1.35;
+        }
+
+        .brand-name small {
+            display: block;
+            color: var(--muted);
+            font-size: 11px;
+            font-weight: 500;
+            margin-top: 3px;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .nav a:hover {
+            color: var(--green-light);
+        }
+
+        .nav .nav-cta {
+            background: var(--green);
+            color: var(--white);
+            padding: 11px 17px;
+            border-radius: 6px;
+        }
+
+        .nav .nav-cta:hover {
+            background: var(--green-light);
+            color: var(--white);
+        }
+
+        /* HERO */
+
+        .hero {
+            background: linear-gradient(135deg, #103f30, #176449);
+            color: var(--white);
+            padding: 82px 0;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 0.8fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            color: var(--gold);
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .hero h1 {
+            font-size: clamp(34px, 5vw, 58px);
+            line-height: 1.12;
+            margin: 0 0 22px;
+            letter-spacing: -1.5px;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+        }
+
+        .hero-copy {
+            max-width: 660px;
+            color: #edf5ef;
+            font-size: 17px;
+            margin-bottom: 28px;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 28px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 14px;
+            transition: transform 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: #173e2f;
+        }
+
+        .btn-outline {
+            border: 2px solid var(--white);
+            color: var(--white);
+        }
+
+        .hero-panel {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 30px;
+        }
+
+        .hero-panel h2 {
+            font-size: 22px;
+            color: var(--gold);
+            margin: 0 0 12px;
+        }
+
+        .hero-panel > p {
+            color: #edf5ef;
+            font-size: 14px;
+        }
+
+        .hero-panel ul {
+            list-style: none;
             padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
+            margin: 20px 0 0;
         }
 
-        /* Homepage-specific refinements */
-        .hero { 
-            padding: 76px 20px; 
-            background: linear-gradient(135deg, #103f30, #176449); 
-            color: #ffffff; 
-            overflow: hidden; 
+        .hero-panel li {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 11px 0;
+            font-size: 14px;
         }
-        .hero .hero-grid { 
-            display: grid; 
-            grid-template-columns: 1.4fr 0.8fr; 
-            gap: 42px; 
-            align-items: center; 
-            max-width: 1120px; 
-            margin: 0 auto; 
-        }
-        .hero .eyebrow { 
-            display: inline-block; 
-            color: #f4d47c; 
-            font-weight: 700; 
-            letter-spacing: 2px; 
-            font-size: 0.78rem; 
-            text-transform: uppercase; 
-            margin-bottom: 16px; 
-        }
-        .hero h1 { 
-            color: #ffffff; 
-            font-size: clamp(2.3rem, 5vw, 4rem); 
-            line-height: 1.12; 
-            margin: 0 0 22px; 
-            max-width: 720px; 
-        }
-        .hero p { 
-            color: #edf7f1; 
-            font-size: 1.08rem; 
-            line-height: 1.85; 
-            max-width: 680px; 
-        }
-        .hero .hero-actions { 
-            display: flex; 
-            flex-wrap: wrap; 
-            gap: 14px; 
-            margin-top: 28px; 
-        }
-        .hero .btn-primary { 
-            background: #e4bd57; 
-            color: #173e2f; 
-            border: 2px solid #e4bd57; 
-        }
-        .hero .btn-outline { 
-            background: transparent; 
-            color: #ffffff; 
-            border: 2px solid #ffffff; 
-        }
-        .hero .btn-primary, .hero .btn-outline { 
-            display: inline-block; 
-            padding: 13px 22px; 
-            border-radius: 6px; 
-            font-weight: 700; 
-            text-decoration: none; 
-            transition: transform 0.2s ease, opacity 0.2s ease; 
-        }
-        .hero .btn-primary:hover, .hero .btn-outline:hover { 
-            transform: translateY(-2px); 
-            opacity: 0.92; 
-        }
-        .hero-panel { 
-            padding: 30px; 
-            background: rgba(255, 255, 255, 0.08); 
-            border: 1px solid rgba(255, 255, 255, 0.2); 
-            border-radius: 16px; 
-        }
-        .hero-panel h2 { 
-            color: #f4d47c; 
-            font-size: 1.4rem; 
-            margin-top: 0; 
-        }
-        .hero-panel ul { 
-            list-style: none; 
-            padding: 0; 
-            margin: 18px 0 0; 
-        }
-        .hero-panel li { 
-            padding: 12px 0; 
-            border-bottom: 1px solid rgba(255, 255, 255, 0.16); 
-            line-height: 1.5; 
-        }
-        .hero-panel li:last-child { 
-            border-bottom: none; 
-        }
-        .hero-panel li::before { 
-            content: "✓"; 
-            color: #f4d47c; 
-            font-weight: 800; 
-            margin-right: 10px; 
-        }
-        .intro-strip { 
-            padding: 26px 20px; 
-            background: #f5f7f2; 
-            border-bottom: 1px solid #e5eae2; 
-        }
-        .intro-strip-inner { 
-            max-width: 1120px; 
-            margin: 0 auto; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            gap: 24px; 
-            flex-wrap: wrap; 
-        }
-        .intro-strip strong { 
-            color: #124734; 
-        }
-        .intro-strip p { 
-            margin: 0; 
-            line-height: 1.7; 
-        }
-        .home-section { 
-            padding: 76px 20px; 
-        }
-        .home-container { 
-            max-width: 1120px; 
-            margin: 0 auto; 
-        }
-        .section-heading { 
-            max-width: 760px; 
-            margin: 0 auto 38px; 
-            text-align: center; 
-        }
-        .section-heading .eyebrow { 
-            color: #98711b; 
-            font-size: 0.8rem; 
-            font-weight: 800; 
-            text-transform: uppercase; 
-            letter-spacing: 1.8px; 
-        }
-        .section-heading h2 { 
-            color: #124734; 
-            font-size: clamp(1.8rem, 4vw, 2.6rem); 
-            margin: 12px 0; 
-            line-height: 1.25; 
-        }
-        .section-heading p { 
-            color: #5c665f; 
-            line-height: 1.8; 
-        }
-        .home-cards { 
-            display: grid; 
-            grid-template-columns: repeat(3, minmax(0, 1fr)); 
-            gap: 24px; 
-        }
-        .home-card { 
-            background: #ffffff; 
-            border: 1px solid #e5eae5; 
-            border-radius: 12px; 
-            padding: 28px; 
-            box-shadow: 0 5px 20px rgba(18, 71, 52, 0.05); 
-            transition: transform 0.2s ease, box-shadow 0.2s ease; 
-        }
-        .home-card:hover { 
-            transform: translateY(-4px); 
-            box-shadow: 0 12px 28px rgba(18, 71, 52, 0.1); 
-        }
-        .home-card .card-icon { 
-            font-size: 2rem; 
-            margin-bottom: 15px; 
-        }
-        .home-card h3 { 
-            color: #124734; 
-            margin: 0 0 12px; 
-            font-size: 1.25rem; 
-        }
-        .home-card p { 
-            color: #59645d; 
-            line-height: 1.8; 
-            margin-bottom: 18px; 
-        }
-        .text-link { 
-            color: #176449; 
-            font-weight: 700; 
-            text-decoration: none; 
-        }
-        .text-link:hover { 
-            text-decoration: underline; 
-        }
-        .about-home { 
-            background: #f5f7f2; 
-        }
-        .about-grid { 
-            display: grid; 
-            grid-template-columns: 1fr 1fr; 
-            gap: 48px; 
-            align-items: center; 
-        }
-        .about-copy h2 { 
-            color: #124734; 
-            font-size: clamp(1.8rem, 4vw, 2.5rem); 
-            line-height: 1.25; 
-            margin-top: 0; 
-        }
-        .about-copy p { 
-            line-height: 1.9; 
-            color: #505c54; 
-        }
-        .values-panel { 
-            background: #ffffff; 
-            border-radius: 14px; 
-            padding: 30px; 
-            border: 1px solid #e3e9e2; 
-        }
-        .values-panel h3 { 
-            color: #124734; 
-            margin-top: 0; 
-        }
-        .value-item { 
-            display: flex; 
-            gap: 14px; 
-            align-items: flex-start; 
-            padding: 14px 0; 
-            border-bottom: 1px solid #edf0eb; 
-        }
-        .value-item:last-child { 
-            border-bottom: none; 
-        }
-        .value-item strong { 
-            display: block; 
-            color: #124734; 
-            margin-bottom: 5px; 
-        }
-        .value-item p { 
-            margin: 0; 
-            color: #59645d; 
-            line-height: 1.6; 
-        }
-        .approach-grid { 
-            display: grid; 
-            grid-template-columns: repeat(4, minmax(0, 1fr)); 
-            gap: 18px; 
-        }
-        .approach-item { 
-            padding: 24px 20px; 
-            border-left: 3px solid #d9b64e; 
-            background: #f7f8f5; 
-            border-radius: 0 8px 8px 0; 
-        }
-        .approach-item h3 { 
-            color: #124734; 
-            font-size: 1.08rem; 
-            margin: 0 0 10px; 
-        }
-        .approach-item p { 
-            color: #59645d; 
-            font-size: 0.95rem; 
-            line-height: 1.75; 
-            margin: 0; 
-        }
-        .partnership-banner { 
-            background: #124734; 
-            color: #ffffff; 
-            border-radius: 16px; 
-            padding: 44px; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            gap: 30px; 
-        }
-        .partnership
 
+        .hero-panel li:last-child {
+            border-bottom: none;
+        }
+
+        .check {
+            color: var(--gold);
+            font-weight: 800;
+            margin-right: 9px;
+        }
+
+        /* INTRO STRIP */
+
+        .intro-strip {
+            background: var(--cream);
+            border-bottom: 1px solid var(--border);
+            padding: 24px 0;
+        }
+
+        .intro-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .intro-inner p {
+            margin: 0;
+        }
+
+        .intro-inner strong {
+            color: var(--green);
+        }
+
+        /* GENERAL SECTIONS */
+
+        .section {
+            padding: 76px 0;
+        }
+
+        .section-soft {
+            background: var(--cream);
+        }
+
+        .section-heading {
+            max-width: 760px;
+            margin: 0 auto 42px;
+            text-align: center;
+        }
+
+        .section-heading .eyebrow {
+            color: #98711b;
+        }
+
+        .section-heading h2 {
+            color: var(--green);
+            font-size: clamp(28px, 4vw, 40px);
+            line-height: 1.25;
+            margin: 8px 0 15px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            margin: 0;
+        }
+
+        /* PROGRAMMES */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+            box-shadow: var(--shadow);
+        }
+
+        .card-icon {
+            width: 54px;
+            height: 54px;
+            display: grid;
+            place-items: center;
+            border-radius: 12px;
+            background: #eaf2eb;
+            font-size: 27px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            color: var(--green);
+            font-size: 20px;
+            margin: 0 0 12px;
+        }
+
+        .card p {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .text-link {
+            color: var(--green-light);
+            font-weight: 800;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .text-link:hover {
+            text-decoration: underline;
+        }
+
+        /* ABOUT */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .about-copy h2 {
+            color: var(--green);
+            font-size: clamp(28px, 4vw, 40px);
+            line-height: 1.25;
+            margin: 8px 0 20px;
+        }
+
+        .about-copy p {
+            color: var(--muted);
+        }
+
+        .about-copy .eyebrow {
+            color: #98711b;
+        }
+
+        .values-panel {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .values-panel h3 {
+            color: var(--green);
+            margin-top: 0;
+            font-size: 23px;
+        }
+
+        .value-item {
+            display: flex;
+            gap: 15px;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .value-item:last-child {
+            border-bottom: none;
+        }
+
+        .value-icon {
+            font-size: 23px;
+            flex-shrink: 0;
+        }
+
+        .value-item strong {
+            display: block;
+            color: var(--green);
+            margin-bottom: 3px;
+        }
+
+        .value-item p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* OUR APPROACH */
+
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .approach-item {
+            background: var(--white);
+            border-left: 4px solid var(--gold);
+            border-radius: 0 8px 8px 0;
+            padding: 24px 20px;
+        }
+
+        .approach-item h3 {
+            color: var(--green);
+            font-size: 17px;
+            margin: 0 0 10px;
+        }
+
+        .approach-item p {
+            color: var(--muted);
+            font-size: 14px;
+            margin: 0;
+        }
+
+        /* PARTNERSHIP */
+
+        .partnership-banner {
+            background: var(--green);
+            color: var(--white);
+            border-radius: 16px;
+            padding: 42px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .partnership-banner h2 {
+            font-size: clamp(26px, 4vw, 36px);
+            line-height: 1.25;
+            margin: 0 0 12px;
+        }
+
+        .partnership-banner p {
+            color: #e6f0e8;
+            margin: 0;
+            max-width: 650px;
+        }
+
+        .partnership-banner .btn {
+            flex-shrink: 0;
+        }
+
+        /* CONTACT */
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .contact-box {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+        }
+
+        .contact-box h3 {
+            color: var(--green);
+            margin-top: 0;
+        }
+
+        .contact-detail {
+            margin: 16px 0;
+        }
+
+        .contact-detail strong {
+            display: block;
+            color: var(--green);
+        }
+
+        .contact-detail a {
+            color: var(--green-light);
+            overflow-wrap: anywhere;
+        }
+
+        .contact-note {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* FOOTER */
+
+        .footer {
+            background: #0b2e22;
+            color: var(--white);
+            padding: 45px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 36px;
+            padding-bottom: 30px;
+        }
+
+        .footer h3,
+        .footer h4 {
+            color: var(--gold);
+            margin-top: 0;
+        }
+
+        .footer p {
+            color: #d6e4d9;
+            font-size: 14px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .footer-links a {
+            color: #e5eee7;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            padding-top: 20px;
+            color: #c9d9cd;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        /* ACCESSIBILITY */
+
+        a:focus-visible {
+            outline: 3px solid var(--gold);
+            outline-offset: 4px;
+        }
+
+        /* MOBILE RESPONSIVENESS */
+
+        @media (max-width: 900px) {
+            .nav {
+                gap: 12px;
+            }
+
+            .nav a {
+                font-size: 12px;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .hero-panel {
+                max-width: 600px;
+            }
+
+            .cards {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .approach-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .partnership-banner {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .header-inner {
+                padding: 14px 0;
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 14px;
+            }
+
+            .nav {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px 16px;
+            }
+
+            .nav a {
+                font-size: 12px;
+            }
+
+            .nav .nav-cta {
+                padding: 8px 12px;
+            }
+
+            .hero {
+                padding: 56px 0;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero-copy {
+                font-size: 15px;
+            }
+
+            .section {
+                padding: 55px 0;
+            }
+
+            .cards,
+            .about-grid,
+            .contact-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .approach-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .partnership-banner {
+                padding: 28px;
+            }
+
+            .values-panel,
+            .card,
+            .contact-box {
+                padding: 23px;
+            }
+
+            .intro-inner {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-inner">
+
+            <a class="brand" href="index.html" aria-label="GICDF homepage">
+                <span class="brand-mark">GICDF</span>
+
+                <span class="brand-name">
+                    GICDF Community Connect
+                    <small>Building Stronger Communities</small>
+                </span>
+            </a>
+
+            <nav class="nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="programmes.html">Programmes</a>
+                <a href="projects.html">Projects</a>
+                <a href="partnerships.html">Partnerships</a>
+                <a href="contact.html" class="nav-cta">Contact Us</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container hero-grid">
+
+                <div>
+                    <span class="eyebrow">Community • Opportunity • Progress</span>
+
+                    <h1>
+                        Building Stronger Communities,
+                        <span>Empowering Future Generations.</span>
+                    </h1>
+
+                    <p class="hero-copy">
+                        Gangara Integrated Community Development Foundation
+                        works with young people, families, community leaders,
+                        and partners to advance education, develop practical
+                        skills, promote peace, and create opportunities for
+                        sustainable community development.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a class="btn btn-gold" href="get-involved.html">
+                            Get Involved
+                        </a>
+
+                        <a class="btn btn-outline" href="about.html">
+                            Discover Our Mission
+                        </a>
+                    </div>
+                </div>
+
+                <aside class="hero-panel">
+                    <h2>Our Community Priorities</h2>
+
+                    <p>
+                        Working together to build a more inclusive,
+                        peaceful, and prosperous future.
+                    </p>
+
+                    <ul>
+                        <li><span class="check">✓</span>Youth empowerment and skills development</li>
+                        <li><span class="check">✓</span>Education and learning opportunities</li>
+                        <li><span class="check">✓</span>Community development and welfare</li>
+                        <li><span class="check">✓</span>Peacebuilding and community security</li>
+                        <li><span class="check">✓</span>Environmental sustainability</li>
+                    </ul>
+                </aside>
+
+            </div>
+        </section>
+
+
+        <!-- INTRODUCTION -->
+        <section class="intro-strip">
+            <div class="container intro-inner">
+                <p>
+                    <strong>Our home:</strong>
+                    Gangara, Makarfi LGA, Kaduna State, Nigeria.
+                </p>
+
+                <p>
+                    <strong>Our belief:</strong>
+                    Strong communities create stronger futures.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- PROGRAMMES -->
+        <section class="section" id="programmes">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">What We Do</span>
+
+                    <h2>Creating Opportunities That Matter</h2>
+
+                    <p>
+                        We aim to address local challenges through practical
+                        initiatives, community participation, and partnerships
+                        that help people develop their potential.
+                    </p>
+                </div>
+
+                <div class="cards">
+
+                    <article class="card">
+                        <div class="card-icon" aria-hidden="true">🎓</div>
+
+                        <h3>Education and Learning</h3>
+
+                        <p>
+                            Supporting educational awareness, learning
+                            opportunities, mentorship, and initiatives that
+                            help children and young people pursue a better future.
+                        </p>
+
+                        <a class="text-link" href="programmes.html">
+                            Explore our programmes →
+                        </a>
+                    </article>
+
+
+                    <article class="card">
+                        <div class="card-icon" aria-hidden="true">💡</div>
+
+                        <h3>Youth Empowerment</h3>
+
+                        <p>
+                            Promoting practical skills, digital literacy,
+                            entrepreneurship, leadership, and pathways toward
+                            meaningful livelihoods.
+                        </p>
+
+                        <a class="text-link" href="programmes.html">
+                            Explore our programmes →
+                        </a>
+                    </article>
+
+
+                    <article class="card">
+                        <div class="card-icon" aria-hidden="true">🏘️</div>
+
+                        <h3>Community Development</h3>
+
+                        <p>
+                            Encouraging locally driven development,
+                            community participation, improved amenities,
+                            and collective responses to shared challenges.
+                        </p>
+
+                        <a class="text-link" href="projects.html">
+                            Discover our priorities →
+                        </a>
+                    </article>
+
+
+                    <article class="card">
+                        <div class="card-icon" aria-hidden="true">🕊️</div>
+
+                        <h3>Peace and Security</h3>
+
+                        <p>
+                            Encouraging dialogue, peaceful coexistence,
+                            responsible citizenship, and collaboration
+                            to strengthen community resilience.
+                        </p>
+
+                        <a class="text-link" href="programmes.html">
+                            Learn about our work →
+                        </a>
+                    </article>
+
+
+                    <article class="card">
+                        <div class="card-icon" aria-hidden="true">🌱</div>
+
+                        <h3>Environment and Sustainability</h3>
+
+                        <p>
+                            Promoting environmental awareness, responsible
+                            resource use, and community participation in
+                            building healthier surroundings.
+                        </p>
+
+                        <a class="text-link" href="projects.html">
+                            Explore our priorities →
+                        </a>
+                    </article>
+
+
+                    <article class="card">
+                        <div class="card-icon" aria-hidden="true">🤝</div>
+
+                        <h3>Partnerships and Inclusion</h3>
+
+                        <p>
+                            Bringing together residents, institutions,
+                            civil society organisations, and development
+                            partners to support shared community goals.
+                        </p>
+
+                        <a class="text-link" href="partnerships.html">
+                            Work with us →
+                        </a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ABOUT -->
+        <section class="section section-soft" id="about">
+            <div class="container about-grid">
+
+                <div class="about-copy">
+                    <span class="eyebrow">Who We Are</span>
+
+                    <h2>A Community-Led Vision for Lasting Progress</h2>
+
+                    <p>
+                        Gangara Integrated Community Development Foundation
+                        (GICDF) is a community-focused initiative committed
+                        to supporting inclusive development in Gangara,
+                        Makarfi Local Government Area, Kaduna State, and
+                        surrounding communities.
+                    </p>
+
+                    <p>
+                        We believe that lasting progress begins when people
+                        participate in identifying their needs, shaping
+                        solutions, and working together to achieve shared goals.
+                    </p>
+
+                    <p>
+                        Through community engagement, skills development,
+                        education, partnerships, and responsible leadership,
+                        we seek to help build a future in which more people
+                        have the opportunity to thrive.
+                    </p>
+
+                    <a class="btn btn-gold"
+                       style="background: var(--green); color: white;"
+                       href="about.html">
+                        Learn More About Us
+                    </a>
+                </div>
+
+
+                <div class="values-panel">
+                    <h3>The Values That Guide Us</h3>
+
+                    <div class="value-item">
+                        <span class="value-icon" aria-hidden="true">⚖️</span>
+
+                        <div>
+                            <strong>Integrity and Accountability</strong>
+                            <p>
+                                Promoting honesty, transparency, and
+                                responsible use of resources.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="value-item">
+                        <span class="value-icon" aria-hidden="true">🤲</span>
+
+                        <div>
+                            <strong>Inclusion and Participation</strong>
+                            <p>
+                                Encouraging meaningful participation by
+                                young people, women, and other community members.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="value-item">
+                        <span class="value-icon" aria-hidden="true">🤝</span>
+
+                        <div>
+                            <strong>Unity and Cooperation</strong>
+                            <p>
+                                Building trust and working across
+                                differences for the common good.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="value-item">
+                        <span class="value-icon" aria-hidden="true">🌍</span>
+
+                        <div>
+                            <strong>Sustainability and Impact</strong>
+                            <p>
+                                Supporting practical solutions that
+                                respond to community needs over time.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- APPROACH -->
+        <section class="section">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">How We Work</span>
+
+                    <h2>Turning Shared Priorities into Action</h2>
+
+                    <p>
+                        Our approach centres on listening to communities,
+                        building partnerships, developing local capacity,
+                        and encouraging accountability.
+                    </p>
+                </div>
+
+                <div class="approach-grid">
+
+                    <article class="approach-item">
+                        <h3>01. Listen</h3>
+                        <p>
+                            Engage community members to understand
+                            their priorities and challenges.
+                        </p>
+                    </article>
+
+                    <article class="approach-item">
+                        <h3>02. Collaborate</h3>
+                        <p>
+                            Work with relevant stakeholders to develop
+                            practical and inclusive solutions.
+                        </p>
+                    </article>
+
+                    <article class="approach-item">
+                        <h3>03. Take Action</h3>
+                        <p>
+                            Support initiatives based on identified
+                            needs, available resources, and clear goals.
+                        </p>
+                    </article>
+
+                    <article class="approach-item">
+                        <h3>04. Learn and Improve</h3>
+                        <p>
+                            Encourage feedback, monitor progress, and
+                            strengthen future community initiatives.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- PARTNERSHIPS -->
+        <section class="section section-soft">
+            <div class="container">
+
+                <div class="partnership-banner">
+
+                    <div>
+                        <span class="eyebrow">Stronger Together</span>
+
+                        <h2>Let's Build Something Meaningful Together.</h2>
+
+                        <p>
+                            We welcome constructive engagement with
+                            development organisations, public institutions,
+                            community leaders, volunteers, donors, and
+                            individuals who share our commitment to
+                            inclusive and sustainable community development.
+                        </p>
+                    </div>
+
+                    <a class="btn btn-gold" href="partnerships.html">
+                        Explore Partnerships
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- CONTACT -->
+        <section class="section" id="contact">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">Connect With Us</span>
+
+                    <h2>Every Positive Change Starts with a Conversation</h2>
+
+                    <p>
+                        Have an idea, want to volunteer, or interested in
+                        working with us? We welcome constructive engagement.
+                    </p>
+                </div>
+
+                <div class="contact-grid">
+
+                    <div class="contact-box">
+                        <h3>Our Community</h3>
+
+                        <div class="contact-detail">
+                            <strong>Location</strong>
+                            Gangara, Makarfi LGA, Kaduna State, Nigeria
+                        </div>
+
+                        <div class="contact-detail">
+                            <strong>Our Focus</strong>
+                            Youth empowerment, education, community
+                            development, peacebuilding, and sustainability.
+                        </div>
+
+                        <p class="contact-note">
+                            We aim to work with communities and partners
+                            to identify practical opportunities for progress.
+                        </p>
+                    </div>
+
+
+                    <div class="contact-box">
+                        <h3>Get in Touch</h3>
+
+                        <div class="contact-detail">
+                            <strong>Email</strong>
+                            <a href="mailto:info.gicdf@gmail.com">
+                                info.gicdf@gmail.com
+                            </a>
+                        </div>
+
+                        <div class="contact-detail">
+                            <strong>Phone</strong>
+                            <a href="tel:+2347059313835">
+                                +234 705 931 3835
+                            </a>
+                        </div>
+
+                        <p class="contact-note">
+                            You can contact us about volunteering,
+                            programme ideas, community needs, or potential
+                            development partnerships.
+                        </p>
+
+                        <a class="btn btn-gold"
+                           style="background: var(--green); color: white;"
+                           href="contact.html">
+                            Visit Contact Page
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div>
+                    <h3>GICDF Community Connect</h3>
+
+                    <p>
+                        Gangara Integrated Community Development Foundation
+                        is committed to supporting youth empowerment,
+                        education, peace, inclusion, and sustainable
+                        community development.
+                    </p>
+                </div>
+
+                <div>
+                    <h4>Explore</h4>
+
+                    <div class="footer-links">
+                        <a href="about.html">About Us</a>
+                        <a href="programmes.html">Programmes</a>
+                        <a href="projects.html">Projects</a>
+                        <a href="news.html">News and Updates</a>
+                        <a href="gallery.html">Gallery</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Get Involved</h4>
+
+                    <div class="footer-links">
+                        <a href="get-involved.html">Volunteer</a>
+                        <a href="partnerships.html">Partner With Us</a>
+                        <a href="governance.html">Governance</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    &copy; <span id="current-year">2026</span>
+                    Gangara Integrated Community Development Foundation.
+                    All rights reserved.
+                </p>
+
+                <p>
+                    Building stronger communities, one opportunity at a time.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script>
+        document.getElementById("current-year").textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+</html>
