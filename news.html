@@ -1,148 +1,884 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Read announcements, community updates, programme opportunities and development news from GICDF.">
-  <title>News and Updates | GICDF Community Connect</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+  <meta name="description" content="Read news, announcements, opportunities and community development updates from Gangara Integrated Community Development Foundation.">
+  <meta name="theme-color" content="#14532d">
+  <title>News & Updates | GICDF Community Connect</title>  <style>
+    :root {
+      --green: #14532d;
+      --green-dark: #0b2e1a;
+      --green-light: #eaf4ed;
+      --gold: #d4a62a;
+      --white: #ffffff;
+      --text: #26332b;
+      --muted: #65736a;
+      --border: #e3e9e4;
+      --background: #f7faf7;
+      --shadow: 0 10px 30px rgba(11, 46, 26, 0.08);
+    }
 
-<header class="site-header">
-  <div class="header-inner">
-    <a href="index.html" class="brand">
-      <img src="assets/images/gicdf-logo.png" alt="GICDF Logo"
-           onerror="this.style.display='none'">
-      <span>GICDF <small>Community Connect</small></span>
-    </a>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    <button class="menu-toggle" aria-label="Open navigation menu"
-            aria-expanded="false">&#9776;</button>
+    html {
+      scroll-behavior: smooth;
+    }
 
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="programmes.html">Programmes</a>
-      <a href="projects.html">Projects</a>
-      <a href="partnerships.html">Partnerships</a>
-      <a href="get-involved.html">Get Involved</a>
-      <a href="news.html" class="active">News</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="governance.html">Governance</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--white);
+    }
 
-<main>
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-  <section class="page-banner">
-    <div class="container">
-      <p>Updates and Announcements</p>
-      <h1>GICDF News and Updates</h1>
-      <p>Follow our announcements, opportunities and community development activities.</p>
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    /* HEADER */
+    .site-header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-inner {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+    }
+
+    .brand-name {
+      color: var(--green);
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.3;
+    }
+
+    .brand-name span {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 500;
+      margin-top: 4px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 19px;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 700;
+      color: #34483a;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--green);
+    }
+
+    .nav-links .nav-cta {
+      background: var(--green);
+      color: var(--white);
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
+
+    .nav-links .nav-cta:hover {
+      background: var(--green-dark);
+      color: var(--white);
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 1px solid var(--border);
+      background: var(--white);
+      color: var(--green);
+      border-radius: 5px;
+      padding: 9px 12px;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(120deg, var(--green-dark), var(--green));
+      color: var(--white);
+      padding: 82px 0 76px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      border: 45px solid rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+      right: -100px;
+      bottom: -180px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: #ffe29a;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 5vw, 56px);
+      line-height: 1.15;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: #e2eee5;
+      font-size: 17px;
+      margin-bottom: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 21px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: 800;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--green-dark);
+    }
+
+    .btn-white {
+      background: var(--white);
+      color: var(--green);
+    }
+
+    /* GENERAL SECTIONS */
+    section {
+      padding: 72px 0;
+    }
+
+    .section-heading {
+      max-width: 700px;
+      margin-bottom: 34px;
+    }
+
+    .section-heading .label {
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      margin-bottom: 10px;
+    }
+
+    .section-heading h2 {
+      color: var(--green-dark);
+      font-size: clamp(27px, 3vw, 37px);
+      line-height: 1.25;
+      margin-bottom: 14px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* INTRO */
+    .intro {
+      background: var(--white);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr;
+      gap: 35px;
+      align-items: center;
+    }
+
+    .intro-copy h2 {
+      color: var(--green-dark);
+      font-size: 30px;
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+
+    .intro-copy p {
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .intro-note {
+      background: var(--green-light);
+      border-left: 5px solid var(--gold);
+      padding: 25px;
+      border-radius: 5px;
+    }
+
+    .intro-note h3 {
+      color: var(--green);
+      font-size: 19px;
+      margin-bottom: 10px;
+    }
+
+    .intro-note p {
+      color: #526357;
+      font-size: 14px;
+    }
+
+    /* NEWS CATEGORIES */
+    .categories {
+      background: var(--background);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .category-card {
+      background: var(--white);
+      padding: 24px 20px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .category-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .category-icon {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      background: var(--green-light);
+      border-radius: 8px;
+      font-size: 23px;
+      margin-bottom: 16px;
+    }
+
+    .category-card h3 {
+      color: var(--green);
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .category-card p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* UPDATES EMPTY STATE */
+    .updates {
+      background: var(--white);
+    }
+
+    .updates-panel {
+      text-align: center;
+      background: var(--background);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 55px 25px;
+    }
+
+    .updates-icon {
+      width: 76px;
+      height: 76px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 22px;
+      border-radius: 50%;
+      background: var(--green-light);
+      font-size: 34px;
+    }
+
+    .updates-panel h3 {
+      color: var(--green-dark);
+      font-size: 25px;
+      margin-bottom: 12px;
+    }
+
+    .updates-panel p {
+      max-width: 600px;
+      margin: 0 auto 24px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .updates-panel .btn {
+      margin: 5px;
+    }
+
+    /* RESPONSIBLE COMMUNICATION */
+    .notice {
+      background: var(--green-light);
+    }
+
+    .notice-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+      align-items: center;
+    }
+
+    .notice h2 {
+      color: var(--green-dark);
+      font-size: 30px;
+      line-height: 1.3;
+      margin-bottom: 14px;
+    }
+
+    .notice p {
+      color: #526357;
+      margin-bottom: 12px;
+    }
+
+    .notice-list {
+      list-style: none;
+    }
+
+    .notice-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid #d3e3d7;
+      color: #34483a;
+      font-size: 14px;
+    }
+
+    .notice-list li::before {
+      content: "✓";
+      color: var(--green);
+      font-weight: 900;
+      margin-right: 10px;
+    }
+
+    /* CTA */
+    .cta {
+      background: var(--green-dark);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: clamp(27px, 3vw, 38px);
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 680px;
+      margin: 0 auto 25px;
+      color: #d9e8dd;
+    }
+
+    /* FOOTER */
+    .site-footer {
+      background: #071e11;
+      color: #d9e5dc;
+      padding: 48px 0 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 35px;
+      padding-bottom: 35px;
+    }
+
+    .footer-brand {
+      color: var(--white);
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 13px;
+    }
+
+    .footer-grid p {
+      color: #b8cabe;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .footer-grid h3 {
+      color: var(--white);
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 9px;
+      font-size: 13px;
+    }
+
+    .footer-links a:hover {
+      color: #ffe29a;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #254332;
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+      color: #a9bcae;
+      font-size: 12px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 1000px) {
+      .nav-links {
+        gap: 12px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 780px) {
+      .header-inner {
+        min-height: 74px;
+        flex-wrap: wrap;
+        padding: 10px 0;
+      }
+
+      .brand img {
+        width: 48px;
+        height: 48px;
+      }
+
+      .brand-name {
+        font-size: 13px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 5px 0 12px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 11px 5px;
+        font-size: 14px;
+        border-top: 1px solid var(--border);
+      }
+
+      .nav-links .nav-cta {
+        text-align: center;
+        margin-top: 8px;
+      }
+
+      .hero {
+        padding: 65px 0;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+
+      .intro-grid,
+      .notice-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-about {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .category-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-about {
+        grid-column: auto;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .updates-panel {
+        padding: 38px 18px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+    }
+  </style></head><body>  <header class="site-header">
+    <div class="container header-inner">  <a href="index.html" class="brand" aria-label="GICDF home">
+    <img src="Assets/images/gicdf-logo.png" alt="GICDF logo">
+    <div class="brand-name">
+      GICDF COMMUNITY CONNECT
+      <span>Building stronger communities</span>
     </div>
-  </section>
+  </a>
 
-  <section class="section">
-    <div class="container">
-      <div class="section-heading">
-        <span class="eyebrow">Stay Informed</span>
-        <h2>What's Happening at GICDF?</h2>
-        <p>
-          This page will share verified information about GICDF announcements,
-          opportunities, activities and community development initiatives.
-        </p>
-      </div>
+  <button class="menu-toggle" id="menuToggle"
+    aria-label="Open navigation menu"
+    aria-expanded="false"
+    aria-controls="mainNav">☰</button>
 
-      <div class="cards">
+  <nav class="nav-links" id="mainNav" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="programmes.html">Programmes</a>
+    <a href="projects.html">Projects</a>
+    <a href="partnerships.html">Partnerships</a>
+    <a href="news.html" class="active">News</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="governance.html">Governance</a>
+    <a href="contact.html">Contact</a>
+    <a href="get-involved.html" class="nav-cta">Get Involved</a>
+  </nav>
 
-        <article class="card">
-          <span class="eyebrow">Announcements</span>
-          <h3>Official Announcements</h3>
-          <p>
-            Important notices, organisational announcements and information
-            relevant to community members and stakeholders will be published here.
-          </p>
-          <p><strong>Status:</strong> Updates will be published when available.</p>
-        </article>
+</div>
 
-        <article class="card">
-          <span class="eyebrow">Opportunities</span>
-          <h3>Youth and Skills Opportunities</h3>
-          <p>
-            This section will highlight relevant training opportunities,
-            educational resources, mentorship initiatives and youth development
-            programmes when verified information is available.
-          </p>
-          <p><strong>Status:</strong> Opportunities will be announced when confirmed.</p>
-        </article>
-
-        <article class="card">
-          <span class="eyebrow">Community Development</span>
-          <h3>Project and Community Updates</h3>
-          <p>
-            Follow documented community engagements, project milestones,
-            development activities and other verified updates.
-          </p>
-          <p><strong>Status:</strong> Updates will be added as activities take place.</p>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-light">
-    <div class="container">
-      <div class="section-heading">
-        <span class="eyebrow">Stay Connected</span>
-        <h2>Have News to Share?</h2>
-        <p>
-          Community members and partner organisations can contact GICDF
-          to share information for consideration. Submitted information
-          may be reviewed before publication.
-        </p>
-      </div>
-
-      <div class="text-center">
-        <a href="mailto:info.gicdf@gmail.com?subject=GICDF%20News%20Submission"
-           class="btn btn-primary">Submit an Update</a>
-
-        <a href="contact.html" class="btn btn-secondary">Contact Us</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container text-center">
-      <h2>Follow Our Community Journey</h2>
-      <p>
-        Check back for verified announcements and updates as GICDF's activities
-        and partnerships develop.
-      </p>
-      <a href="get-involved.html" class="btn btn-primary">Get Involved</a>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <p><strong>Gangara Integrated Community Development Foundation (GICDF)</strong></p>
-    <p>Gangara, Makarfi LGA, Kaduna State, Nigeria.</p>
+  </header>  <main><!-- HERO -->
+<section class="hero">
+  <div class="container hero-content">
+    <span class="eyebrow">GICDF Community Connect</span>
+    <h1>News, Updates &amp; Opportunities</h1>
     <p>
-      <a href="index.html">Home</a> |
-      <a href="about.html">About Us</a> |
-      <a href="programmes.html">Programmes</a> |
-      <a href="projects.html">Projects</a> |
-      <a href="partnerships.html">Partnerships</a> |
-      <a href="contact.html">Contact</a>
+      Stay informed about announcements, opportunities, community
+      development information and updates from Gangara Integrated
+      Community Development Foundation.
     </p>
-    <p>&copy; <span class="current-year">2026</span> GICDF. All rights reserved.</p>
+    <a href="#latest-updates" class="btn btn-gold">Explore Updates</a>
   </div>
-</footer>
+</section>
 
-<script src="assets/js/main.js"></script>
-</body>
-                                                       </html>
+<!-- INTRODUCTION -->
+<section class="intro">
+  <div class="container intro-grid">
+
+    <div class="intro-copy">
+      <div class="section-heading">
+        <div class="label">Stay Informed</div>
+        <h2>Information that connects communities to opportunities</h2>
+      </div>
+
+      <p>
+        Access information about GICDF's areas of interest, relevant
+        opportunities, planned initiatives and organisational
+        announcements through this page.
+      </p>
+
+      <p>
+        We aim to communicate responsibly, share useful information
+        and keep our community informed as activities and opportunities
+        are confirmed.
+      </p>
+    </div>
+
+    <aside class="intro-note">
+      <h3>Our commitment to transparency</h3>
+      <p>
+        We will distinguish confirmed announcements from proposed
+        activities and opportunities. Information will be published
+        when it has been verified and approved for public sharing.
+      </p>
+    </aside>
+
+  </div>
+</section>
+
+<!-- NEWS CATEGORIES -->
+<section class="categories">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="label">What to Expect</div>
+      <h2>Explore our update categories</h2>
+      <p>
+        This page is designed to share information relevant to our
+        community and development priorities.
+      </p>
+    </div>
+
+    <div class="category-grid">
+
+      <article class="category-card">
+        <div class="category-icon" aria-hidden="true">📢</div>
+        <h3>Announcements</h3>
+        <p>
+          Official organisational notices, public statements and
+          important community information.
+        </p>
+      </article>
+
+      <article class="category-card">
+        <div class="category-icon" aria-hidden="true">🎓</div>
+        <h3>Opportunities</h3>
+        <p>
+          Relevant education, training, skills development and
+          empowerment opportunities when verified.
+        </p>
+      </article>
+
+      <article class="category-card">
+        <div class="category-icon" aria-hidden="true">🤝</div>
+        <h3>Partnerships</h3>
+        <p>
+          Confirmed collaborations, partnership announcements and
+          opportunities for constructive engagement.
+        </p>
+      </article>
+
+      <article class="category-card">
+        <div class="category-icon" aria-hidden="true">🌱</div>
+        <h3>Community Development</h3>
+        <p>
+          Verified updates relating to education, youth development,
+          peacebuilding, the environment and community welfare.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- LATEST UPDATES -->
+<section class="updates" id="latest-updates">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="label">Latest Information</div>
+      <h2>News &amp; announcements</h2>
+      <p>
+        Official updates will appear here as they become available.
+      </p>
+    </div>
+
+    <div class="updates-panel">
+      <div class="updates-icon" aria-hidden="true">📰</div>
+
+      <h3>Stay connected with GICDF</h3>
+
+      <p>
+        There are no published news articles on this page yet.
+        Please check back for verified announcements and updates.
+        You can also contact our team to make an enquiry or explore
+        our programmes and ways to get involved.
+      </p>
+
+      <a href="contact.html" class="btn btn-gold">Contact GICDF</a>
+      <a href="programmes.html" class="btn btn-white">Explore Programmes</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- COMMUNICATION PRINCIPLES -->
+<section class="notice">
+  <div class="container notice-grid">
+
+    <div>
+      <div class="section-heading">
+        <div class="label">Responsible Communication</div>
+        <h2>News you can approach with confidence</h2>
+      </div>
+
+      <p>
+        Community information is most useful when it is clear,
+        accurate and shared responsibly. We aim to provide updates
+        that help people understand our work and identify relevant
+        opportunities.
+      </p>
+
+      <p>
+        Always verify time-sensitive opportunities with the
+        organisation or the original issuing body before submitting
+        personal information or making payments.
+      </p>
+    </div>
+
+    <ul class="notice-list">
+      <li>Announcements should be checked before publication.</li>
+      <li>Proposed initiatives should not be presented as completed projects.</li>
+      <li>Partnerships should only be described as confirmed when verified.</li>
+      <li>Opportunity details should include the original source where available.</li>
+      <li>Personal information should be shared only through appropriate channels.</li>
+    </ul>
+
+  </div>
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="cta">
+  <div class="container">
+    <h2>Be part of community development</h2>
+
+    <p>
+      Interested in youth empowerment, education, skills development,
+      environmental awareness or community wellbeing? Connect with
+      GICDF to explore appropriate ways to participate.
+    </p>
+
+    <a href="get-involved.html" class="btn btn-gold">Get Involved</a>
+    <a href="partnerships.html" class="btn btn-white">Explore Partnerships</a>
+  </div>
+</section>
+
+  </main>  <!-- FOOTER -->  <footer class="site-footer">
+    <div class="container">  <div class="footer-grid">
+
+    <div class="footer-about">
+      <div class="footer-brand">GICDF Community Connect</div>
+      <p>
+        Gangara Integrated Community Development Foundation works
+        towards inclusive community development, youth empowerment,
+        education, skills development and peaceful communities.
+      </p>
+      <p>Gangara, Makarfi LGA, Kaduna State, Nigeria.</p>
+    </div>
+
+    <div>
+      <h3>Quick Links</h3>
+      <ul class="footer-links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="programmes.html">Our Programmes</a></li>
+        <li><a href="projects.html">Projects &amp; Initiatives</a></li>
+        <li><a href="partnerships.html">Partnerships</a></li>
+        <li><a href="news.html">News &amp; Updates</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Connect With Us</h3>
+      <ul class="footer-links">
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="governance.html">Governance</a></li>
+        <li>
+          <a href="mailto:info.gicdf@gmail.com">Email GICDF</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>
+      &copy; <span id="currentYear"></span>
+      Gangara Integrated Community Development Foundation.
+      All rights reserved.
+    </p>
+    <p>Community • Opportunity • Sustainable Development</p>
+  </div>
+
+</div>
+
+  </footer>  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+
+    menuToggle.addEventListener("click", function () {
+      const isOpen = mainNav.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", isOpen);
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    document.querySelectorAll("#mainNav a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        mainNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+  </script></body>
+</html>
